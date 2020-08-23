@@ -1,4 +1,5 @@
-import "%modules%/preloader/preloader";
-import "%modules%/appointment/appointment";
 import "%modules%/header/header";
+import "%modules%/appointment/appointment";
 import "%modules%/footer/footer";
+import "%modules%/preloader/preloader";
+

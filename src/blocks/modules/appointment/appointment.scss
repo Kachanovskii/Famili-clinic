@@ -1,223 +1,236 @@
 .appointment {
-    .container-fluid {
-        background-color: #fcfcfc;
+  .container-fluid {
+    background-color: $primary-main-5;
 
-        .container {
-            .appointment__content {
-                padding: 70px 0 100px 0;
+    .container {
+      .appointment__content {
+        padding: 70px 0 100px 0;
 
-                .appointment__content__head {
-                    background-color: #fcfcfc;
-                    @include font-style(20px, $primary1_300, $base-dark);
+        .appointment__content_main {
+          .appointment__contact-form {
+            background-color: $primary-main-6;
+            padding: 40px 30px 30px 30px;
 
-                    .appointment__location__head-text {
-                        padding: 10px 0;
-                        text-align: center;
-                    }
-
-                    .appointment__content_text {
-                        background-color: #1393b3;
-                        padding: 30px 0 0 35px;
-                        @include font-style(20px, $primary1_300, $base-light);
-                    }
-                }
-
-                .appointment__content_main {
-                    .appointment__contact-form {
-                        background-color: #1393b3;
-                        padding: 40px 35px 30px 35px;
-
-                        .contact-form__main {
-                            background-color: #1393b3;
-
-                            .contact-form__input {
-                                padding: 0 7.5px;
-
-                                input {
-                                    width: 100%;
-                                    height: 42px;
-                                    outline: none;
-                                    padding: 0 10px;
-                                    @include font-style(13px, $primary1_300, $base-light);
-                                    background-color: rgba(255, 255, 255, 0.3);
-                                    border: 1px solid rgba(255, 255, 255, 0.5);
-                                    transition: .3s border;
-                                    cursor: pointer;
-
-                                    &:hover,
-                                    &:focus {
-                                        border: 1px solid $base-light;
-                                    }
-                                }
-
-                                .contact-form__input-date {
-                                    input {
-                                        position: relative;
-                                    }
-
-                                    input::after {
-                                        display: block;
-                                        content: '\f073';
-                                        position: absolute;
-                                        right: 10px;
-                                        font-weight: 200;
-                                        font-family: 'Font Awesome 5 Pro';
-                                        font-size: 18px;
-                                    }
-                                }
-
-                                ::-webkit-calendar-picker-indicator {
-                                    filter: invert(1);
-                                    opacity: 0;
-                                    z-index: 99;
-                                    cursor: pointer;
-                                }
-
-                                input::placeholder {
-                                    color: $base-light;
-                                }
-
-                                .custom-select {
-                                    margin-bottom: 15px;
-                                    $height: 42px;
-
-                                    .select {
-                                        width: 100%;
-                                        position: relative;
-                                        z-index: 100;
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        @include font-style(13px, $primary1_300, $base-light);
-
-
-                                        &.open {
-                                            .select__dropdown {
-                                                display: block;
-                                                font-size: 12px;
-
-                                            }
-
-                                            .select__input {
-                                                border: 1px solid $base-light;
-                                                border-bottom: none;
-                                            }
-
-                                            .select__backdrop {
-                                                display: block;
-                                            }
-                                        }
-
-                                        &__input:first-of-type {
-                                            border-top: 1px solid rgba(255, 255, 255, 0.5);
-                                        }
-
-                                        &__input {
-                                            border: 1px solid rgba(255, 255, 255, 0.5);
-                                            height: $height;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: space-between;
-                                            padding: 0 10px;
-                                            cursor: pointer;
-                                            transition: .3s border;
-
-                                            &:hover {
-                                                border: 1px solid $base-light;
-                                            }
-                                        }
-
-                                        &__dropdown {
-                                            display: none;
-                                            border: 1px solid rgba(255, 255, 255, 0.5);
-                                            border-radius: 0 0 5px 5px;
-                                            position: absolute;
-                                            top: $height;
-                                            left: 0;
-                                            right: 0;
-                                            max-height: 200px;
-                                            overflow-y: auto;
-                                            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
-                                        }
-
-                                        &__list {
-                                            padding: 0;
-                                            margin: 0;
-                                            list-style: none;
-                                        }
-
-                                        &__backdrop {
-                                            position: fixed;
-                                            top: 0;
-                                            right: 0;
-                                            left: 0;
-                                            bottom: 0;
-                                            background: transparent;
-                                            z-index: -1;
-                                            display: none;
-                                        }
-
-                                        &__item:first-of-type {
-                                            border-top: 1px solid rgba(255, 255, 255, 0.5);
-                                        }
-
-                                        &__item {
-                                            padding: 7px 10px;
-                                            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-                                            background-color: $primary-main-3;
-
-                                            &.selected {
-                                                background-color: #fcfcfc;
-
-                                                color: $primary-main-3;
-                                            }
-
-                                            &:hover {
-                                                background-color: #fcfcfc;
-
-                                                color: $primary-main-3;
-
-                                                cursor: pointer;
-                                                transition: 0.15s background-color ease-in;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                .contact-form__input-phone {
-                                    margin-bottom: 15px;
-                                }
-                            }
-                        }
-
-                        .contact-form__button {
-                            input {
-                                padding: 10px 20px;
-                                background-color: transparent;
-                                border: 1px solid rgba(255, 255, 255, 0.5);
-                                @include font-style(15px, $primary1_300, $base-light);
-                                transition: .3s all;
-                                cursor: pointer;
-
-                                &:hover {
-                                    background-color: #fcfcfc;
-                                    color: $primary-main-3;
-                                }
-                            }
-
-                            margin: 30px 0 20px 0;
-                        }
-                    }
-                }
-
-                .appointment__location_map {
-                    padding: 0 40px;
-                    height: 100%;
-
-                    iframe {
-                        height: 100%;
-                        width: 100%;
-                    }
-                }
+            .appointment__content__head_text {
+              padding-bottom: 45px;
+              @include font-style(22px, $primary1_300, $base-light);
             }
+            .contact-form__main {
+              background-color: $primary-main-6;
+              .contact-form__input:first-of-type {
+                padding-right: 7.5px;
+                margin-bottom: 15px;
+                @media (max-width: 767.98px) {
+                  padding: 0 15px;
+                }
+              }
+              .contact-form__input:last-of-type {
+                padding-left: 7.5px;
+                @media (max-width: 767.98px) {
+                  padding: 0 15px;
+                }
+              }
+              .contact-form__input {
+                input {
+                  width: 100%;
+                  height: 42px;
+                  outline: none;
+                  padding: 0 10px;
+                  @include font-style(13px, $primary1_300, $base-light);
+                  background-color: rgba(255, 255, 255, 0.2);
+                  border: 1px solid rgba(255, 255, 255, 0.4);
+                  transition: 0.3s border;
+                  cursor: pointer;
+                  &:hover,
+                  &:focus {
+                    border: 1px solid $base-light;
+                  }
+                }
+
+                .contact-form__input-date {
+                  input {
+                    position: relative;
+                  }
+
+                  input::after {
+                    display: block;
+                    content: "\f073";
+                    position: absolute;
+                    right: 10px;
+                    font-weight: 200;
+                    font-family: "Font Awesome 5 Pro";
+                    font-size: 18px;
+                  }
+                }
+
+                ::-webkit-calendar-picker-indicator {
+                  filter: invert(1);
+                  opacity: 0;
+                  z-index: 99;
+                  cursor: pointer;
+                }
+
+                input::placeholder {
+                  color: $base-light;
+                }
+
+                .custom-select {
+                  margin-bottom: 15px;
+                  $height: 42px;
+
+                  .select {
+                    width: 100%;
+                    position: relative;
+                    z-index: 100;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    @include font-style(13px, $primary1_300, $base-light);
+
+                    &.open {
+                      .select__dropdown {
+                        display: block;
+                        font-size: 12px;
+                      }
+
+                      .select__input {
+                        border: 1px solid $base-light;
+                        border-bottom: none;
+                      }
+
+                      .select__backdrop {
+                        display: block;
+                      }
+                    }
+
+                    &__input:first-of-type {
+                      border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+
+                    &__input {
+                      border: 1px solid rgba(255, 255, 255, 0.5);
+                      height: $height;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      padding: 0 10px;
+                      cursor: pointer;
+                      transition: 0.3s border;
+
+                      &:hover {
+                        border: 1px solid $base-light;
+                      }
+                    }
+
+                    &__dropdown {
+                      display: none;
+                      border: 1px solid rgba(255, 255, 255, 0.5);
+                      border-radius: 0 0 5px 5px;
+                      position: absolute;
+                      top: $height;
+                      left: 0;
+                      right: 0;
+                      max-height: 200px;
+                      overflow-y: auto;
+                      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+                    }
+
+                    &__list {
+                      padding: 0;
+                      margin: 0;
+                      list-style: none;
+                    }
+
+                    &__backdrop {
+                      position: fixed;
+                      top: 0;
+                      right: 0;
+                      left: 0;
+                      bottom: 0;
+                      background: transparent;
+                      z-index: -1;
+                      display: none;
+                    }
+
+                    &__item:first-of-type {
+                      border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+
+                    &__item {
+                      padding: 7px 10px;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                      background-color: $primary-main-6;
+
+                      &.selected {
+                        background-color: $primary-main-5;
+
+                        color: $primary-main-3;
+                      }
+
+                      &:hover {
+                        background-color: $primary-main-5;
+
+                        color: $primary-main-3;
+
+                        cursor: pointer;
+                        transition: 0.15s background-color ease-in;
+                      }
+                    }
+                  }
+                }
+
+                .contact-form__input-phone {
+                  margin-bottom: 15px;
+                }
+              }
+            }
+
+            .contact-form__button {
+              margin: 25px 0 15px 0;
+              @media (max-width: 767.98px) {
+                margin: 30px 0 15px 0;
+              }
+              input {
+                padding: 10px 20px;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                @include font-style(15px, $primary1_300, $base-light);
+                transition: 0.3s all;
+                cursor: pointer;
+                outline: none;
+
+                &:hover {
+                  background-color: $primary-main-5;
+                  color: $primary-main-3;
+                }
+              }
+            }
+          }
         }
+        .appointment__location {
+          .appointment__location__head-text {
+            @media (max-width: 991.98px) {
+              padding: 25px 0 0 0;
+            }
+            padding: 10px 0;
+            text-align: center;
+            @include font-style(20px, $primary1_300, $base-dark);
+            text-transform: uppercase;
+          }
+          .appointment__location_map {
+            @media (max-width: 991.98px) {
+              padding: 20px 0 0 0;
+              height: 100%;
+            }
+            padding: 20px 40px 0 40px;
+            display: flex;
+            height: 88%;
+
+            flex-direction: column;
+            iframe {
+              flex-grow: 1;
+            }
+          }
+        }
+      }
     }
+  }
 }

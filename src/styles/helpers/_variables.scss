@@ -1,19 +1,20 @@
 //fonts
-$primary1_300:'Roboto-Light';
-$primary1_400:'Roboto-Regular';
-$primary1_500:'Roboto-Medium';
-$primary1_700:'Roboto-Bold';
+$primary1_300: "Roboto-Light";
+$primary1_400: "Roboto-Regular";
+$primary1_500: "Roboto-Medium";
+$primary1_700: "Roboto-Bold";
 
 // colors
-$base-light:#fff;
-$base-dark:#000;
+$base-light: #fff;
+$base-dark: #000;
 
 // main-colors
-$primary-main-1:#0C4459;
-$primary-main-2:#1ebba3;
-$primary-main-3:#02a3cc;
-$primary-main-4:#276d7f;
-
+$primary-main-1: #0c4459;
+$primary-main-2: #1ebba3;
+$primary-main-3: #02a3cc;
+$primary-main-4: #276d7f;
+$primary-main-5: #fcfcfc;
+$primary-main-6: #1393b3;
 
 // primary-1
 $li-1-1: mix($primary-main-2, #fff, 60%);

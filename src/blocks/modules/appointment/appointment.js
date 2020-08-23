@@ -12,6 +12,9 @@
 
 // });
 
+
+//  *******  start castom select  ********
+
 const getTemplate = (data = [], placeholder, selectedId) => {
     let text = placeholder ?? 'placeholder default';
 
@@ -142,3 +145,45 @@ const select = new Select('#select', {
     }
 
 });
+//  *******  end castom select  ********
+
+document.querySelector('.contact-form__button input').addEventListener('click', (e) => {
+    e.preventDefault();
+});;
+
+
+
+//  *******  start appointment fetch  ********
+// const URL = 'http://localhost';
+
+// function getAppointmentForm() {
+
+// }
+
+// function sendRequest(method, url, body = null) {
+//     const headers = {
+//         'Content-Type': 'application/json'
+//     };
+
+//     return fetch(url, {
+//         method: method,
+//         body: JSON.stringify(body),
+//         headers: headers
+//     }).then(response => {
+//         if (response.ok) {
+//             return response.json();
+//         }
+//         return response.json().then(err => {
+//             const e = new Error('Щось пішло не так');
+//             e.data = err;
+//             throw e;
+//         });
+//     });
+// }
+
+
+// sendRequest('POST', URL, body)
+//     .then(data => console.log(data))
+//     .catch(data => console.log(data));
+
+//  *******  end appointment fetch  ********

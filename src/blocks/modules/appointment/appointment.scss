@@ -32,6 +32,9 @@
               }
               .contact-form__input {
                 input {
+                  box-shadow: none;
+                  -webkit-appearance: none;
+                  border-radius: 0;
                   width: 100%;
                   height: 42px;
                   outline: none;
@@ -41,6 +44,10 @@
                   border: 1px solid rgba(255, 255, 255, 0.4);
                   transition: 0.3s border;
                   cursor: pointer;
+                  @media (max-width: 991.98px) {
+                    background-color: inherit;
+                    border-style: solid;
+                  }
                   &:hover,
                   &:focus {
                     border: 1px solid $base-light;
@@ -48,11 +55,15 @@
                 }
 
                 .contact-form__input-date {
+                  box-sizing: border-box;
                   input {
                     position: relative;
                   }
 
                   input::after {
+                    @media (max-width: 991.98px) {
+                      right: 15px;
+                    }
                     display: block;
                     content: "\f073";
                     position: absolute;
@@ -63,13 +74,21 @@
                   }
                 }
 
-                ::-webkit-calendar-picker-indicator {
+                input[type=date]::-webkit-clear-button, /* blue cross */
+                input[type=date]::-webkit-inner-spin-button, /* up */
+                input[type=date]::-webkit-outer-spin-button {
+                  display: none;
+                } /* down */
+                input[type="date"] {
+                  min-width: 95.5%;
+                }
+
+                input[type=date]::-webkit-calendar-picker-indicator /* datepicker*/ {
                   filter: invert(1);
                   opacity: 0;
                   z-index: 99;
                   cursor: pointer;
                 }
-
                 input::placeholder {
                   color: $base-light;
                 }
@@ -77,13 +96,20 @@
                 .custom-select {
                   margin-bottom: 15px;
                   $height: 42px;
-
+                  i {
+                    @media (max-width: 991.98px) {
+                      margin-right: 5px;
+                    }
+                  }
                   .select {
                     width: 100%;
                     position: relative;
                     z-index: 100;
-                    background-color: rgba(255, 255, 255, 0.3);
+                    background-color: rgba(255, 255, 255, 0.2);
                     @include font-style(13px, $primary1_300, $base-light);
+                    @media (max-width: 991.98px) {
+                      background-color: inherit;
+                    }
 
                     &.open {
                       .select__dropdown {
@@ -196,6 +222,7 @@
                 transition: 0.3s all;
                 cursor: pointer;
                 outline: none;
+                border-radius: 0;
 
                 &:hover {
                   background-color: $primary-main-5;

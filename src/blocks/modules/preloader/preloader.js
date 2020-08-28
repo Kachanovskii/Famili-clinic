@@ -1,4 +1,4 @@
-document.body = addEventListener('load', function () {
+body = addEventListener('load', function () {
     setTimeout(function () {
         let preloader = document.querySelector('#page-preloader');
         if (!preloader.classList.contains('done')) {

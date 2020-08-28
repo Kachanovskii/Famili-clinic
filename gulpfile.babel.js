@@ -79,6 +79,6 @@ export const development = gulp.series("clean", "smart-grid",
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.series(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.series(["views", "styles", "scripts", "images", "sprites", "fonts", "gzip"]));
 
 export default development;

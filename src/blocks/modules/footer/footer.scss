@@ -1,6 +1,22 @@
+body {
+  margin-bottom: 218.14px;
+  @media (max-width: 1199.98px) {
+    margin-bottom: 223px;
+  }
+  @media (max-width: 991.98px) {
+    margin-bottom: 288.39px;
+  }
+  @media (max-width: 767.98px) {
+    margin-bottom: 407.39px;
+  }
+}
 .footer_main {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
   @include font-style(15px, $primary1_400, $base-light);
-
   .container-fluid {
     background-color: $primary-main-1;
 

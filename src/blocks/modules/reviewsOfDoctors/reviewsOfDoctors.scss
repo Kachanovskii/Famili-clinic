@@ -2,41 +2,60 @@
   .container-fluid {
     background-color: $primary-main-5;
 
-    padding: 40px 0;
-    // border-bottom: 1px solid $primary-main-4;
+    padding: 50px 0 40px 0;
     .container {
-      //   background-color: $primary-main-7;
-      // border-bottom: 1px solid $primary-main-3;
       .review__head {
         .reviews__head_text {
           @include font-style(25px, $primary1_300, $primary-main-3);
           padding: 0 0 10px 0;
-          margin-bottom: 30px;
+          margin-bottom: 40px;
           border-bottom: 1px solid $primary-main-3;
+          @media (max-width: 575.98px) {
+            text-align: center;
+          }
         }
       }
       .review__content {
+        padding: 0 45px;
+        @media (max-width: 1199.98px) {
+          padding: 0;
+        }
+        @media (max-width: 991.98px) {
+          padding: 0 40px;
+        }
         .review__item {
-          box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
           border-radius: 50px;
           display: flex;
           flex-direction: column;
-          //   align-items: ;
-          padding: 30px 30px 20px 30px;
-          //   border-right: 1px solid $primary-main-3;
+          padding: 30px 30px 10px 30px;
+          @media (max-width: 991.98px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+          @media (max-width: 575.98px) {
+            flex-direction: column;
+          }
           .review__doctor {
+            @media (max-width: 991.98px) {
+              width: 45%;
+              text-align: center;
+            }
+            @media (max-width: 575.98px) {
+              width: 100%;
+            }
             @include font-style(16px, $primary1_300, $primary-main-3);
             display: flex;
             flex-direction: column;
             align-items: center;
-            // text-align: center;
             .review__doctor__box-img {
-              width: 150px;
-              height: 150px;
+              width: 90px;
+              height: 90px;
               border-radius: 50%;
               background-image: url("../img/doctor.jpg");
-              background-position: -70px;
-              background-size: auto 150px;
+              background-position: -65px;
+              background-size: auto 115px;
               margin-bottom: 20px;
               background-repeat: no-repeat;
               box-shadow: 0px 0px 0px 2px $primary-main-3;
@@ -56,6 +75,14 @@
             }
           }
           .review__customer {
+            @media (max-width: 991.98px) {
+              width: 55%;
+              padding: 0 20px;
+            }
+            @media (max-width: 575.98px) {
+              width: 100%;
+              padding: 0;
+            }
             .review__customer__content {
               display: flex;
               flex-direction: column;
@@ -63,7 +90,6 @@
                 @include font-style(16px, $primary1_400, $primary-main-3);
 
                 display: flex;
-                // flex-direction: column;
                 align-items: center;
                 margin-left: 10px;
                 .review__customer__box-img {
@@ -96,18 +122,28 @@
               .review__customer__text {
                 @include font-style(15px, $primary1_300, $base-dark);
                 line-height: 18px;
-                padding: 10px 0 15px 0;
-                text-align: justify;
+                padding: 10px 0 0 0;
+                border-bottom: 1px solid $primary-main-2;
+
                 p {
-                  border-bottom: 1px solid $primary-main-2;
-                  padding-bottom: 10px;
+                  padding-bottom: 15px;
+                  a {
+                    margin-top: 5px;
+                    cursor: pointer;
+                    @include font-style(15px, $primary1_400, $primary-main-3);
+                    display: block;
+                    width: 150px;
+                    transition: 0.3s all;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
                 }
               }
               .review__customer__data {
                 text-align: right;
                 @include font-style(12px, $primary1_300, rgba(0, 0, 0, 0.4));
-                span {
-                }
+                padding: 10px;
               }
             }
           }
@@ -115,30 +151,30 @@
         .review__item:nth-of-type(2) {
           .review__doctor__box-img {
             background-image: url("../img/doctor-2.jpg");
-            background-position: -70px;
-            background-size: auto 150px;
+            background-position: center;
+            background-size: cover;
           }
           .review__customer
             .review__customer__content
             .review__customer__info
             .review__customer__box-img {
             background-image: url("../img/customer-girl-2.jpg");
-            background-position: -20px;
+            background-position: center;
             background-size: auto 50px;
           }
         }
         .review__item:nth-of-type(3) {
           .review__doctor__box-img {
             background-image: url("../img/doctor3.jpg");
-            background-position: 10px;
-            background-size: auto 155px;
+            background-position: 0 0;
+            background-size: auto 140px;
           }
           .review__customer
             .review__customer__content
             .review__customer__info
             .review__customer__box-img {
             background-image: url("../img/customer-men.jpeg");
-            background-position: -5px 0;
+            background-position: 0 0;
             background-size: auto 100px;
           }
         }

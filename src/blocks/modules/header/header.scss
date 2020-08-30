@@ -23,6 +23,7 @@
   top: 0;
   transition: 0.3s;
 
+
   .header-info {
     display: none;
   }
@@ -341,29 +342,26 @@
 
   .navbar {
     display: flex;
+    align-items: center;
 
     .navbar__i {
       font-size: 23px;
     }
   }
 
-  .header-logo {
-    display: none;
+  .navbar-logo {
+    padding: 0;
 
     .header-logo__icon {
-      padding: 0;
+      padding: 10px 0;
       width: 162px;
     }
   }
-}
 
-.navbar-logo {
-  padding: 0;
-  display: block;
-}
-
-.header-logo__icon {
-  width: 162px;
+  .header-logo {
+    display: none;
+    padding: 0;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -401,6 +399,10 @@
 
     .navbar-logo {
       padding: 0;
+
+      .header-logo__icon {
+        padding-right: 10px;
+      }
     }
 
     &__link {

@@ -1,3 +1,4 @@
+console.log(1);
 // header-fixed
 window.onscroll = function () { headerFixed(); };
 let header = document.querySelector('.header');

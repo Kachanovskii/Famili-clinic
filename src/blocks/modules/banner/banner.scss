@@ -1,0 +1,11 @@
+.banner {
+    background-color: $base-white;
+
+    .container {
+        .slider {
+            &__img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,35 +1,51 @@
 .appointment {
   .container-fluid {
-    background-color: $primary-main-5;
+    background-color: $primary-main-1;
 
     .container {
       .appointment__content {
-        padding: 70px 0 100px 0;
+        padding-top: 30px;
+
+        @media (max-width: 991.98px) {
+          padding: 40px 0 70px 0;
+
+        }
 
         .appointment__content_main {
           .appointment__contact-form {
-            background-color: $primary-main-6;
+            background-color: $primary-main-1;
             padding: 40px 30px 30px 30px;
+
+            @media (max-width: 991.98px) {
+              padding: 0 30px 0 30px;
+            }
+
 
             .appointment__content__head_text {
               padding-bottom: 45px;
-              @include font-style(22px, $primary1_300, $base-light);
+              @include font-style(25px, $primary1_400, $base-light);
             }
+
             .contact-form__main {
-              background-color: $primary-main-6;
+              background-color: $primary-main-1;
+
               .contact-form__input:first-of-type {
                 padding-right: 7.5px;
                 margin-bottom: 15px;
+
                 @media (max-width: 767.98px) {
                   padding: 0 15px;
                 }
               }
+
               .contact-form__input:last-of-type {
                 padding-left: 7.5px;
+
                 @media (max-width: 767.98px) {
                   padding: 0 15px;
                 }
               }
+
               .contact-form__input {
                 input {
                   box-shadow: none;
@@ -44,10 +60,12 @@
                   border: 1px solid rgba(255, 255, 255, 0.4);
                   transition: 0.3s border;
                   cursor: pointer;
+
                   @media (max-width: 991.98px) {
                     background-color: inherit;
                     border-style: solid;
                   }
+
                   &:hover,
                   &:focus {
                     border: 1px solid $base-light;
@@ -56,6 +74,7 @@
 
                 .contact-form__input-date {
                   box-sizing: border-box;
+
                   input {
                     position: relative;
                   }
@@ -64,6 +83,7 @@
                     @media (max-width: 991.98px) {
                       right: 15px;
                     }
+
                     display: block;
                     content: "\f073";
                     position: absolute;
@@ -74,21 +94,29 @@
                   }
                 }
 
-                input[type=date]::-webkit-clear-button, /* blue cross */
-                input[type=date]::-webkit-inner-spin-button, /* up */
+                input[type=date]::-webkit-clear-button,
+                /* blue cross */
+                input[type=date]::-webkit-inner-spin-button,
+                /* up */
                 input[type=date]::-webkit-outer-spin-button {
                   display: none;
-                } /* down */
+                }
+
+                /* down */
                 input[type="date"] {
                   min-width: 95.5%;
                 }
 
-                input[type=date]::-webkit-calendar-picker-indicator /* datepicker*/ {
+                input[type=date]::-webkit-calendar-picker-indicator
+
+                /* datepicker*/
+                  {
                   filter: invert(1);
                   opacity: 0;
                   z-index: 99;
                   cursor: pointer;
                 }
+
                 input::placeholder {
                   color: $base-light;
                 }
@@ -96,17 +124,20 @@
                 .custom-select {
                   margin-bottom: 15px;
                   $height: 42px;
+
                   i {
                     @media (max-width: 991.98px) {
                       margin-right: 5px;
                     }
                   }
+
                   .select {
                     width: 100%;
                     position: relative;
                     z-index: 100;
                     background-color: rgba(255, 255, 255, 0.2);
                     @include font-style(13px, $primary1_300, $base-light);
+
                     @media (max-width: 991.98px) {
                       background-color: inherit;
                     }
@@ -183,18 +214,18 @@
                     &__item {
                       padding: 7px 10px;
                       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-                      background-color: $primary-main-6;
+                      background-color: $primary-main-1;
 
                       &.selected {
                         background-color: $primary-main-5;
 
-                        color: $primary-main-3;
+                        color: $primary-main-1;
                       }
 
                       &:hover {
                         background-color: $primary-main-5;
 
-                        color: $primary-main-3;
+                        color: $primary-main-1;
 
                         cursor: pointer;
                         transition: 0.15s background-color ease-in;
@@ -211,9 +242,11 @@
 
             .contact-form__button {
               margin: 25px 0 15px 0;
+
               @media (max-width: 767.98px) {
                 margin: 30px 0 15px 0;
               }
+
               input {
                 padding: 10px 20px;
                 background-color: transparent;
@@ -232,26 +265,31 @@
             }
           }
         }
+
         .appointment__location {
           .appointment__location__head-text {
             @media (max-width: 991.98px) {
               padding: 25px 0 0 0;
             }
+
             padding: 10px 0;
             text-align: center;
-            @include font-style(20px, $primary1_300, $base-dark);
+            @include font-style(21px, $primary1_400, $base-light);
             text-transform: uppercase;
           }
+
           .appointment__location_map {
             @media (max-width: 991.98px) {
               padding: 20px 0 0 0;
               height: 100%;
             }
+
             padding: 20px 40px 0 40px;
             display: flex;
             height: 88%;
 
             flex-direction: column;
+
             iframe {
               flex-grow: 1;
             }

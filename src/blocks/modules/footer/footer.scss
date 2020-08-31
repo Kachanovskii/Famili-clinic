@@ -1,15 +1,19 @@
 body {
   margin-bottom: 218.14px;
+
   @media (max-width: 1199.98px) {
     margin-bottom: 223px;
   }
+
   @media (max-width: 991.98px) {
     margin-bottom: 288.39px;
   }
+
   @media (max-width: 767.98px) {
-    margin-bottom: 407.39px;
+    margin-bottom: 406.39px;
   }
 }
+
 .footer_main {
   position: fixed;
   bottom: 0;
@@ -17,6 +21,7 @@ body {
   right: 0;
   z-index: -1;
   @include font-style(15px, $primary1_400, $base-light);
+
   .container-fluid {
     background-color: $primary-main-1;
 
@@ -197,19 +202,23 @@ body {
 
               @media (max-width: 991.98px) {
                 align-self: flex-end;
-                margin: 10px 30px 20px 0;
+                margin: 10px 35px 20px 0;
               }
             }
 
             .custom-btn {
+              font-size: 11px;
               color: $base-light;
               padding: 10px 20px;
               transition: 0.3s all;
               background-color: $primary-main-4;
               cursor: pointer;
               display: inline-block;
-              box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-                7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+
+              @media (max-width: 1199.98px) {
+                padding: 10px 13px;
+
+              }
 
               @media (max-width: 991.98px) {
                 align-self: flex-end;

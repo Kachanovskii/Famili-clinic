@@ -1,16 +1,34 @@
-console.log(1);
-// header-fixed
-window.onscroll = function () { headerFixed(); };
-let header = document.querySelector('.header');
-let sticky = header.offsetTop;
-function headerFixed() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add('header-fixed');
+// header - fixed;
+// window.onscroll = function () { headerFixed(); };
+// let header = document.querySelector('.header');
+// let sticky = header.offsetTop;
+// function headerFixed() {
+
+//     if (window.pageYOffset > 150) {
+//         header.classList.add('header-fixed');
+//         
+
+//     }
+//     else {
+//         
+//     }
+// }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    console.log(window.pageYOffset);
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".header-fixed").style.top = "0";
+    } else {
+        document.querySelector(".header-fixed").style.top = "-200px";
     }
-    else {
-        header.classList.remove('header-fixed');
-    }
+    prevScrollpos = currentScrollPos;
 };
+
+
+
+
 // mobile-btn
 document.querySelector('.mobile').addEventListener('click', function () {
     document.querySelector('.header').classList.toggle('header-mobile-menu');
@@ -20,3 +38,4 @@ document.querySelector('.mobile').addEventListener('click', function () {
     document.querySelector('.bar4').classList.toggle('bar4-active');
     document.querySelector('.mobile-menu__item').classList.toggle('mobile-menu__active');
 });
+

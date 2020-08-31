@@ -1,72 +1,139 @@
 .reviewsOfDoctors {
   .container-fluid {
     background-color: $primary-main-5;
-
-    padding: 50px 0 40px 0;
+    padding: 50px 15px 40px 15px;
     .container {
       .review__head {
         .reviews__head_text {
-          @include font-style(25px, $primary1_300, $primary-main-3);
+          @include font-style(30px, $primary1_500, $primary-main-3);
           padding: 0 0 10px 0;
           margin-bottom: 40px;
-          border-bottom: 1px solid $primary-main-3;
+          @media (max-width: 767.98px) {
+            padding: 0 15px;
+          }
           @media (max-width: 575.98px) {
-            text-align: center;
+            padding: 0 5px;
+          }
+
+          h3 {
+            &::after {
+              content: '';
+              display: block;
+              width: 150px;
+              border-bottom: 2px solid;
+              position: relative;
+              bottom: -6px;
+            }
           }
         }
       }
-      .review__content {
-        padding: 0 45px;
+
+      .review__content .review__item:nth-of-type(3) {
+        width: calc(33.33% - 20px);
+        margin-left: 20px;
+
         @media (max-width: 1199.98px) {
-          padding: 0;
+          width: calc(33.33% - 15px);
+          margin-left: 15px;
+        }
+      }
+
+      .review__content .review__item:nth-of-type(2) {
+        width: calc(33.33% - 20px);
+        margin: 0 10px;
+
+        @media (max-width: 1199.98px) {
+          width: calc(33.33% - 15px);
+          margin: 0 7.5px;
+        }
+      }
+
+      .review__content .review__item:nth-of-type(1) {
+        width: calc(33.33% - 20px);
+        margin-right: 20px;
+
+        @media (max-width: 1199.98px) {
+          width: calc(33.33% - 15px);
+          margin-right: 15px;
+        }
+      }
+
+      .review__content .review__item:nth-of-type(-n + 3) {
+        @media (max-width: 991.98px) {
+          width: 100%;
+          margin: 15px 0;
+        }
+      }
+
+      .review__content {
+        @media (max-width: 767.98px) {
+          padding: 0 15px;
         }
         @media (max-width: 991.98px) {
           padding: 0 40px;
         }
+        @media (max-width: 575.98px) {
+          padding: 0 5px;
+        }
+
         .review__item {
-          box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
-          border-radius: 50px;
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
           display: flex;
           flex-direction: column;
           padding: 30px 30px 10px 30px;
+          transition: 0.3s;
+
+          &:hover {
+            box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
+          }
+
           @media (max-width: 991.98px) {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
           }
+
           @media (max-width: 575.98px) {
             flex-direction: column;
           }
+
           .review__doctor {
             @media (max-width: 991.98px) {
               width: 45%;
               text-align: center;
             }
+
             @media (max-width: 575.98px) {
               width: 100%;
             }
+
             @include font-style(16px, $primary1_300, $primary-main-3);
             display: flex;
             flex-direction: column;
             align-items: center;
+
             .review__doctor__box-img {
               width: 90px;
               height: 90px;
               border-radius: 50%;
-              background-image: url("../img/doctor.jpg");
+              background-image: url('../img/doctor.jpg');
               background-position: -65px;
               background-size: auto 115px;
               margin-bottom: 20px;
               background-repeat: no-repeat;
               box-shadow: 0px 0px 0px 2px $primary-main-3;
             }
+
             .review__doctor__content {
               display: flex;
               flex-direction: column;
+
               a {
                 @include font-style(17px, $primary1_400, $base-dark);
                 margin-bottom: 5px;
               }
+
               span {
                 @include font-style(14px, $primary1_400, rgba(0, 0, 0, 0.4));
                 margin-bottom: 20px;
@@ -74,34 +141,40 @@
               }
             }
           }
+
           .review__customer {
             @media (max-width: 991.98px) {
               width: 55%;
               padding: 0 20px;
             }
+
             @media (max-width: 575.98px) {
               width: 100%;
               padding: 0;
             }
+
             .review__customer__content {
               display: flex;
               flex-direction: column;
+
               .review__customer__info {
                 @include font-style(16px, $primary1_400, $primary-main-3);
 
                 display: flex;
                 align-items: center;
                 margin-left: 10px;
+
                 .review__customer__box-img {
                   box-shadow: 0px 0px 1px 2px $primary-main-3;
                   margin-right: 15px;
                   width: 50px;
                   height: 50px;
                   border-radius: 50%;
-                  background-image: url("../img/customer-girl.jpg");
+                  background-image: url('../img/customer-girl.jpg');
                   background-position: -5px;
                   background-size: auto 50px;
                   position: relative;
+
                   i {
                     position: absolute;
                     font-size: 18px;
@@ -113,12 +186,15 @@
                   }
                 }
               }
+
               .review__customer__star {
                 align-self: flex-end;
+
                 i {
                   color: $primary-main-2;
                 }
               }
+
               .review__customer__text {
                 @include font-style(15px, $primary1_300, $base-dark);
                 line-height: 18px;
@@ -127,6 +203,7 @@
 
                 p {
                   padding-bottom: 15px;
+
                   a {
                     margin-top: 5px;
                     cursor: pointer;
@@ -134,12 +211,14 @@
                     display: block;
                     width: 150px;
                     transition: 0.3s all;
+
                     &:hover {
                       text-decoration: underline;
                     }
                   }
                 }
               }
+
               .review__customer__data {
                 text-align: right;
                 @include font-style(12px, $primary1_300, rgba(0, 0, 0, 0.4));
@@ -148,32 +227,36 @@
             }
           }
         }
+
         .review__item:nth-of-type(2) {
           .review__doctor__box-img {
-            background-image: url("../img/doctor-2.jpg");
+            background-image: url('../img/doctor-2.jpg');
             background-position: center;
             background-size: cover;
           }
+
           .review__customer
             .review__customer__content
             .review__customer__info
             .review__customer__box-img {
-            background-image: url("../img/customer-girl-2.jpg");
+            background-image: url('../img/customer-girl-2.jpg');
             background-position: center;
             background-size: auto 50px;
           }
         }
+
         .review__item:nth-of-type(3) {
           .review__doctor__box-img {
-            background-image: url("../img/doctor3.jpg");
+            background-image: url('../img/doctor3.jpg');
             background-position: 0 0;
             background-size: auto 140px;
           }
+
           .review__customer
             .review__customer__content
             .review__customer__info
             .review__customer__box-img {
-            background-image: url("../img/customer-men.jpeg");
+            background-image: url('../img/customer-men.jpeg');
             background-position: 0 0;
             background-size: auto 100px;
           }

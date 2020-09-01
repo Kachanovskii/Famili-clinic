@@ -160,7 +160,3 @@ ul {
   @include lg(max-width, rem(930));
   @include xl(max-width, rem(1110));
 }
-
-body {
-  background-color: $primary-main-1;
-}

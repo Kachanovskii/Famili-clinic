@@ -55,7 +55,7 @@
                   height: 42px;
                   outline: none;
                   padding: 0 10px;
-                  @include font-style(13px, $primary1_300, $base-light);
+                  @include font-style(13px, $primary1_400, $base-light);
                   background-color: rgba(255, 255, 255, 0.2);
                   border: 1px solid rgba(255, 255, 255, 0.4);
                   transition: 0.3s border;
@@ -136,7 +136,7 @@
                     position: relative;
                     z-index: 100;
                     background-color: rgba(255, 255, 255, 0.2);
-                    @include font-style(13px, $primary1_300, $base-light);
+                    @include font-style(13px, $primary1_400, $base-light);
 
                     @media (max-width: 991.98px) {
                       background-color: inherit;
@@ -251,7 +251,7 @@
                 padding: 10px 20px;
                 background-color: transparent;
                 border: 1px solid rgba(255, 255, 255, 0.5);
-                @include font-style(15px, $primary1_300, $base-light);
+                @include font-style(15px, $primary1_400, $base-light);
                 transition: 0.3s all;
                 cursor: pointer;
                 outline: none;
@@ -259,7 +259,7 @@
 
                 &:hover {
                   background-color: $primary-main-5;
-                  color: $primary-main-3;
+                  color: $primary-main-1;
                 }
               }
             }

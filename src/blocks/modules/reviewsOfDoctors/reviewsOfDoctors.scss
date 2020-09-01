@@ -2,15 +2,18 @@
   .container-fluid {
     background-color: $primary-main-5;
     padding: 50px 15px 40px 15px;
+
     .container {
       .review__head {
         .reviews__head_text {
-          @include font-style(30px, $primary1_500, $primary-main-3);
+          @include font-style(30px, $primary1_500, $base-color);
           padding: 0 0 10px 0;
           margin-bottom: 40px;
+
           @media (max-width: 767.98px) {
             padding: 0 15px;
           }
+
           @media (max-width: 575.98px) {
             padding: 0 5px;
           }
@@ -69,20 +72,22 @@
         @media (max-width: 767.98px) {
           padding: 0 15px;
         }
+
         @media (max-width: 991.98px) {
           padding: 0 40px;
         }
+
         @media (max-width: 575.98px) {
           padding: 0 5px;
         }
 
         .review__item {
           box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
-          border-radius: 5px;
           display: flex;
           flex-direction: column;
           padding: 30px 30px 10px 30px;
           transition: 0.3s;
+          cursor: pointer;
 
           &:hover {
             box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
@@ -108,7 +113,7 @@
               width: 100%;
             }
 
-            @include font-style(16px, $primary1_300, $primary-main-3);
+            @include font-style(16px, $primary1_300, $base-color);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -117,12 +122,11 @@
               width: 90px;
               height: 90px;
               border-radius: 50%;
-              background-image: url('../img/doctor.jpg');
-              background-position: -65px;
-              background-size: auto 115px;
+              background-image: url('../img/ourDoctors4.jpg');
+              background-position: center;
+              background-size: cover;
               margin-bottom: 20px;
               background-repeat: no-repeat;
-              box-shadow: 0px 0px 0px 2px $primary-main-3;
             }
 
             .review__doctor__content {
@@ -130,8 +134,13 @@
               flex-direction: column;
 
               a {
-                @include font-style(17px, $primary1_400, $base-dark);
+                @include font-style(17px, $primary1_400, $base-text);
                 margin-bottom: 5px;
+                transition: .3s;
+
+                &:hover {
+                  color: $base-color;
+                }
               }
 
               span {
@@ -158,14 +167,13 @@
               flex-direction: column;
 
               .review__customer__info {
-                @include font-style(16px, $primary1_400, $primary-main-3);
+                @include font-style(16px, $primary1_400, $base-color);
 
                 display: flex;
                 align-items: center;
                 margin-left: 10px;
 
                 .review__customer__box-img {
-                  box-shadow: 0px 0px 1px 2px $primary-main-3;
                   margin-right: 15px;
                   width: 50px;
                   height: 50px;
@@ -178,7 +186,7 @@
                   i {
                     position: absolute;
                     font-size: 18px;
-                    background-color: $base-light;
+                    background-color: $primary-main-5;
                     right: -15px;
                     top: -5px;
                     padding: 4px;
@@ -191,23 +199,21 @@
                 align-self: flex-end;
 
                 i {
-                  color: $primary-main-2;
+                  color: $base-color;
+                  font-size: 13px;
                 }
               }
 
               .review__customer__text {
-                @include font-style(15px, $primary1_300, $base-dark);
+                @include font-style(15px, $primary1_300, $base-text);
                 line-height: 18px;
                 padding: 10px 0 0 0;
-                border-bottom: 1px solid $primary-main-2;
 
                 p {
-                  padding-bottom: 15px;
-
                   a {
                     margin-top: 5px;
                     cursor: pointer;
-                    @include font-style(15px, $primary1_400, $primary-main-3);
+                    @include font-style(15px, $primary1_400, $base-color);
                     display: block;
                     width: 150px;
                     transition: 0.3s all;
@@ -230,15 +236,10 @@
 
         .review__item:nth-of-type(2) {
           .review__doctor__box-img {
-            background-image: url('../img/doctor-2.jpg');
-            background-position: center;
-            background-size: cover;
+            background-image: url('../img/ourDoctors2.jpg');
           }
 
-          .review__customer
-            .review__customer__content
-            .review__customer__info
-            .review__customer__box-img {
+          .review__customer .review__customer__content .review__customer__info .review__customer__box-img {
             background-image: url('../img/customer-girl-2.jpg');
             background-position: center;
             background-size: auto 50px;
@@ -247,15 +248,10 @@
 
         .review__item:nth-of-type(3) {
           .review__doctor__box-img {
-            background-image: url('../img/doctor3.jpg');
-            background-position: 0 0;
-            background-size: auto 140px;
+            background-image: url('../img/ourDoctors3.jpg');
           }
 
-          .review__customer
-            .review__customer__content
-            .review__customer__info
-            .review__customer__box-img {
+          .review__customer .review__customer__content .review__customer__info .review__customer__box-img {
             background-image: url('../img/customer-men.jpeg');
             background-position: 0 0;
             background-size: auto 100px;

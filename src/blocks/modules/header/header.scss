@@ -5,8 +5,17 @@
   }
 
   position: relative;
-  transition: ease-in-out 0.5s;
-  background-color: #f2f2f2;
+  transition: 1s;
+  background-color: $primary-main-5;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.header-fixed {
+  position: fixed;
+  margin-top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.3s;
 }
 
 .header-container {
@@ -16,25 +25,27 @@
 // /header
 
 //header-fixed
-.header-fixed {
-  z-index: 999;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  transition: 0.3s;
+// .header-fixed {
+//   position: fixed;
+//   margin-top: 0px;
+//   z-index: 999;
+//   position: fixed;
+//   width: 100%;
+//   // margin-top: 0;
 
-  .header-info {
-    display: none;
-  }
+//   .header-info {
 
-  .header-nav {
-    border: none;
-  }
+//     display: none;
+//   }
 
-  .header-logo__icon {
-    width: 177px;
-  }
-}
+//   .header-nav {
+//     border: none;
+//   }
+
+//   .header-logo__icon {
+//     width: 177px;
+//   }
+// }
 
 // /header-fixed
 
@@ -341,29 +352,25 @@
 
   .navbar {
     display: flex;
+    align-items: center;
 
     .navbar__i {
       font-size: 23px;
     }
   }
 
-  .header-logo {
-    display: none;
+  .navbar-logo {
+    padding: 0;
 
     .header-logo__icon {
-      padding: 0;
+      padding: 10px 0;
       width: 162px;
     }
   }
-}
-
-.navbar-logo {
-  padding: 0;
-  display: block;
-}
-
-.header-logo__icon {
-  width: 162px;
+  .header-logo {
+    display: none;
+    padding: 0;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -401,6 +408,9 @@
 
     .navbar-logo {
       padding: 0;
+      .header-logo__icon {
+        padding-right: 10px;
+      }
     }
 
     &__link {
@@ -432,6 +442,8 @@
     flex-direction: column;
 
     .header-info {
+      display: none;
+      //забрати стилі, якщо не використовуватиметься
       padding: 12px 0;
       flex-direction: column-reverse;
       align-items: baseline;

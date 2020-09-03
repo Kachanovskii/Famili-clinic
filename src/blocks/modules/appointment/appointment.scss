@@ -23,7 +23,7 @@
 
             .appointment__content__head_text {
               padding-bottom: 45px;
-              @include font-style(25px, $primary1_400, $base-light);
+              @include font-style(25px, $primary1_400, $primary-main-5);
             }
 
             .contact-form__main {
@@ -55,16 +55,11 @@
                   height: 42px;
                   outline: none;
                   padding: 0 10px;
-                  @include font-style(13px, $primary1_400, $base-light);
-                  background-color: rgba(255, 255, 255, 0.2);
+                  @include font-style(13px, $primary1_400, $primary-main-5);
+                  background-color: rgba($primary-main-5, 0.1);
                   border: 1px solid rgba(255, 255, 255, 0.4);
                   transition: 0.3s border;
                   cursor: pointer;
-
-                  @media (max-width: 991.98px) {
-                    background-color: inherit;
-                    border-style: solid;
-                  }
 
                   &:hover,
                   &:focus {
@@ -135,12 +130,8 @@
                     width: 100%;
                     position: relative;
                     z-index: 100;
-                    background-color: rgba(255, 255, 255, 0.2);
-                    @include font-style(13px, $primary1_400, $base-light);
-
-                    @media (max-width: 991.98px) {
-                      background-color: inherit;
-                    }
+                    background-color: rgba($primary-main-5, 0.1);
+                    @include font-style(13px, $primary1_400, $primary-main-5);
 
                     &.open {
                       .select__dropdown {
@@ -149,7 +140,7 @@
                       }
 
                       .select__input {
-                        border: 1px solid $base-light;
+                        border: 1px solid $primary-main-5;
                         border-bottom: none;
                       }
 
@@ -173,7 +164,7 @@
                       transition: 0.3s border;
 
                       &:hover {
-                        border: 1px solid $base-light;
+                        border: 1px solid $primary-main-5;
                       }
                     }
 
@@ -248,10 +239,10 @@
               }
 
               input {
-                padding: 10px 20px;
+                padding: 11px 20px;
                 background-color: transparent;
                 border: 1px solid rgba(255, 255, 255, 0.5);
-                @include font-style(15px, $primary1_400, $base-light);
+                @include font-style(16px, $primary1_400, $primary-main-5);
                 transition: 0.3s all;
                 cursor: pointer;
                 outline: none;
@@ -274,7 +265,7 @@
 
             padding: 10px 0;
             text-align: center;
-            @include font-style(21px, $primary1_400, $base-light);
+            @include font-style(21px, $primary1_400, $primary-main-5);
             text-transform: uppercase;
           }
 

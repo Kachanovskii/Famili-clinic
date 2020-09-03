@@ -1,129 +1,78 @@
-<header class="header header-fixed header-fixed">
-    <div class="container-fluid">
-        <div class="container header-container">
-            <!-- header-logo -->
-            <div class="header-logo col-xl-3">
-                <a href="#" class="header-logo__link-home">
-                    <img src="img/logo.png" alt="logo" class="header-logo__icon">
-                </a>
-
-                <!-- burger -->
-                <div class="mobile">
-                    <button class="mobile__btn">
-                        <span class="bar bar1"></span>
-                        <span class="bar bar2"></span>
-                        <span class="bar bar3"></span>
-                        <span class="bar bar4"></span>
-                    </button>
+<!-- *start header* -->
+<header class="header">
+    <div class="container-fluid header-top">
+        <div class="container">
+            <div class="header-top__section">
+                <div class="header-top__info address">
+                    <a href="#">
+                        <i class="far fa-map-marker-alt"></i>
+                        Рівне, <span>вул. Різдвяна</span>
+                    </a>
                 </div>
-                <!-- /burger -->
-            </div>
-            <!-- /header-logo -->
-
-            <!-- mobile-menu -->
-            <div class="mobile-menu">
-                <ul class="mobile-menu__item">
-                    <li class="mobile-menu__link"><a href="#">Лікарі та напрями</a></li>
-                    <li class="mobile-menu__link"><a href="#">Вартість</a></li>
-                    <li class="mobile-menu__link"><a href="#">Про нас</a></li>
-                    <li class="mobile-menu__link"><a href="#">Акції</a></li>
-                    <li class="mobile-menu__link"><a href="#">Контакти</a></li>
-                    <li class="mobile-menu__link"><a href="#">F.A.Q</a></li>
-
-                </ul>
-            </div>
-            <!-- /mobile-menu -->
-
-            <!-- header-content -->
-            <div class="header-content col-xl-9 col-lg-12">
-                <!-- header-info -->
-
-                <div class="header-info">
-                    <div class="header-info-box header-address">
-                        <div class="header-info-box__icon">
-                            <i class="fal fa-map-marker-alt"></i>
-                        </div>
-                        <div class="header-info-box__text">
-                            <strong>Рівне</strong>
-                            <span>вул. Різдвяна, 2а</span>
-                        </div>
-                        <a href="#" class="header-info-box__link"></a>
-                    </div>
-                    <div class="header-info-box header-schedule">
-                        <div class="header-info-box__icon">
-                            <i class="fal fa-clock"></i>
-                        </div>
-                        <div class="header-info-box__text">
-                            <strong>Пн-Пт 9:00 - 21:00</strong>
-                            <strong>Сб-Нд 9:00 - 19:00</strong>
-                        </div>
-                    </div>
-                    <div class="header-info-box header-social">
-                        <a href="#" class="header-social__link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="header-social__link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="header-info-box">
-                        <button class="header-btn">
-                            <div class="header-info-box__icon">
-                                <i class="fal fa-calendar-alt"></i>
-                            </div>
-                            <div class="header-info-box__text header-btn__text">
-                                <strong>Запис на прийом</strong>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="header-info-box header-phone">
-                        <div class="header-info-box__icon header-phone__icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="header-info-box">
-                            <a class="header-info-box__phone" href="tel:+380661112233">(066) 111-22-33 </a><br>
-                            <a class="header-info-box__phone" href="tel:+380661112233">(066) 111-22-33 </a>
-                        </div>
-                    </div>
+                <div class="header-top__info">
+                    <i class="far fa-clock"></i>
+                    <span>Пн-Пт 9:00 - 21:00 | Cб-Нд 9:00 - 18:00</span>
                 </div>
-                <!-- /header-info -->
-
-                <!-- header-nav -->
-                <div class="header-nav">
-                    <nav class="navbar">
-                        <div class="navbar-logo col-lg-3 col-md-3 col-sm-3">
-                            <a href="#" class="header-logo__link-home">
-                                <img src="img/logo.png" alt="logo" class="header-logo__icon">
-                            </a>
-                        </div>
-                        <ul class="navbar__menu">
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link"><i class="fal fa-clipboard-list navbar__i"></i>Лікарі
-                                    та напрями</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link"><i
-                                        class="fal fa-file-invoice-dollar navbar__i"></i>Вартість</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link"><i class="fal fa-hospital-user navbar__i"></i>Про
-                                    нас</a>
-                            </li>
-                            <li class="navbar__item navbar__item_red">
-                                <a href="#" class="navbar__link"><i class="fal fa-percent navbar__i"></i>Акції %</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link"><i
-                                        class="fal fa-map-marked-alt navbar__i"></i>Контакти</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link"><i
-                                        class="fal fa-question-circle navbar__i"></i>F.A.Q</a>
-                            </li>
+                <div class="header-top__info header-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <button class="header-top__btn">
+                    <i class="far fa-calendar-alt"></i>
+                    Запис на прийом
+                </button>
+                <div class="header-top__info h-phone">
+                    <i class="far fa-phone-alt"></i>
+                    <a href="tel:+380662222233">+38 066 222 22 33</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid header-navigation">
+        <div class="container">
+            <div class="header-navigation__section">
+                <div class="container container-nav">
+                    <div class="logo" href="">
+                        <a class="logo-link" href="#">
+                            <img src="../../../img/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <nav class="navigation">
+                        <ul>
+                            <li><a class="navigation__link" href="#">Лікарі та напрями</a></li>
+                            <li><a class="navigation__link" href="#">Вартість</a></li>
+                            <li><a class="navigation__link" href="#">Про нас</a></li>
+                            <li><a class="navigation__link link-red" href="#">Акції %</a></li>
+                            <li><a class="navigation__link" href="#">Контакти</a></li>
+                            <li><a class="navigation__link" href="#">F.A.Q</a></li>
                         </ul>
                     </nav>
+                    <!-- mobile nav -->
+                    <div class="mobile-menu">
+                        <button class="mobile-btn">
+                            <span class="bar bar1"></span>
+                            <span class="bar bar2"></span>
+                            <span class="bar bar3"></span>
+                            <span class="bar bar4"></span>
+                        </button>
+                    </div>
+                    <div class="mobile-navigation">
+                        <div class="container">
+                            <a href="#">Лікарі та напрямки</a>
+                            <a href="#">Вартість</a>
+                            <a href="#">Про нас</a>
+                            <a class="link-red" href="#">Акції %</a>
+                            <a href="#">Контакти</a>
+                            <a href="#">F.A.Q</a>
+                            <div class="mobile-social"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a></div>
+                        </div>
+                    </div>
+                    <!--/ mobile-nav -->
                 </div>
-                <!-- /header-nav -->
 
             </div>
-            <!-- /header-content -->
-
         </div>
     </div>
 </header>
+<!-- *end header- -->

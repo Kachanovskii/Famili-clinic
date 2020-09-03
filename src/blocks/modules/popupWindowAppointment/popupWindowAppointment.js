@@ -1,6 +1,6 @@
 $(document).ready(function ($) {
     var elements = $('.modal-overlay, .modal');
-    $('.button').click(function () {
+    $('.header-top__btn, .link-red').click(function () {
         elements.addClass('active');
     });
 

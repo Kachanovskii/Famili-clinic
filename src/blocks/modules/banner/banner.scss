@@ -1,7 +1,13 @@
 .banner {
+    margin-top: 150px;
     // background-color: $base-color;
     background: linear-gradient(0deg, $base-color, #00cec8);
-    padding: 15px 0;
+    padding: 15px;
+
+    // padding: 15px 0;
+    @media (max-width: 991.98px) {
+        margin-top: 80px;
+    }
 
     .container {
         .slider {
@@ -90,4 +96,8 @@
             }
         }
     }
+}
+
+.sticky+.banner {
+    padding-top: 102px;
 }

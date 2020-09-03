@@ -2,7 +2,7 @@
 window.onscroll = function () { myFunction(); };
 
 // Get the header
-let header = document.querySelector(".header-top");
+let header = document.querySelector(".header-top__section");
 
 // Get the offset position of the navbar
 let sticky = header.offsetTop;
@@ -18,7 +18,7 @@ function myFunction() {
 
 // mobile-btn
 document.querySelector('.mobile-menu').addEventListener('click', function () {
-    document.querySelector('.header').classList.toggle('header-mobile-menu');
+    // document.querySelector('.header').classList.toggle('header-mobile-menu');
     document.querySelector('.bar1').classList.toggle('bar1-active');
     document.querySelector('.bar2').classList.toggle('bar2-active');
     document.querySelector('.bar3').classList.toggle('bar3-active');
@@ -26,6 +26,6 @@ document.querySelector('.mobile-menu').addEventListener('click', function () {
 
     // document.querySelector('.mobile-menu__item').classList.toggle('mobile-menu__active');
 
-    document.querySelector('.sidenav').classList.toggle('open-nav');
+    document.querySelector('.mobile-navigation').classList.toggle('show-m-navigation');
 });
 

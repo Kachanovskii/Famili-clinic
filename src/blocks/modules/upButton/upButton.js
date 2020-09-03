@@ -1,7 +1,7 @@
 jQuery(document).ready(function () {
     var btn = $('#upButton');
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 900) {
+        if ($(window).scrollTop() > 600) {
             btn.addClass('show');
             document.body.style.backgroundColor = '#0c4459';
         } else {
@@ -11,6 +11,6 @@ jQuery(document).ready(function () {
     });
     btn.on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 1000);
+        $('html, body').animate({ scrollTop: 0 }, 700);
     });
 });

@@ -1,0 +1,333 @@
+$speed: .6s;
+$delay: ($speed * .5);
+$easing: cubic-bezier(.55, 0, .1, 1);
+
+
+
+.popupWindowAppointment {
+    .appointment__content__head_text {
+        padding-bottom: 45px;
+        @include font-style(25px, $primary1_400, $primary-main-5);
+
+        @media (max-width: 575.98px) {
+            font-size: 23px;
+
+        }
+    }
+
+    .contact-form__main {
+        .contact-form__input:first-of-type {
+            padding-right: 7.5px;
+            margin-bottom: 15px;
+            padding: 0 15px;
+        }
+
+        .contact-form__input:last-of-type {
+            @media (max-width: 767.98px) {
+                padding: 0 15px;
+            }
+        }
+
+        .contact-form__input {
+            input {
+                box-shadow: none;
+                -webkit-appearance: none;
+                border-radius: 0;
+                width: 100%;
+                height: 42px;
+                outline: none;
+                padding: 0 10px;
+                @include font-style(13px, $primary1_400, $primary-main-5);
+                background-color: rgba($base-white, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                transition: 0.3s border;
+                cursor: pointer;
+
+                &:hover,
+                &:focus {
+                    border: 1px solid $primary-main-5;
+                }
+            }
+
+            .contact-form__input-date {
+                box-sizing: border-box;
+
+                input {
+                    position: relative;
+                }
+
+                input::after {
+                    @media (max-width: 991.98px) {
+                        right: 15px;
+                    }
+
+                    display: block;
+                    content: "\f073";
+                    position: absolute;
+                    right: 10px;
+                    font-weight: 200;
+                    font-family: "Font Awesome 5 Pro";
+                    font-size: 18px;
+                }
+            }
+
+            input[type=date]::-webkit-clear-button,
+            /* blue cross */
+            input[type=date]::-webkit-inner-spin-button,
+            /* up */
+            input[type=date]::-webkit-outer-spin-button {
+                display: none;
+            }
+
+            /* down */
+            input[type="date"] {
+                min-width: 95.5%;
+            }
+
+            input[type=date]::-webkit-calendar-picker-indicator
+
+            /* datepicker*/
+                {
+                filter: invert(1);
+                opacity: 0;
+                z-index: 99;
+                cursor: pointer;
+            }
+
+            input::placeholder {
+                color: $primary-main-5;
+            }
+
+            .custom-select {
+                margin-bottom: 15px;
+                $height: 42px;
+
+                i {
+                    @media (max-width: 991.98px) {
+                        margin-right: 5px;
+                    }
+                }
+
+                .select {
+                    width: 100%;
+                    position: relative;
+                    z-index: 100;
+                    background-color: rgba($base-white, 0.1);
+                    @include font-style(13px, $primary1_400, $primary-main-5);
+
+                    &.open {
+                        .select__dropdown {
+                            display: block;
+                            font-size: 12px;
+                        }
+
+                        .select__input {
+                            border: 1px solid $primary-main-5;
+                            border-bottom: none;
+                        }
+
+                        .select__backdrop {
+                            display: block;
+                        }
+                    }
+
+                    &__input:first-of-type {
+                        border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+
+                    &__input {
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        height: $height;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 10px;
+                        cursor: pointer;
+                        transition: 0.3s border;
+
+                        &:hover {
+                            border: 1px solid $primary-main-5;
+                        }
+                    }
+
+                    &__dropdown {
+                        display: none;
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        border-radius: 0 0 5px 5px;
+                        position: absolute;
+                        top: $height;
+                        left: 0;
+                        right: 0;
+                        max-height: 200px;
+                        overflow-y: auto;
+                        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+                    }
+
+                    &__list {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                    }
+
+                    &__backdrop {
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        background: transparent;
+                        z-index: -1;
+                        display: none;
+                    }
+
+                    &__item:first-of-type {
+                        border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+
+                    &__item {
+                        padding: 7px 10px;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                        background-color: $base-color;
+
+                        &.selected {
+                            background-color: $primary-main-5;
+
+                            color: $base-color;
+                        }
+
+                        &:hover {
+                            background-color: $primary-main-5;
+
+                            color: $base-color;
+
+                            cursor: pointer;
+                            transition: 0.15s background-color ease-in;
+                        }
+                    }
+                }
+            }
+
+            .contact-form__input-phone {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .contact-form__button {
+        margin: 25px 0 15px 0;
+
+        @media (max-width: 767.98px) {
+            margin: 30px 0 15px 0;
+        }
+
+        input {
+            padding: 11px 20px;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            @include font-style(16px, $primary1_400, $primary-main-5);
+            transition: 0.3s all;
+            cursor: pointer;
+            outline: none;
+            border-radius: 0;
+
+            &:hover {
+                background-color: $primary-main-5;
+                color: $base-color;
+            }
+        }
+    }
+
+
+
+
+    .modal {
+        padding: 40px 30px 10px 30px;
+        position: relative;
+        margin: 0 auto;
+        background-color: $base-color;
+        width: 600px;
+        border-radius: 3px;
+        opacity: 0;
+        overflow-y: auto;
+        visibility: hidden;
+        box-shadow: 0 2px 10px rgba(#000, 0.1);
+        backface-visibility: hidden;
+        transform: scale(1.2);
+        transition: all $speed $easing;
+
+        @media (max-width: 767.98px) {
+            width: 100%;
+            margin: 0 15px;
+        }
+
+        @media (max-width: 575.98px) {
+            padding: 35px 20px 10px 20px;
+
+        }
+
+
+        .close-modal {
+            position: absolute;
+            cursor: pointer;
+            top: 5px;
+            right: 15px;
+            opacity: 0;
+            backface-visibility: hidden;
+            transition: opacity $speed $easing, transform $speed $easing;
+            transition-delay: $delay;
+            font-size: 30px;
+
+        }
+
+        // close modal
+
+        .modal-content {
+            opacity: 0;
+            backface-visibility: hidden;
+            transition: opacity $speed $easing;
+            transition-delay: $delay;
+            background-color: $base-color;
+
+        }
+
+        // content
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+
+            .modal-content {
+                opacity: 1;
+            }
+
+            .close-modal {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+.modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba($base-text, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity $speed $easing, visibility $speed $easing;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

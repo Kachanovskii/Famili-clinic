@@ -3,7 +3,6 @@
 //         let preloader = document.querySelector('#page-preloader');
 //         if (!preloader.classList.contains('done')) {
 //             preloader.classList.add('done');
-//             document.body.style.backgroundColor = '#0c4459';
 //         }
 //     }, 1000);
 // });

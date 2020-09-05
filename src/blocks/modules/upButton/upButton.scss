@@ -6,26 +6,24 @@
     border-radius: 50%;
     border: 1px solid $primary-main-5;
     text-align: center;
-    margin: 10px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+    bottom: 8%;
+    right: 3%;
+    z-index: 999;
     transition: background-color .3s,
         opacity .5s, visibility .5s, transform .5s;
     opacity: 0;
     visibility: hidden;
 
     @media (max-width: 575.98px) {
-        bottom: 15px;
-        right: 15px;
+        right: 4%;
     }
 
 }
 
 #upButton:hover {
     cursor: pointer;
-    background-color: $primary-main-2;
+    background-color: $primary-btn-1;
 
     @media (max-width: 991.98px) {
         cursor: pointer;
@@ -36,7 +34,7 @@
 
 
 #upButton:active {
-    background-color: $primary-main-2;
+    background-color: $primary-btn-1;
     transform: scale(1.2);
 
 }

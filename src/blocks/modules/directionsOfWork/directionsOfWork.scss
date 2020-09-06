@@ -20,7 +20,7 @@
             }
 
             &::after {
-              content: "";
+              content: '';
               display: block;
               width: 150px;
               border-bottom: 2px solid;
@@ -32,33 +32,116 @@
 
         .directionsOfWork__card {
           display: flex;
-          // justify-content: space-between;
           flex-wrap: wrap;
 
+
+
+
           .card__info {
-            text-align: center;
-            max-width: 25%;
-            padding: 20px 25px;
+
+            max-width: 220px;
+            padding: 15px;
             border-radius: 8px;
 
-            // .card__a {}
+
+            &:hover {
+              box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .12);
+            }
+
+            &:hover .card__detail {
+              opacity: 1;
+            }
+
+            // &:hover .card__img {
+            //   background: linear-gradient(90deg, lighten($base-color, 35%), lighten(#00cec8, 35%));
+            // }
+
+            .card__a {
+              display: block;
+            }
 
             .card__img {
-              width: 50%;
-
+              border: 1px solid #eee;
+              border-radius: 5px;
+              padding: 15px 70px;
+              width: 100%;
+              // background: linear-gradient(90deg, lighten($base-color, 35%), lighten(#00cec8, 35%));
+              ;
+              background-color: #eee;
             }
 
             .card__heading {
-
+              text-align: center;
+              min-height: 32px;
               margin-top: 15px;
-              @include font-style(23px, $primary1_400, $base-text);
-              // text-align: center;
+              @include font-style(16px, $primary1_500, $base-text);
+            }
+
+            .card__p {
+              @include font-style(12px, $primary1_400, $base-text1);
+              padding-top: 15px;
+
+            }
+
+            .card__detail {
+              cursor: pointer;
+              opacity: 0;
+              margin-top: auto;
+              margin-top: 15px;
+              @include font-style(14px, $primary1_400, $primary-main-2);
+              padding: 5px 10px;
+              background: linear-gradient(90deg, lighten($base-color, 50%), lighten(#00cec8, 50%));
+              border: none;
+
+              &:hover {
+                background: linear-gradient(90deg, lighten($base-color, 30%), lighten(#00cec8, 30%));
+              }
+            }
+          }
+
+          @media (max-width: 1199.98px) {
+            .card__info {
+              max-width: 230px;
+            }
+          }
+
+          @media (max-width: 991.98px) {
+            .card__detail {
+              display: none;
+            }
+          }
+
+          @media (max-width: 767.98px) {
+            .card__info {
+              max-width: 250px;
+            }
+          }
+
+          @media (max-width: 589.98px) {
+            justify-content: center;
+
+            .card__info {
+              max-width: 250px;
             }
           }
         }
 
+
         .directionsOfWork__btn {
-          // .btn__all {}
+          padding: 15px;
+
+
+          .btn__all {
+            @include font-style(16px, $primary1_400, $primary-main-2);
+
+            i {
+              font-size: 11px;
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }

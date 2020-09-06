@@ -78,7 +78,7 @@
                                 justify-content: center;
 
                                 span {
-                                    line-height: 0;
+                                    margin: 0 auto;
                                     @include font-style(30px, $primary1_400, $base-light);
                                 }
                             }

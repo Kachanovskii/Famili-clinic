@@ -5,9 +5,9 @@ $(document).ready(function () {
         loop: true,
         margin: 10,
         nav: false,
-        // autoplay: true,
-        // autoplayTimeout: 5000,
-        // autoplayHoverPause: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
         responsiveClass: true,
         // responsive: {
         //     0: {

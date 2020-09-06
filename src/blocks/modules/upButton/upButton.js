@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
             document.body.style.backgroundColor = '#0c4459';
         } else {
             btn.removeClass('show');
-            document.body.style.backgroundColor = '';
+            document.body.style.backgroundColor = '#fcfcfc';
         }
     });
     btn.on('click', function (e) {

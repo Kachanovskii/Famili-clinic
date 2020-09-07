@@ -70,10 +70,12 @@ body {
           }
 
           .footer__box-img {
-            max-width: 300px;
+            max-width: 200px;
+            padding: 15.4px 0;
+            align-self: center;
 
             @media (max-width: 991.98px) {
-              max-width: 265px;
+              padding: 10px 0;
             }
 
             img {

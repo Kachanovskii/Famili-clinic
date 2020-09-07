@@ -3,10 +3,12 @@ jQuery(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > 600) {
             btn.addClass('show');
-            // document.body.style.backgroundColor = '#0c4459';
+            $("body").css("background-color", "#0c4459");
+            $(".footer_main").css("display", "block");
         } else {
             btn.removeClass('show');
-            document.body.style.backgroundColor = '#fcfcfc';
+            $("body").css("background-color", "#fcfcfc");
+            $(".footer_main").css("display", "none");
         }
     });
     btn.on('click', function (e) {

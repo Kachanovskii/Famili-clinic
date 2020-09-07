@@ -14,6 +14,7 @@
         opacity .5s, visibility .5s, transform .5s;
     opacity: 0;
     visibility: hidden;
+    cursor: pointer;
 
     @media (max-width: 575.98px) {
         right: 4%;
@@ -22,7 +23,6 @@
 }
 
 #upButton:hover {
-    cursor: pointer;
     background-color: $primary-btn-1;
 
     @media (max-width: 991.98px) {

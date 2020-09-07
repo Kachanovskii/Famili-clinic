@@ -6,7 +6,7 @@ function showMore() {
             let arrText = elm.textContent;
             let arrShort = arrText.slice(0, 120);
             let $p = elm.parentElement;
-            $p.innerHTML = `<span>— "${arrShort}"...</span><a>Читати повністю >></a>`;
+            $p.innerHTML = `<span>— "${arrShort}"...</span><a>Читати повністю ></a>`;
             showAllText(arrText, arrShort, $p);
         }
     }
@@ -21,14 +21,14 @@ function showMore() {
             }
 
             if (e.target.tagName === 'A') {
-                if (e.target.textContent === 'Читати повністю >>') {
-                    e.target.textContent = '<< Сховати';
+                if (e.target.textContent === 'Читати повністю >') {
+                    e.target.textContent = '< Сховати';
                     e.target.previousElementSibling.textContent = `— "${arrText}"`;
                     currentItem = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
                     currentItem.classList.toggle('openReview');
                 }
                 else {
-                    e.target.textContent = 'Читати повністю >>';
+                    e.target.textContent = 'Читати повністю >';
                     e.target.previousElementSibling.textContent = `— "${arrShort}..."`;
                     currentItem = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
                     currentItem.classList.toggle('openReview');

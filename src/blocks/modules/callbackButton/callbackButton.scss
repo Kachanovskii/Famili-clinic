@@ -62,7 +62,6 @@
 }
 
 .callback-bt-hover {
-    z-index: 1;
     background: $primary-main-5;
     color: transparent;
     transition: .3s;
@@ -317,8 +316,11 @@ $easing: cubic-bezier(.55, 0, .1, 1);
 
         }
 
-        @media (max-width: 440px) {
-            font-size: 20px;
+        @media (max-width: 410px) {
+            padding: 10px 0 20px 0;
+            font-size: 19px;
+            width: 90%;
+            line-height: 25px;
         }
 
         i {
@@ -328,7 +330,7 @@ $easing: cubic-bezier(.55, 0, .1, 1);
 
     p {
         padding: 10px 0 10px 5px;
-        @include font-style(14px, $primary1_300, rgba($primary-main-5, .9));
+        @include font-style(14px, $primary1_300, rgba($primary-main-5, .7));
 
         @media (max-width: 440px) {
             font-size: 12px;
@@ -435,6 +437,10 @@ $easing: cubic-bezier(.55, 0, .1, 1);
         @media (max-width: 440px) {
             padding: 0 15px 5px 15px;
 
+        }
+
+        @media (max-width: 410px) {
+            padding: 10px 15px 5px 15px;
         }
 
     }

@@ -87,6 +87,7 @@
           flex-direction: column;
           padding: 30px 30px 10px 30px;
           transition: 0.3s;
+          border-radius: 5px;
           cursor: pointer;
 
           &:hover {
@@ -213,7 +214,7 @@
                   a {
                     margin-top: 5px;
                     cursor: pointer;
-                    @include font-style(15px, $primary1_400, $base-color);
+                    @include font-style(14px, $primary1_300, $base-color);
                     display: block;
                     width: 150px;
                     transition: 0.3s all;
@@ -257,6 +258,38 @@
             background-size: auto 100px;
           }
         }
+      }
+
+      .all__reviews {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a {
+          cursor: pointer;
+          padding-top: 15px;
+          text-align: right;
+          margin-top: 5px;
+          cursor: pointer;
+          @include font-style(17px, $primary1_300, $base-color);
+          display: block;
+          transition: 0.3s all;
+          margin-right: 20px;
+
+          @media (max-width: 991.98px) {
+            padding-top: 0;
+          }
+
+          i {
+            padding-left: 5px;
+            align-self: flex-end;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
       }
     }
   }

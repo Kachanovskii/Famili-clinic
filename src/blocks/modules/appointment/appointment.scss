@@ -4,11 +4,10 @@
 
     .container {
       .appointment__content {
-        padding-top: 30px;
+        padding-top: 55px;
 
         @media (max-width: 991.98px) {
-          padding: 40px 0 70px 0;
-
+          padding: 55px 0 46px 0;
         }
 
         .appointment__content_main {
@@ -22,7 +21,7 @@
 
 
             .appointment__content__head_text {
-              padding-bottom: 45px;
+              padding-bottom: 40px;
               @include font-style(25px, $primary1_400, $primary-main-5);
             }
 

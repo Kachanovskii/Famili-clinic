@@ -277,16 +277,18 @@
             @include font-style(17px, $primary1_500, $base-text);
           }
 
-          a:hover {
-            opacity: 1;
-          }
+
 
           .mobile-social {
             display: flex;
             justify-content: center;
 
+            a {
+              border: none;
+            }
+
             i {
-              padding-right: 15px;
+              padding: 0 10px;
             }
           }
         }
@@ -295,7 +297,6 @@
           margin-top: 0;
           height: auto;
           opacity: 1;
-          padding: 0;
           background-color: darken($primary-main-5, 1%);
         }
       }

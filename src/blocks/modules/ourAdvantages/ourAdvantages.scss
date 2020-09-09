@@ -9,6 +9,8 @@
         }
 
         .container {
+            border-bottom: 2px solid rgba($base-color, 0.2);
+
             .ourAdvantages__head_text {
                 @include font-style(30px, $primary1_500, $base-color);
                 margin-bottom: 40px;

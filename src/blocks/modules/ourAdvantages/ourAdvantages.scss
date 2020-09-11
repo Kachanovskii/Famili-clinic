@@ -1,6 +1,7 @@
 .ourAdvantages {
     .container-fluid {
-        background-color: $primary-main-7;
+        background-color: rgba($primary-main-1, .03);
+
         padding: 55px 0 0 0;
 
         @media (max-width: 991.98px) {

@@ -1,4 +1,3 @@
-import "../carousel/owl.carousel";
 import "%modules%/upButton/upButton";
 import "%modules%/header/header";
 import "%modules%/appointment/appointment";

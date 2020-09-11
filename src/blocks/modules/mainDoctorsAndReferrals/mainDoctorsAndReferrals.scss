@@ -166,6 +166,10 @@
       .mainDoctorsAndReferrals__cartsOfDoctors {
         padding: 20px 40px 20px 40px;
 
+        @media (max-width: 1199.98px) {
+          padding: 0 0 0 30px;
+        }
+
         .ourDoctors__head-text {
           display: none;
 
@@ -175,10 +179,6 @@
             display: block;
             padding: 40px 0 0 0;
           }
-        }
-
-        @media (max-width: 1199.98px) {
-          padding: 0;
         }
 
         .ourDoctors__main {

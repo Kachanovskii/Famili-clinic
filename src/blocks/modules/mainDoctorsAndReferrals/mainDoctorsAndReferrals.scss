@@ -170,6 +170,10 @@
           padding: 0 0 0 30px;
         }
 
+        @media (max-width: 767.98px) {
+          padding: 0;
+        }
+
         .ourDoctors__head-text {
           display: none;
 

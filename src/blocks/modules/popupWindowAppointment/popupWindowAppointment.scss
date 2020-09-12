@@ -44,7 +44,7 @@ $easing: cubic-bezier(.55, 0, .1, 1);
                 outline: none;
                 padding: 0 10px;
                 @include font-style(13px, $primary1_400, $primary-main-5);
-                background-color: rgba($base-text, 0.1);
+                background-color: rgba($base-text, .03);
                 border: 1px solid rgba(255, 255, 255, 0.4);
                 transition: 0.3s border;
                 cursor: pointer;
@@ -118,7 +118,7 @@ $easing: cubic-bezier(.55, 0, .1, 1);
                     width: 100%;
                     position: relative;
                     z-index: 100;
-                    background-color: rgba($base-text, 0.1);
+                    background-color: rgba($base-text, .03);
                     @include font-style(13px, $primary1_400, $primary-main-5);
 
                     &.open {
@@ -223,6 +223,14 @@ $easing: cubic-bezier(.55, 0, .1, 1);
 
         @media (max-width: 767.98px) {
             margin: 30px 0 15px 0;
+        }
+
+        textarea,
+        input[type="text"],
+        input[type="button"],
+        input[type="submit"] {
+            -webkit-appearance: none;
+            border-radius: 0;
         }
 
         input {

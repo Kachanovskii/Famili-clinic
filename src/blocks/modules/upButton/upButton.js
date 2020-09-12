@@ -13,6 +13,7 @@ jQuery(document).ready(function () {
         }
         else {
             btn.removeClass('show');
+            $("body").css("background-color", "#fcfcfc");
         }
     });
     btn.on('click', function (e) {

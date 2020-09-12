@@ -284,6 +284,11 @@
 
             iframe {
               flex-grow: 1;
+              height: 270px;
+
+              @media (max-width: 991.98px) {
+                height: 200px;
+              }
             }
           }
         }

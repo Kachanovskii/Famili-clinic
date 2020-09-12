@@ -1,6 +1,6 @@
 .ourAdvantages {
     .container-fluid {
-        background-color: rgba($primary-main-1, .03);
+        background-color: $primary-main-8;
 
         padding: 55px 0 0 0;
 
@@ -10,7 +10,7 @@
         }
 
         .container {
-            border-bottom: 2px solid rgba($base-color, 0.2);
+            border-bottom: 2px solid #cdeef4;
 
             .ourAdvantages__head_text {
                 @include font-style(30px, $primary1_500, $base-color);

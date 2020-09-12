@@ -17,14 +17,13 @@
           flex-direction: column;
 
           .breadcrumbs__content {
-            border-bottom: 1px solid rgba($primary-main-5, .5);
+            border-bottom: 1px solid rgba($primary-main-5, 0.5);
             padding: 20px 0 5px 5px;
             @include font-style(17px, $primary1_300, $primary-main-5);
 
             @media (max-width: 767.98px) {
               border-bottom: none;
               padding-bottom: 0;
-
             }
 
             a {
@@ -39,10 +38,9 @@
             }
           }
 
-          .breadcrumbs__content+div {
+          .breadcrumbs__content + div {
             display: flex;
             padding-top: 20px;
-
 
             .mainDoctorsAndReferrals__navbar-head {
               @include font-style(28px, $primary1_500, $primary-main-5);
@@ -80,8 +78,7 @@
   .container-fluid {
     .container {
       .mainDoctorsAndReferrals__navbar {
-        box-shadow: 0 0 5px 2px rgba($primary-main-1, .1);
-
+        box-shadow: 0 0 5px 2px rgba($primary-main-1, 0.1);
 
         .mainDoctorsAndReferrals__navbar-head {
           display: none;
@@ -93,14 +90,13 @@
           }
         }
 
-        background-color: rgba($primary-main-1, .03);
+        background-color: rgba($primary-main-1, 0.03);
         position: relative;
         padding-top: 30px;
 
         @media (max-width: 991.98px) {
           padding-top: 25px;
         }
-
 
         .mainDoctorsAndReferrals__navbar-content {
           transition: 0.3s all;
@@ -112,14 +108,13 @@
             padding-bottom: 30px;
           }
 
-
           li {
             display: flex;
             align-items: center;
             padding: 5px 0;
             cursor: pointer;
             transition: 0.3s color;
-            border-bottom: 1px solid rgba($base-color, .15);
+            border-bottom: 1px solid rgba($base-color, 0.15);
 
             &:hover {
               a {
@@ -204,7 +199,7 @@
               display: flex;
               flex-direction: column;
               align-items: center;
-              justify-content: center;
+              justify-content: flex-start;
               margin: 15px 20px;
               width: calc(33.33% - 40px);
 

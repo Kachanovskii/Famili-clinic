@@ -9,6 +9,12 @@ $easing: cubic-bezier(.55, 0, .1, 1);
         padding-bottom: 45px;
         @include font-style(25px, $primary1_400, $primary-main-5);
 
+        h3 {
+            i {
+                margin-left: 10px;
+            }
+        }
+
         @media (max-width: 575.98px) {
             font-size: 23px;
 
@@ -38,7 +44,7 @@ $easing: cubic-bezier(.55, 0, .1, 1);
                 outline: none;
                 padding: 0 10px;
                 @include font-style(13px, $primary1_400, $primary-main-5);
-                background-color: rgba($base-white, 0.1);
+                background-color: rgba($base-text, .03);
                 border: 1px solid rgba(255, 255, 255, 0.4);
                 transition: 0.3s border;
                 cursor: pointer;
@@ -112,7 +118,7 @@ $easing: cubic-bezier(.55, 0, .1, 1);
                     width: 100%;
                     position: relative;
                     z-index: 100;
-                    background-color: rgba($base-white, 0.1);
+                    background-color: rgba($base-text, .03);
                     @include font-style(13px, $primary1_400, $primary-main-5);
 
                     &.open {
@@ -151,6 +157,7 @@ $easing: cubic-bezier(.55, 0, .1, 1);
                     }
 
                     &__dropdown {
+                        color: rgba($base-text, .7);
                         display: none;
                         border: 1px solid rgba(255, 255, 255, 0.5);
                         border-radius: 0 0 5px 5px;
@@ -186,19 +193,17 @@ $easing: cubic-bezier(.55, 0, .1, 1);
 
                     &__item {
                         padding: 7px 10px;
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-                        background-color: $base-color;
+                        border-bottom: 1px solid rgba($base-color, .2);
+                        background-color: $primary-main-7;
 
                         &.selected {
-                            background-color: $primary-main-5;
-
-                            color: $base-color;
+                            background-color: $base-light;
+                            color: $base-text;
                         }
 
                         &:hover {
-                            background-color: $primary-main-5;
-
-                            color: $base-color;
+                            background-color: $base-light;
+                            color: $base-text;
 
                             cursor: pointer;
                             transition: 0.15s background-color ease-in;
@@ -218,6 +223,14 @@ $easing: cubic-bezier(.55, 0, .1, 1);
 
         @media (max-width: 767.98px) {
             margin: 30px 0 15px 0;
+        }
+
+        textarea,
+        input[type="text"],
+        input[type="button"],
+        input[type="submit"] {
+            -webkit-appearance: none;
+            border-radius: 0;
         }
 
         input {
@@ -244,7 +257,9 @@ $easing: cubic-bezier(.55, 0, .1, 1);
         padding: 40px 30px 10px 30px;
         position: relative;
         margin: 0 auto;
-        background-color: $base-color;
+        // background-color: $base-color;
+        // background: linear-gradient(0deg, lighten($base-color, 30%), darken(#00cec8, 5%));
+        background: linear-gradient(0deg, $base-color, #00cec8);
         width: 600px;
         border-radius: 3px;
         opacity: 0;
@@ -286,7 +301,7 @@ $easing: cubic-bezier(.55, 0, .1, 1);
             backface-visibility: hidden;
             transition: opacity $speed $easing;
             transition-delay: $delay;
-            background-color: $base-color;
+            // background-color: $base-color;
 
         }
 
@@ -320,7 +335,6 @@ $easing: cubic-bezier(.55, 0, .1, 1);
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background-color: rgba($base-text, 0.5);
     opacity: 0;
     visibility: hidden;
     backface-visibility: hidden;

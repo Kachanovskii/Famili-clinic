@@ -1,0 +1,263 @@
+.mainDoctorsAndReferrals {
+  background-color: $primary-main-5;
+  margin-top: 150px;
+
+  @media (max-width: 991.98px) {
+    margin-top: 80px;
+  }
+
+  .breadcrumbs {
+    .container-fluid {
+      background-color: $base-color;
+      position: relative;
+      z-index: 1;
+
+      .container {
+        .row {
+          flex-direction: column;
+
+          .breadcrumbs__content {
+            border-bottom: 1px solid rgba($primary-main-5, 0.5);
+            padding: 20px 0 5px 5px;
+            @include font-style(17px, $primary1_300, $primary-main-5);
+
+            @media (max-width: 767.98px) {
+              border-bottom: none;
+              padding-bottom: 0;
+            }
+
+            a {
+              @include font-style(17px, $primary1_400, $primary-main-5);
+
+              color: $primary-main-5;
+            }
+
+            i {
+              padding: 0 10px;
+              font-size: 12px;
+            }
+          }
+
+          .breadcrumbs__content + div {
+            display: flex;
+            padding-top: 20px;
+
+            .mainDoctorsAndReferrals__navbar-head {
+              @include font-style(28px, $primary1_500, $primary-main-5);
+              padding-left: 15px;
+
+              @media (max-width: 991.98px) {
+                font-size: 25px;
+              }
+
+              @media (max-width: 767.98px) {
+                display: none;
+              }
+            }
+
+            .ourDoctors__head-text {
+              margin: 0 0 20px 0;
+              @include font-style(28px, $primary1_500, $primary-main-5);
+              text-align: center;
+
+              @media (max-width: 991.98px) {
+                font-size: 25px;
+                text-align: right;
+              }
+
+              @media (max-width: 767.98px) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container-fluid {
+    .container {
+      .mainDoctorsAndReferrals__navbar {
+        box-shadow: 0 0 5px 2px rgba($primary-main-1, 0.1);
+
+        .mainDoctorsAndReferrals__navbar-head {
+          display: none;
+          @include font-style(28px, $primary1_500, $base-color);
+          padding-bottom: 15px;
+
+          @media (max-width: 767.98px) {
+            display: block;
+          }
+        }
+
+        background-color: rgba($primary-main-1, 0.03);
+        position: relative;
+        padding-top: 30px;
+
+        @media (max-width: 991.98px) {
+          padding-top: 25px;
+        }
+
+        .mainDoctorsAndReferrals__navbar-content {
+          transition: 0.3s all;
+          position: sticky;
+          top: 110px;
+          padding-bottom: 30px;
+
+          @media (max-width: 991.98px) {
+            padding-bottom: 30px;
+          }
+
+          li {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            cursor: pointer;
+            transition: 0.3s color;
+            border-bottom: 1px solid rgba($base-color, 0.15);
+
+            &:hover {
+              a {
+                color: $base-color;
+              }
+            }
+          }
+
+          .box-img {
+            width: 30px;
+            height: 30px;
+
+            @media (max-width: 1199.98px) {
+              width: 20px;
+              height: 20px;
+            }
+
+            @media (max-width: 991.98px) {
+              width: 30px;
+              height: 30px;
+            }
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+
+          a {
+            padding: 5px 0 5px 8px;
+            @include font-style(16px, $primary1_400, $base-text);
+
+            @media (max-width: 1199.98px) {
+              font-size: 14.3px;
+            }
+
+            @media (max-width: 991.98px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .mainDoctorsAndReferrals__cartsOfDoctors {
+        padding: 20px 40px 20px 40px;
+
+        @media (max-width: 1199.98px) {
+          padding: 0 0 0 30px;
+        }
+
+        @media (max-width: 767.98px) {
+          padding: 0;
+        }
+
+        .ourDoctors__head-text {
+          display: none;
+
+          @media (max-width: 767.98px) {
+            text-align: center;
+            @include font-style(28px, $primary1_500, $base-color);
+            display: block;
+            padding: 40px 0 0 0;
+          }
+        }
+
+        .ourDoctors__main {
+          text-align: center;
+
+          .ourDoctors__cards {
+            display: flex;
+            flex-wrap: wrap;
+
+            @media (max-width: 1199.98px) {
+              padding: 20px 0;
+            }
+
+            @media (max-width: 767.98px) {
+              padding: 0 0 20px 0;
+            }
+
+            .ourDoctors__item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+              margin: 15px 20px;
+              width: calc(33.33% - 40px);
+
+              @media (max-width: 991.98px) {
+                width: calc(50% - 40px);
+              }
+
+              @media (max-width: 466px) {
+                width: calc(100% - 40px);
+              }
+
+              &:hover {
+                img {
+                  box-shadow: 0px 5px 20px rgba($primary-main-1, 0.7);
+                }
+
+                .ourDoctors__name {
+                  color: $base-color;
+                }
+              }
+
+              .ourDoctors__box-img {
+                @media (max-width: 767.98px) {
+                  margin-top: 20px;
+                }
+
+                img {
+                  border-radius: 50%;
+                  max-width: 220px;
+                  height: auto;
+                  transition: 0.3s all;
+
+                  @media (max-width: 1199.98px) {
+                    max-width: 200px;
+                  }
+                }
+              }
+
+              .ourDoctors__rating {
+                padding: 10px 0;
+                color: $base-color;
+                font-size: 13px;
+              }
+
+              .ourDoctors__name {
+                @include font-style(18px, $primary1_500, $base-color);
+                padding-bottom: 8px;
+                transition: 0.3s all;
+              }
+
+              .ourDoctors__trade {
+                @include font-style(14px, $primary1_500, rgba($base-text, 0.7));
+                line-height: 1.2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

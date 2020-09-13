@@ -1,6 +1,7 @@
 .ourAdvantages {
     .container-fluid {
-        background-color: $primary-main-7;
+        background-color: $primary-main-8;
+
         padding: 55px 0 0 0;
 
         @media (max-width: 991.98px) {
@@ -9,7 +10,7 @@
         }
 
         .container {
-            border-bottom: 2px solid rgba($base-color, 0.2);
+            border-bottom: 2px solid #cdeef4;
 
             .ourAdvantages__head_text {
                 @include font-style(30px, $primary1_500, $base-color);
@@ -27,8 +28,6 @@
                     padding: 0 0 25px 0;
 
                 }
-
-                // border-bottom: 1px solid #00cec8;
 
                 .ourAdvantages__item:nth-of-type(-n + 2) {
                     @media (max-width: 767.98px) {

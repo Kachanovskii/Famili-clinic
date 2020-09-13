@@ -1,6 +1,6 @@
 @import "modules/header/header";
 @import "modules/banner/banner";
-@import "modules/directionsOfWork/directionsOfWork.scss";
+@import "modules/directionsOfWork/directionsOfWork";
 @import "modules/footer/footer";
 @import "modules/preloader/preloader";
 @import "modules/appointment/appointment";
@@ -10,4 +10,5 @@
 @import "modules/upButton/upButton";
 @import "modules/popupWindowAppointment/popupWindowAppointment";
 @import "modules/callbackButton/callbackButton";
-@import "modules/pricesAndPromotions/pricesAndPromotions.scss"
+@import "modules/pricesAndPromotions/pricesAndPromotions";
+@import "modules/mainDoctorsAndReferrals/mainDoctorsAndReferrals";

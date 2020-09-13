@@ -1,6 +1,8 @@
 .appointment {
   .container-fluid {
     background-color: $primary-main-1;
+    position: relative;
+    z-index: 1;
 
     .container {
       .appointment__content {
@@ -282,6 +284,11 @@
 
             iframe {
               flex-grow: 1;
+              height: 270px;
+
+              @media (max-width: 991.98px) {
+                height: 200px;
+              }
             }
           }
         }

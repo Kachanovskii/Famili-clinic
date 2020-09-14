@@ -35,7 +35,7 @@
           }
         }
 
-        .breadcrumbs__content + div {
+        .breadcrumbs__content+div {
           display: flex;
           padding-top: 20px;
 
@@ -102,13 +102,11 @@
 
 .promotions {
   padding: 46px 0;
-  background: linear-gradient(
-    180deg,
-    $primary-main-5,
-    $primary-main-5,
-    $primary-main-5,
-    rgb(239, 239, 239)
-  );
+  background: linear-gradient(180deg,
+      $primary-main-5,
+      $primary-main-5,
+      $primary-main-5,
+      rgb(239, 239, 239));
 
   .container {
     .promotions-heading {
@@ -148,7 +146,7 @@
             overflow: hidden;
             // padding: 10px;
             // width: 330px;
-            min-height: 180px;
+            height: 180px;
             border-radius: 5px;
             display: flex;
             flex-direction: column;
@@ -271,7 +269,6 @@
 
   .container {
     .prices-heading {
-      // text-align: center;
       margin: 0 0 40px 0;
       @include font-style(30px, $primary1_500, $base-color);
 
@@ -304,6 +301,7 @@
           cursor: pointer;
           @include font-style(16px, $primary1_400, $base-text);
           transition: 0.3s;
+          position: relative;
 
           p {
             font-size: 19px;
@@ -318,13 +316,30 @@
             transition: transform 0.3s;
           }
 
+          .table__container {
+            overflow: hidden;
+            max-height: 0;
+            min-height: 0;
+            opacity: 0;
+            transition: 0.1s;
+          }
+
+          .show__table {
+            opacity: 1;
+            min-height: 100px;
+            max-height: 1000px;
+          }
+
+
+
           .table-prices {
-            display: none;
             width: 100%;
             border: 1px solid #eee;
 
             tbody {
+
               color: $base-text;
+              height: 0;
 
               tr {
                 width: 100%;

@@ -44,14 +44,17 @@ for (let e of list) {
       e.children[0].style.paddingBottom = '10px';
       e.style.color = '#04aac7';
       e.children[1].style.transform = 'rotate(45deg)';
-      e.children[2].style.display = 'table';
+      // e.children[2].style.display = 'table';
+      e.children[2].classList.add('show__table');
+
       toggle = true;
     }
     else {
       e.children[0].style.paddingBottom = '0px';
       e.style.color = '#505050';
       e.children[1].style.transform = 'rotate(0deg)';
-      e.children[2].style.display = 'none';
+      e.children[2].classList.remove('show__table');
+      // e.children[2].style.display = 'none';
       toggle = false;
     }
   });

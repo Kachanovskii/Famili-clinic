@@ -15,8 +15,8 @@
             @include font-style(17px, $primary1_300, $primary-main-5);
 
             @media (max-width: 767.98px) {
-              border-bottom: none;
-              padding-bottom: 0;
+              // border-bottom: none;
+              // padding-bottom: 0;
             }
 
             a {
@@ -50,33 +50,43 @@
   }
   .mainContact__content {
     background-color: $primary-main-5;
-    padding: 40px 0 60px 0;
+    padding: 30px 0 60px 0;
+    @media (max-width: 767.98px) {
+      padding: 30px 0 10px 0;
+    }
     .container-fluid {
       .container {
         .row {
           .mainContact__content-address {
             @media (max-width: 767.98px) {
               margin-bottom: 30px;
+              padding: 0;
             }
             .content-address__photo-clinic {
-              padding: 0 0 35px 0;
+              padding: 0 0 30px 0;
 
               .box-img {
                 display: flex;
                 justify-content: center;
 
                 img {
-                  height: auto;
-                  max-width: 100%;
+                  height: 100%;
+                  width: 100%;
                 }
               }
             }
             .content-address__main {
               border: 4px solid $base-color;
-              padding: 25px 48px 25px 42px;
+              padding: 20px 0 10px 42px;
               background-color: $primary-main-8;
+              @media (max-width: 991.98px) {
+                padding: 25px 0 15px 30px;
+              }
+              @media (max-width: 767.98px) {
+                padding: 25px 0 10px 42px;
+              }
               @media (max-width: 400px) {
-                padding: 25px 0 25px 20px;
+                padding: 25px 0 15px 20px;
               }
               .content-address__main-content {
                 span {
@@ -105,6 +115,8 @@
           .mainContact__content-map {
             @media (max-width: 767.98px) {
               height: 300px;
+              padding: 0;
+              display: none;
             }
             iframe {
               height: 0;
@@ -142,7 +154,8 @@
         textarea,
         input[type="text"],
         input[type="button"],
-        input[type="submit"] {
+        input[type="submit"],
+        input[type="email"] {
           -webkit-appearance: none;
           border-radius: 0;
         }
@@ -169,6 +182,7 @@
               border-bottom: 1px solid rgba($base-text, 0.2);
               background-color: $primary-main-5;
               @include font-style(16px, $primary1_300, $base-text);
+              cursor: pointer;
             }
           }
         }
@@ -183,13 +197,14 @@
             outline: none;
             resize: none;
             background-color: $primary-main-5;
+            cursor: pointer;
           }
         }
         .contact-form__button {
           padding-left: 15px;
 
           input {
-            padding: 15px 25px;
+            padding: 11px 20px;
             background-color: $base-color;
             border: 1px solid rgba(255, 255, 255, 0.5);
             @include font-style(16px, $primary1_400, $primary-main-5);

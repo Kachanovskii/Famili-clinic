@@ -41,19 +41,19 @@ for (let e of list) {
   e.addEventListener('click', function () {
     console.log(e.children);
     if (toggle == false) {
-      e.children[0].style.paddingBottom = '10px';
+      e.children[1].style.paddingBottom = '10px';
       e.style.color = '#04aac7';
-      e.children[1].style.transform = 'rotate(45deg)';
+      e.children[2].style.transform = 'rotate(45deg)';
       // e.children[2].style.display = 'table';
-      e.children[2].classList.add('show__table');
+      e.children[3].classList.add('show__table');
 
       toggle = true;
     }
     else {
-      e.children[0].style.paddingBottom = '0px';
+      e.children[1].style.paddingBottom = '0px';
       e.style.color = '#505050';
-      e.children[1].style.transform = 'rotate(0deg)';
-      e.children[2].classList.remove('show__table');
+      e.children[2].style.transform = 'rotate(0deg)';
+      e.children[3].classList.remove('show__table');
       // e.children[2].style.display = 'none';
       toggle = false;
     }

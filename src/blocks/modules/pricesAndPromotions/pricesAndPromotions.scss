@@ -110,14 +110,14 @@
 
   .container {
     .promotions-heading {
+      text-align: center;
       margin: 0 0 40px 0;
       // text-align: center;
-      @include font-style(30px, $primary1_500, darken(#f27e63, 5%));
+      // @include font-style(30px, $primary1_500, darken(#f27e63, 5%));
 
-      h3 {
-        @media (max-width: 991.98px) {
-          // width: 70%;
-        }
+      h2 {
+        @include font-style(30px, $primary1_500, darken(#f27e63, 5%));
+
 
         @media (max-width: 767.98px) {
           width: 100%;
@@ -133,6 +133,47 @@
           bottom: -6px;
         }
       }
+
+      h3 {
+        padding-top: 10px;
+        @include font-style(20px, $primary1_400, $base-text);
+
+        strong {
+          font-family: $primary1_500;
+        }
+      }
+
+      a {
+        padding-top: 12px;
+        display: block;
+        @include font-style(17px, $primary1_400, darken($base-color, 5%));
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        h2 {
+
+          font-size: 28px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        h2 {
+
+          font-size: 25px;
+        }
+
+        h3 {
+          font-size: 17px;
+        }
+      }
     }
 
     .promotions-content {
@@ -144,9 +185,8 @@
 
           .promotions-card-content {
             overflow: hidden;
-            // padding: 10px;
             // width: 330px;
-            height: 180px;
+            // height: 180px;
             border-radius: 5px;
             display: flex;
             flex-direction: column;
@@ -165,17 +205,14 @@
             }
 
             .promotions-card-heading {
-              margin: 10px;
-              // background-color: rgba(255, 255, 255, 0.8);
               border-radius: 5px;
-              padding: 10px;
+              padding: 15px;
               margin-bottom: 15px;
               display: flex;
 
               .card-img {
-                padding-left: 10px;
-                margin: 0 auto;
                 width: 75px;
+                padding-left: 15px;
               }
 
               p {
@@ -200,7 +237,7 @@
 
             .promotions-card-info {
               background: rgba(255, 255, 255, 0.8);
-              padding: 15px;
+              padding: 10px 15px;
 
               display: flex;
               justify-content: space-between;
@@ -243,19 +280,14 @@
 
           .promotions-card2 {
             background: linear-gradient(45deg, #04d99d, lighten(#04d99d, 15%));
-            // background-color: #04d99d;
           }
 
           .promotions-card3 {
             background: linear-gradient(45deg, #f27e63, lighten(#f27e63, 15%));
-
-            // background-color: #f27e63;
           }
 
           .promotions-card4 {
             background: linear-gradient(45deg, #6805f2, lighten(#6805f2, 15%));
-
-            // background-color: #6805f2;
           }
         }
       }
@@ -270,9 +302,16 @@
   .container {
     .prices-heading {
       margin: 0 0 40px 0;
-      @include font-style(30px, $primary1_500, $base-color);
+      text-align: center;
+
+      h2 {
+        @include font-style(30px, $primary1_500, $base-color);
+      }
 
       h3 {
+        padding-top: 10px;
+        @include font-style(20px, $primary1_400, $base-text);
+
         @media (max-width: 991.98px) {
           // width: 70%;
         }
@@ -290,11 +329,49 @@
           bottom: -6px;
         }
       }
+
+      @media (max-width: 991.98px) {
+        h2 {
+
+          font-size: 28px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        h2 {
+
+          font-size: 25px;
+        }
+
+        h3 {
+          font-size: 17px;
+        }
+      }
     }
 
     .prices-content {
+      border-radius: 15px;
+      background-color: #fff;
+      padding: 35px 0px 50px;
+
+      .list-heading {
+        padding: 0px 15px 15px;
+        text-transform: uppercase;
+        @include font-style(15px, $primary1_400, lighten($base-text, 30%));
+      }
+
       .prices-list {
+        padding: 0px 15px 0px 37px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+
+
         .prices-list__item {
+          position: relative;
           border-top: 1px solid #eee;
           padding: 15px 0;
           position: relative;
@@ -303,31 +380,46 @@
           transition: 0.3s;
           position: relative;
 
+
+
+          i {
+            position: absolute;
+            top: 12px;
+            left: -25px;
+            color: $base-color;
+            font-size: 22px;
+          }
+
           p {
             font-size: 19px;
           }
 
           span {
+            text-align: center;
             top: 15px;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 500;
             position: absolute;
             right: 0;
             transition: transform 0.3s;
+
           }
 
           .table__container {
+            // margin-left: -22px;
             overflow: hidden;
-            max-height: 0;
+            max-height: 0px;
+            height: 0;
             min-height: 0;
             opacity: 0;
-            transition: 0.1s;
+            transition: 0.3s;
           }
 
           .show__table {
             opacity: 1;
-            min-height: 100px;
+            height: auto;
             max-height: 1000px;
+            min-height: 100px;
           }
 
 
@@ -338,8 +430,7 @@
 
             tbody {
 
-              color: $base-text;
-              height: 0;
+              color: lighten($base-text, 10%);
 
               tr {
                 width: 100%;
@@ -350,13 +441,17 @@
 
                 .prices-detail {
                   font-size: 12px;
-                  color: lighten($base-text, 10%);
+                  color: lighten($base-text, 15%);
                 }
               }
             }
           }
 
           @media (max-width: 767.98px) {
+            .list-heading {
+              font-size: 15px;
+            }
+
             font-size: 14px;
 
             p {
@@ -367,12 +462,20 @@
               tbody {
                 tr {
                   td {
-                    padding: 10px 8px;
+                    padding: 15px 10px;
+                  }
+
+                  td:nth-of-type(2) {
+                    width: 70px;
                   }
                 }
               }
             }
           }
+        }
+
+        .prices-list__item:nth-of-type(1) {
+          border: none;
         }
       }
     }

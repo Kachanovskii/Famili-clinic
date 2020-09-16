@@ -1,0 +1,224 @@
+.mainContact {
+  .breadcrumbs {
+    .container-fluid {
+      background-color: $base-color;
+      position: relative;
+      z-index: 1;
+
+      .container {
+        .row {
+          flex-direction: column;
+
+          .breadcrumbs__content {
+            border-bottom: 1px solid rgba($primary-main-5, 0.5);
+            padding: 20px 0 5px 5px;
+            @include font-style(17px, $primary1_300, $primary-main-5);
+
+            @media (max-width: 767.98px) {
+              // border-bottom: none;
+              // padding-bottom: 0;
+            }
+
+            a {
+              @include font-style(17px, $primary1_400, $primary-main-5);
+
+              color: $primary-main-5;
+            }
+
+            i {
+              padding: 0 10px;
+              font-size: 12px;
+            }
+          }
+
+          .breadcrumbs__content + div {
+            padding-top: 20px;
+
+            .mainContact__head-text {
+              margin: 0 0 20px 0;
+
+              @include font-style(28px, $primary1_500, $primary-main-5);
+
+              @media (max-width: 991.98px) {
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mainContact__content {
+    background-color: $primary-main-5;
+    padding: 30px 0 60px 0;
+    @media (max-width: 767.98px) {
+      padding: 30px 0 10px 0;
+    }
+    .container-fluid {
+      .container {
+        .row {
+          .mainContact__content-address {
+            @media (max-width: 767.98px) {
+              margin-bottom: 30px;
+              padding: 0;
+            }
+            .content-address__photo-clinic {
+              padding: 0 0 30px 0;
+
+              .box-img {
+                display: flex;
+                justify-content: center;
+
+                img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+            }
+            .content-address__main {
+              border: 4px solid $base-color;
+              padding: 20px 0 10px 42px;
+              background-color: $primary-main-8;
+              @media (max-width: 991.98px) {
+                padding: 25px 0 15px 30px;
+              }
+              @media (max-width: 767.98px) {
+                padding: 25px 0 10px 42px;
+              }
+              @media (max-width: 400px) {
+                padding: 25px 0 15px 20px;
+              }
+              .content-address__main-content {
+                span {
+                  @include font-style(16px, $primary1_500, $base-text);
+                  display: block;
+                  margin-bottom: 11px;
+                }
+                a,
+                p {
+                  @include font-style(14px, $primary1_300, rgba($base-text, 0.8));
+                  line-height: 24px;
+                  padding-bottom: 15px;
+                  i {
+                    color: $base-color;
+                    padding-right: 7px;
+                  }
+                  a {
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .mainContact__content-map {
+            @media (max-width: 767.98px) {
+              height: 300px;
+              padding: 0;
+              display: none;
+            }
+            iframe {
+              height: 0;
+              max-height: 100%;
+              max-width: 100%;
+              min-height: 100%;
+              min-width: 100%;
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .write-to-us {
+    padding-bottom: 60px;
+    background-color: $primary-main-5;
+    .container-fluid {
+      .container {
+        .write-to-us__head-text {
+          margin: 0 0 40px 0;
+          @include font-style(30px, $primary1_500, $base-text);
+
+          &::after {
+            content: "";
+            display: block;
+            width: 150px;
+            border-bottom: 2px solid;
+            position: relative;
+            bottom: -6px;
+          }
+        }
+      }
+      form {
+        textarea,
+        input[type="text"],
+        input[type="button"],
+        input[type="submit"],
+        input[type="email"] {
+          -webkit-appearance: none;
+          border-radius: 0;
+        }
+        .write-to-us__box_inputs {
+          span {
+            display: block;
+            position: relative;
+            i {
+              position: absolute;
+              left: 0;
+              bottom: 53%;
+              font-size: 25px;
+              color: $base-color;
+            }
+            input:first-of-type {
+              margin: 0 0 30px;
+            }
+            input {
+              width: 100%;
+              line-height: 18px;
+              border: none;
+              outline: none;
+              padding: 14px 0 12px 40px;
+              border-bottom: 1px solid rgba($base-text, 0.2);
+              background-color: $primary-main-5;
+              @include font-style(16px, $primary1_300, $base-text);
+              cursor: pointer;
+            }
+          }
+        }
+        .write-to-us__box_textarea {
+          textarea {
+            @include font-style(16px, $primary1_300, $base-text);
+            border: 1px solid rgba($base-text, 0.2);
+            width: 100%;
+            height: calc(100% - 29px);
+            line-height: 18px;
+            padding: 14px 15px 12px;
+            outline: none;
+            resize: none;
+            background-color: $primary-main-5;
+            cursor: pointer;
+          }
+        }
+        .contact-form__button {
+          padding-left: 15px;
+
+          input {
+            padding: 11px 20px;
+            background-color: $base-color;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            @include font-style(16px, $primary1_400, $primary-main-5);
+            transition: 0.3s all;
+            cursor: pointer;
+            outline: none;
+            border-radius: 0;
+
+            &:hover {
+              background-color: rgba($base-color, 0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+}

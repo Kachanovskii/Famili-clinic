@@ -1,77 +1,3 @@
-.breadcrumbs {
-  margin-top: 150px;
-
-  @media (max-width: 991.98px) {
-    margin-top: 80px;
-  }
-
-  .container-fluid {
-    background-color: $base-color;
-    position: relative;
-    z-index: 1;
-
-    .container {
-      .row {
-        flex-direction: column;
-
-        .breadcrumbs__content {
-          border-bottom: 1px solid rgba($primary-main-5, 0.5);
-          padding: 15px 0 15px 5px;
-          @include font-style(17px, $primary1_300, $primary-main-5);
-
-          @media (max-width: 767.98px) {
-            border-bottom: none;
-          }
-
-          a {
-            @include font-style(17px, $primary1_400, $primary-main-5);
-
-            color: $primary-main-5;
-          }
-
-          i {
-            padding: 0 10px;
-            font-size: 12px;
-          }
-        }
-
-        .breadcrumbs__content+div {
-          display: flex;
-          padding-top: 20px;
-
-          .mainDoctorsAndReferrals__navbar-head {
-            @include font-style(28px, $primary1_500, $primary-main-5);
-            padding-left: 15px;
-
-            @media (max-width: 991.98px) {
-              font-size: 25px;
-            }
-
-            @media (max-width: 767.98px) {
-              display: none;
-            }
-          }
-
-          .ourDoctors__head-text {
-            margin: 0 0 20px 0;
-            @include font-style(28px, $primary1_500, $primary-main-5);
-            text-align: center;
-
-            @media (max-width: 991.98px) {
-              font-size: 25px;
-              text-align: right;
-            }
-
-            @media (max-width: 767.98px) {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .ribbon {
   padding: 10px;
 
@@ -102,11 +28,13 @@
 
 .promotions {
   padding: 46px 0;
-  background: linear-gradient(180deg,
-      $primary-main-5,
-      $primary-main-5,
-      $primary-main-5,
-      rgb(239, 239, 239));
+  background: linear-gradient(
+    180deg,
+    $primary-main-5,
+    $primary-main-5,
+    $primary-main-5,
+    rgb(239, 239, 239)
+  );
 
   .container {
     .promotions-heading {
@@ -118,13 +46,12 @@
       h2 {
         @include font-style(30px, $primary1_500, darken(#f27e63, 5%));
 
-
         @media (max-width: 767.98px) {
           width: 100%;
         }
 
         &::after {
-          content: '';
+          content: "";
           display: block;
           width: 150px;
 
@@ -155,7 +82,6 @@
 
       @media (max-width: 991.98px) {
         h2 {
-
           font-size: 28px;
         }
 
@@ -166,7 +92,6 @@
 
       @media (max-width: 767.98px) {
         h2 {
-
           font-size: 25px;
         }
 
@@ -186,7 +111,7 @@
           .promotions-card-content {
             overflow: hidden;
             // width: 330px;
-            // height: 180px;
+            height: 180px;
             border-radius: 5px;
             display: flex;
             flex-direction: column;
@@ -238,8 +163,8 @@
             .promotions-card-info {
               background: rgba(255, 255, 255, 0.8);
               padding: 10px 15px;
-
               display: flex;
+              flex: 0 0 auto;
               justify-content: space-between;
               @include font-style(15px, $primary1_400, $base-text);
 
@@ -258,7 +183,7 @@
 
                 &:before {
                   position: absolute;
-                  content: '';
+                  content: "";
                   height: 1px;
                   width: 100%;
                   background-color: #e72a19;
@@ -321,7 +246,7 @@
         }
 
         &::after {
-          content: '';
+          content: "";
           display: block;
           width: 150px;
           // border-bottom: 2px solid;
@@ -332,7 +257,6 @@
 
       @media (max-width: 991.98px) {
         h2 {
-
           font-size: 28px;
         }
 
@@ -343,7 +267,6 @@
 
       @media (max-width: 767.98px) {
         h2 {
-
           font-size: 25px;
         }
 
@@ -369,7 +292,6 @@
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
 
-
         .prices-list__item {
           position: relative;
           border-top: 1px solid #eee;
@@ -379,8 +301,6 @@
           @include font-style(16px, $primary1_400, $base-text);
           transition: 0.3s;
           position: relative;
-
-
 
           i {
             position: absolute;
@@ -402,7 +322,6 @@
             position: absolute;
             right: 0;
             transition: transform 0.3s;
-
           }
 
           .table__container {
@@ -422,14 +341,11 @@
             min-height: 100px;
           }
 
-
-
           .table-prices {
             width: 100%;
             border: 1px solid #eee;
 
             tbody {
-
               color: lighten($base-text, 10%);
 
               tr {

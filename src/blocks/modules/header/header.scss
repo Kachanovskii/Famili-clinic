@@ -86,7 +86,6 @@
       .sticky {
         margin-top: -61px;
       }
-
     }
   }
 
@@ -277,8 +276,6 @@
             @include font-style(17px, $primary1_500, $base-text);
           }
 
-
-
           .mobile-social {
             display: flex;
             justify-content: center;
@@ -300,7 +297,6 @@
           background-color: darken($primary-main-5, 1%);
         }
       }
-
     }
   }
 }

@@ -1,6 +1,7 @@
 .mainContact {
   .mainContact__content {
-    background-color: $primary-main-5;
+    background-color: #f8f9fc;
+
     padding: 30px 0 60px 0;
     @media (max-width: 767.98px) {
       padding: 30px 0 10px 0;
@@ -29,7 +30,7 @@
             .content-address__main {
               border: 3px solid $base-color;
               padding: 20px 0 10px 42px;
-              background-color: $primary-main-8;
+              background-color: $primary-main-5;
               @media (max-width: 991.98px) {
                 padding: 25px 0 15px 30px;
               }
@@ -84,7 +85,7 @@
   }
   .write-to-us {
     padding-bottom: 60px;
-    background-color: $primary-main-5;
+    background-color: #f8f9fc;
     .container-fluid {
       .container {
         .write-to-us__head-text {
@@ -131,7 +132,8 @@
               outline: none;
               padding: 14px 0 12px 40px;
               border-bottom: 1px solid rgba($base-text, 0.2);
-              background-color: $primary-main-5;
+              background-color: #f8f9fc;
+
               @include font-style(16px, $primary1_300, $base-text);
               cursor: pointer;
             }
@@ -147,7 +149,7 @@
             padding: 14px 15px 12px;
             outline: none;
             resize: none;
-            background-color: $primary-main-5;
+            background-color: #f8f9fc;
             cursor: pointer;
           }
         }

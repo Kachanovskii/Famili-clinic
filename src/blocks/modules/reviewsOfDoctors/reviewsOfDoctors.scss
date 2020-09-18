@@ -20,7 +20,7 @@
 
           h3 {
             &::after {
-              content: '';
+              content: "";
               display: block;
               width: 150px;
               border-bottom: 2px solid;
@@ -83,8 +83,7 @@
 
         .review__item {
           box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
-          background-color: rgba($primary-main-1, .03);
-
+          background-color: #f8f9fc;
           display: flex;
           flex-direction: column;
           padding: 30px 30px 10px 30px;
@@ -107,9 +106,9 @@
           }
 
           .review__doctor {
+            text-align: center;
             @media (max-width: 991.98px) {
               width: 45%;
-              text-align: center;
             }
 
             @media (max-width: 575.98px) {
@@ -125,7 +124,7 @@
               width: 90px;
               height: 90px;
               border-radius: 50%;
-              background-image: url('../img/ourDoctors4.jpg');
+              background-image: url("../img/ourDoctors4.jpg");
               background-position: center;
               background-size: cover;
               margin-bottom: 20px;
@@ -139,7 +138,7 @@
               a {
                 @include font-style(17px, $primary1_400, $base-text);
                 margin-bottom: 5px;
-                transition: .3s;
+                transition: 0.3s;
 
                 &:hover {
                   color: $base-color;
@@ -181,7 +180,7 @@
                   width: 50px;
                   height: 50px;
                   border-radius: 50%;
-                  background-image: url('../img/customer-girl.jpg');
+                  background-image: url("../img/customer-girl.jpg");
                   background-position: -5px;
                   background-size: auto 50px;
                   position: relative;
@@ -239,11 +238,14 @@
 
         .review__item:nth-of-type(2) {
           .review__doctor__box-img {
-            background-image: url('../img/ourDoctors2.jpg');
+            background-image: url("../img/ourDoctors2.jpg");
           }
 
-          .review__customer .review__customer__content .review__customer__info .review__customer__box-img {
-            background-image: url('../img/customer-girl-2.jpg');
+          .review__customer
+            .review__customer__content
+            .review__customer__info
+            .review__customer__box-img {
+            background-image: url("../img/customer-girl-2.jpg");
             background-position: center;
             background-size: auto 50px;
           }
@@ -251,11 +253,14 @@
 
         .review__item:nth-of-type(3) {
           .review__doctor__box-img {
-            background-image: url('../img/ourDoctors3.jpg');
+            background-image: url("../img/ourDoctors3.jpg");
           }
 
-          .review__customer .review__customer__content .review__customer__info .review__customer__box-img {
-            background-image: url('../img/customer-men.jpeg');
+          .review__customer
+            .review__customer__content
+            .review__customer__info
+            .review__customer__box-img {
+            background-image: url("../img/customer-men.jpeg");
             background-position: 0 0;
             background-size: auto 100px;
           }
@@ -291,7 +296,6 @@
             text-decoration: underline;
           }
         }
-
       }
     }
   }

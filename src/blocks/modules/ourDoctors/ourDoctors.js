@@ -3,7 +3,7 @@
 $(document).ready(function () {
     $('.owl-two').owlCarousel({
         loop: true,
-        margin: 10,
+        margin: 20,
         responsiveClass: true,
         dots: false,
         smartSpeed: 900,

@@ -1,135 +1,135 @@
 // *******************   ourDoctors  **************************
 .ourDoctors {
-    .container-fluid {
-        background-color: $base-color;
+  .container-fluid {
+    background-color: $base-color;
 
-        .container {
-            .ourDoctors__container {
-                padding: 50px 0 40px 0;
+    .container {
+      padding: 0;
+      .ourDoctors__container {
+        padding: 50px 0 40px 0;
 
-                @media (max-width: 767.98px) {
-                    padding: 40px 0 0 0;
-
-                }
-
-                .ourDoctors__head {
-                    .ourDoctors__head-text {
-                        margin: 0 0 40px 0;
-                        @include font-style(30px, $primary1_500, $base-light);
-
-                        h3 {
-                            @media (max-width: 991.98px) {
-                                width: 70%;
-                            }
-
-                            @media (max-width: 767.98px) {
-                                width: 100%;
-                            }
-
-                            &::after {
-                                content: "";
-                                display: block;
-                                width: 150px;
-                                border-bottom: 2px solid;
-                                position: relative;
-                                bottom: -6px;
-                            }
-                        }
-                    }
-                }
-
-                .ourDoctors__main {
-                    text-align: center;
-
-                    .ourDoctors__cards {
-                        padding: 0 35px;
-                        position: relative;
-
-                        @media (max-width: 767.98px) {
-                            padding: 30px 0;
-                        }
-
-                        .owl-nav {
-                            position: absolute;
-                            top: -85px;
-                            right: 0;
-                            text-align: right;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            @media (max-width: 767.98px) {
-                                left: 0;
-                                right: auto;
-                                top: -20px;
-                            }
-
-                            button {
-                                width: 60px;
-                                height: 60px;
-                                border: 1px solid $base-light;
-                                border-radius: 50%;
-                                cursor: pointer;
-                                margin-left: 20px;
-                                color: $base-light;
-                                outline: none;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-
-                                span {
-                                    margin: 0 auto;
-                                    @include font-style(30px, $primary1_400, $base-light);
-                                }
-                            }
-                        }
-
-                        .ourDoctors__item {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-
-                            &:hover {
-                                img {
-                                    box-shadow: 0px 10px 20px #dce4e6;
-                                }
-                            }
-
-                            .ourDoctors__box-img {
-                                @media (max-width: 767.98px) {
-                                    margin-top: 20px;
-                                }
-
-
-                                img {
-                                    border-radius: 50%;
-                                    max-width: 220px;
-                                    height: auto;
-                                    transition: .5s all;
-                                }
-                            }
-
-                            .ourDoctors__rating {
-                                padding: 10px 0;
-                                color: $base-light;
-                                font-size: 13px;
-                            }
-
-                            .ourDoctors__name {
-                                @include font-style(18px, $primary1_500, $base-light);
-                                padding-bottom: 8px;
-                            }
-
-                            .ourDoctors__trade {
-                                @include font-style(14px, $primary1_500, rgba(255, 255, 255, .7));
-                                line-height: 1.2;
-                            }
-                        }
-                    }
-                }
-            }
+        @media (max-width: 767.98px) {
+          padding: 40px 0 0 0;
         }
+
+        .ourDoctors__head {
+          .ourDoctors__head-text {
+            padding: 0;
+            margin: 0 0 40px 0;
+            @include font-style(30px, $primary1_500, $base-light);
+
+            h3 {
+              @media (max-width: 991.98px) {
+                width: 70%;
+              }
+
+              @media (max-width: 767.98px) {
+                width: 100%;
+              }
+
+              &::after {
+                content: "";
+                display: block;
+                width: 150px;
+                border-bottom: 2px solid;
+                position: relative;
+                bottom: -6px;
+              }
+            }
+          }
+        }
+
+        .ourDoctors__main {
+          text-align: center;
+
+          .ourDoctors__cards {
+            padding: 0 35px;
+            position: relative;
+
+            @media (max-width: 767.98px) {
+              padding: 30px 0;
+            }
+
+            .owl-nav {
+              position: absolute;
+              top: -85px;
+              right: 0;
+              text-align: right;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              @media (max-width: 767.98px) {
+                left: 0;
+                right: auto;
+                top: -20px;
+              }
+
+              button {
+                width: 60px;
+                height: 60px;
+                border: 1px solid $base-light;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-left: 20px;
+                color: $base-light;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                  margin: 0 auto;
+                  @include font-style(30px, $primary1_400, $base-light);
+                }
+              }
+            }
+
+            .ourDoctors__item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              &:hover {
+                img {
+                  box-shadow: 0px 10px 20px #dce4e6;
+                }
+              }
+
+              .ourDoctors__box-img {
+                @media (max-width: 767.98px) {
+                  margin-top: 20px;
+                }
+
+                img {
+                  border-radius: 50%;
+                  max-width: 220px;
+                  height: auto;
+                  transition: 0.5s all;
+                }
+              }
+
+              .ourDoctors__rating {
+                padding: 10px 0;
+                color: $base-light;
+                font-size: 13px;
+              }
+
+              .ourDoctors__name {
+                @include font-style(18px, $primary1_500, $base-light);
+                padding-bottom: 8px;
+              }
+
+              .ourDoctors__trade {
+                @include font-style(14px, $primary1_500, rgba(255, 255, 255, 0.7));
+                line-height: 1.2;
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 // *******************   ourDoctors  **************************

@@ -278,9 +278,9 @@
           cursor: pointer;
           padding-top: 15px;
           text-align: right;
-          margin-top: 5px;
+          margin-top: 10px;
           cursor: pointer;
-          @include font-style(16px, $primary1_300, $base-color);
+          @include font-style(16px, $primary1_400, $base-color);
           display: block;
           transition: 0.3s all;
           margin-right: 20px;

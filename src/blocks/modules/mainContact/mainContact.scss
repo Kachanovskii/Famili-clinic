@@ -102,6 +102,10 @@
         border-radius: 8px;
         border-right: 3px solid $base-color;
         background-color: #fff;
+        @media (max-width: 575.98px) {
+          padding: 30px;
+        }
+
         .write-to-us__head-text {
           margin: 0 0 40px 0;
           @include font-style(28px, $primary1_500, $base-text);

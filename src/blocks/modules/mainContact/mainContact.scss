@@ -2,7 +2,7 @@
   .mainContact__content {
     background-color: #f8f9fc;
 
-    padding: 60px 0;
+    padding: 60px 0 30px 0;
     @media (max-width: 767.98px) {
       padding: 60px 0 10px 0;
     }
@@ -22,15 +22,21 @@
                 justify-content: center;
 
                 img {
+                  box-shadow: 0px 10px 20px rgba(#000, 0.1);
+
                   height: 100%;
                   width: 100%;
+                  border-radius: 8px;
                 }
               }
             }
             .content-address__main {
-              border: 3px solid $base-color;
+              box-shadow: 0px 10px 20px rgba(#000, 0.1);
+
+              border-left: 3px solid $base-color;
+              border-radius: 8px;
               padding: 20px 0 10px 42px;
-              background-color: $primary-main-5;
+              background-color: #fff;
               @media (max-width: 991.98px) {
                 padding: 25px 0 15px 30px;
               }
@@ -71,6 +77,9 @@
               display: none;
             }
             iframe {
+              box-shadow: 0px 10px 20px rgba(#000, 0.1);
+              border-radius: 8px;
+
               height: 0;
               max-height: 100%;
               max-width: 100%;
@@ -88,9 +97,14 @@
     background-color: #f8f9fc;
     .container-fluid {
       .container {
+        box-shadow: 0px 10px 20px rgba(#000, 0.1);
+        padding: 40px;
+        border-radius: 8px;
+        border-right: 3px solid $base-color;
+        background-color: #fff;
         .write-to-us__head-text {
           margin: 0 0 40px 0;
-          @include font-style(30px, $primary1_500, $base-text);
+          @include font-style(28px, $primary1_500, $base-text);
 
           &::after {
             content: "";
@@ -132,7 +146,7 @@
               outline: none;
               padding: 14px 0 12px 40px;
               border-bottom: 1px solid rgba($base-text, 0.2);
-              background-color: #f8f9fc;
+              background-color: #fff;
 
               @include font-style(16px, $primary1_300, $base-text);
               cursor: pointer;
@@ -149,7 +163,7 @@
             padding: 14px 15px 12px;
             outline: none;
             resize: none;
-            background-color: #f8f9fc;
+            background-color: #fff;
             cursor: pointer;
           }
         }
@@ -160,11 +174,11 @@
             padding: 11px 20px;
             background-color: $base-color;
             border: 1px solid rgba(255, 255, 255, 0.5);
-            @include font-style(16px, $primary1_400, $primary-main-5);
+            @include font-style(16px, $primary1_400, $base-light);
             transition: 0.3s all;
             cursor: pointer;
             outline: none;
-            border-radius: 0;
+            border-radius: 6px;
 
             &:hover {
               background-color: rgba($base-color, 0.7);

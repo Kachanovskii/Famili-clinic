@@ -55,13 +55,13 @@
 
 .callback-bt-hover i {
   display: none;
-  color: $primary-main-5;
+  color: $base-light;
   font-size: 40px;
   transition: 0.3s;
 }
 
 .callback-bt-hover {
-  background: $primary-main-5;
+  background: $base-light;
   color: transparent;
   transition: 0.3s;
   border: 2px solid transparent;
@@ -76,20 +76,20 @@
 
 .callback-bt:hover i {
   display: none;
-  color: $primary-main-5;
+  color: $base-light;
   font-size: 40px;
   transition: 0.3s;
 }
 
 .callback-bt:hover {
-  background: $primary-main-5;
+  background: $base-light;
   color: transparent;
   transition: 0.3s;
   border: 2px solid transparent;
 }
 
 .callback-bt i {
-  color: $primary-main-5;
+  color: $base-light;
   font-size: 34px;
   transition: 0.3s;
   line-height: 66px;
@@ -290,7 +290,7 @@ $delay: ($speed * 0.5);
 $easing: cubic-bezier(0.55, 0, 0.1, 1);
 
 .callback-bt-input {
-  @include font-style(16px, $primary1_300, $primary-main-5);
+  @include font-style(16px, $primary1_300, $base-light);
   background: linear-gradient(0deg, $base-color, #00cec8);
   width: 700px;
   border-radius: 3px;
@@ -313,7 +313,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
 
   h4 {
     padding: 20px 0 40px 0;
-    @include font-style(22px, $primary1_400, $primary-main-5);
+    @include font-style(22px, $primary1_400, $base-light);
 
     @media (max-width: 575.98px) {
       padding: 20px 0 30px 0;
@@ -334,7 +334,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
 
   p {
     padding: 10px 0 10px 5px;
-    @include font-style(14px, $primary1_300, rgba($primary-main-5, 0.7));
+    @include font-style(14px, $primary1_300, rgba($base-light, 0.7));
 
     @media (max-width: 440px) {
       font-size: 12px;
@@ -352,7 +352,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
     input {
       max-width: 60%;
       padding: 13px;
-      background-color: $primary-main-5;
+      background-color: $base-light;
       flex-grow: 1;
       border: none;
       outline: none;
@@ -385,10 +385,10 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
     input[type="submit"] {
       max-width: 40%;
       background-color: $primary-btn-1;
-      color: $primary-main-5;
+      color: $base-light;
       cursor: pointer;
       border: none;
-      @include font-style(16px, $primary1_400, $primary-main-5);
+      @include font-style(16px, $primary1_400, $base-light);
       border: 1px inset transparent;
       transition: 0.3s border;
       border-radius: 0;
@@ -403,7 +403,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
       }
 
       &:hover {
-        border-color: $primary-main-5;
+        border-color: $base-light;
       }
     }
   }

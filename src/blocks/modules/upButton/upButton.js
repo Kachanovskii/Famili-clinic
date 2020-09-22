@@ -7,13 +7,13 @@ jQuery(document).ready(function () {
                 $("body").css("background-color", "#0c4459");
                 $(".footer_main").css("visibility", "visible");
             } else {
-                $("body").css("background-color", "#fcfcfc");
+                $("body").css("background-color", "#fff");
                 $(".footer_main").css("visibility", "hidden");
             }
         }
         else {
             btn.removeClass('show');
-            $("body").css("background-color", "#fcfcfc");
+            $("body").css("background-color", "#fff");
         }
     });
     btn.on('click', function (e) {

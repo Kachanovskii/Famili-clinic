@@ -15,12 +15,12 @@
 
         .breadcrumbs__content {
           padding: 15px 0 5px 0;
-          @include font-style(17px, $primary1_300, $primary-main-5);
+          @include font-style(17px, $primary1_300, $base-light);
 
           a {
-            @include font-style(17px, $primary1_400, $primary-main-5);
+            @include font-style(17px, $primary1_400, $base-light);
 
-            color: $primary-main-5;
+            color: $base-light;
           }
 
           i {
@@ -50,7 +50,7 @@
               }
             }
 
-            @include font-style(28px, $primary1_500, $primary-main-5);
+            @include font-style(28px, $primary1_500, $base-light);
 
             // @media (max-width: 991.98px) {
             //   font-size: 25px;

@@ -1,0 +1,111 @@
+.doctorDetails {
+  .doctorDetails__content {
+    padding: 60px;
+    background-color: #f8f9fc;
+
+    .container-fluid {
+      .container {
+        .row {
+          .box-photo {
+            margin-bottom: 15px;
+            font-size: 0;
+            img {
+              border-radius: 8px;
+              box-shadow: 0px 10px 20px #dce4e6;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .description-doctor {
+            border-right: 3px solid $base-color;
+            border-radius: 8px;
+            margin: 20px 0 35px 0;
+            background-color: $base-white;
+            padding: 0 20px;
+            .doctor__text-head {
+              @include font-style(28px, $primary1_400, $base-text);
+              padding: 30px 0;
+              margin-bottom: 20px;
+            }
+            .doctorDetails__rating {
+              padding-left: 30px;
+              i {
+                color: $base-color;
+              }
+              span {
+                color: $base-color;
+                @include font-style(13px, $primary1_500, $base-text1);
+                border-radius: 50%;
+                border: 1px solid $base-text;
+                padding: 5px;
+                margin-left: 5px;
+              }
+            }
+            .details-info {
+              margin-top: 30px;
+              .box-img {
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              li {
+                padding-bottom: 15px;
+                display: flex;
+                span {
+                  @include font-style(17px, $primary1_400, $base-text);
+
+                  span {
+                    @include font-style(16px, $primary1_300, $base-text1);
+                  }
+                }
+              }
+              .experience {
+              }
+              .category {
+              }
+              .phones-for-recording {
+              }
+              .specialization {
+              }
+            }
+          }
+        }
+        .row:nth-of-type(2) {
+          border-radius: 8px;
+
+          border-left: 3px solid $base-color;
+          background-color: $base-white;
+          justify-content: center;
+          .more-info__content {
+            padding: 30px 0 20px 0;
+            div {
+              padding-bottom: 25px;
+              display: flex;
+              flex-direction: column;
+              @include font-style(17px, $primary1_400, $base-text);
+              span {
+                @include font-style(16px, $primary1_300, $base-text1);
+                padding-top: 10px;
+                line-height: 24px;
+                padding-left: 15px;
+              }
+            }
+            flex-direction: column;
+            .position {
+            }
+            .education {
+            }
+            .treated {
+            }
+            .procedures {
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,21 +14,23 @@
 
         .appointment__content_main {
           .appointment__contact-form {
-            background-color: $primary-main-1;
+            background-color: lighten($primary-main-1, 2.5%);
             padding: 40px 30px 30px 30px;
+            // border: 0.2px solid #eee;
+            box-shadow: 0px 10px 20px rgba(#000, 0.2);
 
-            @media (max-width: 991.98px) {
-              padding: 0 30px 0 30px;
-            }
-
+            // @media (max-width: 991.98px) {
+            //   padding: 0 30px 0 30px;
+            // }
 
             .appointment__content__head_text {
               padding-bottom: 40px;
-              @include font-style(25px, $primary1_400, $primary-main-5);
+              @include font-style(25px, $primary1_400, $base-light);
             }
 
             .contact-form__main {
-              background-color: $primary-main-1;
+              // background-color: $primary-main-1;
+              background-color: lighten($primary-main-1, 2.5%);
 
               .contact-form__input:first-of-type {
                 padding-right: 7.5px;
@@ -56,8 +58,8 @@
                   height: 42px;
                   outline: none;
                   padding: 0 10px;
-                  @include font-style(13px, $primary1_400, $primary-main-5);
-                  background-color: rgba($primary-main-5, 0.1);
+                  @include font-style(13px, $primary1_400, $base-light);
+                  background-color: rgba($base-light, 0.1);
                   border: 1px solid rgba(255, 255, 255, 0.4);
                   transition: 0.3s border;
                   cursor: pointer;
@@ -105,8 +107,7 @@
 
                 input[type=date]::-webkit-calendar-picker-indicator
 
-                /* datepicker*/
-                  {
+                /* datepicker*/ {
                   filter: invert(1);
                   opacity: 0;
                   z-index: 99;
@@ -131,8 +132,8 @@
                     width: 100%;
                     position: relative;
                     z-index: 100;
-                    background-color: rgba($primary-main-5, 0.1);
-                    @include font-style(13px, $primary1_400, $primary-main-5);
+                    background-color: rgba($base-light, 0.1);
+                    @include font-style(13px, $primary1_400, $base-light);
 
                     &.open {
                       .select__dropdown {
@@ -141,7 +142,7 @@
                       }
 
                       .select__input {
-                        border: 1px solid $primary-main-5;
+                        border: 1px solid $base-light;
                         border-bottom: none;
                       }
 
@@ -165,7 +166,7 @@
                       transition: 0.3s border;
 
                       &:hover {
-                        border: 1px solid $primary-main-5;
+                        border: 1px solid $base-light;
                       }
                     }
 
@@ -206,16 +207,16 @@
                     &__item {
                       padding: 7px 10px;
                       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-                      background-color: $primary-main-1;
+                      background-color: lighten($primary-main-1, 2.5%);
 
                       &.selected {
-                        background-color: $primary-main-5;
+                        background-color: $base-light;
 
                         color: $primary-main-1;
                       }
 
                       &:hover {
-                        background-color: $primary-main-5;
+                        background-color: $base-light;
 
                         color: $primary-main-1;
 
@@ -243,14 +244,14 @@
                 padding: 11px 20px;
                 background-color: transparent;
                 border: 1px solid rgba(255, 255, 255, 0.5);
-                @include font-style(16px, $primary1_400, $primary-main-5);
+                @include font-style(16px, $primary1_400, $base-light);
                 transition: 0.3s all;
                 cursor: pointer;
                 outline: none;
                 border-radius: 0;
 
                 &:hover {
-                  background-color: $primary-main-5;
+                  background-color: $base-light;
                   color: $primary-main-1;
                 }
               }
@@ -264,10 +265,9 @@
               padding: 25px 0 0 0;
             }
 
-            padding: 10px 0;
+            padding: 20px 0 0 0;
             text-align: center;
-            @include font-style(21px, $primary1_400, $primary-main-5);
-            text-transform: uppercase;
+            @include font-style(25px, $primary1_400, $base-light);
           }
 
           .appointment__location_map {
@@ -283,6 +283,8 @@
             flex-direction: column;
 
             iframe {
+              box-shadow: 0px 10px 20px rgba(#000, 0.15);
+
               flex-grow: 1;
               height: 270px;
 

@@ -6,35 +6,35 @@
         padding-top: 60px;
         padding-bottom: 50px;
         .mainAboutUs__text-img {
-          padding: 0 25px;
+          padding: 0 5px 0 15px;
           position: relative;
+
           @media (max-width: 991.98px) {
             padding: 0;
           }
           .box-img {
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
             font-size: 0;
+            border-radius: 8px;
+            overflow: hidden;
             img {
               width: 100%;
               height: 100%;
+              box-shadow: 0px 10px 20px rgba(#000, 0.1);
+              border: 1px solid #eee;
             }
           }
           .box-text {
             display: block;
-            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
-            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0px 10px 20px rgba(#000, 0.1);
+            padding: 45px;
             position: relative;
             z-index: 1;
-            background-color: $primary-main-5;
-            left: 0;
-            margin: -70px 35px 0 35px;
-            @media (max-width: 767.98px) {
-              margin: -50px 20px 0 20px;
-              padding: 30px 30px 10px 30px;
-            }
-            @media (max-width: 575.98px) {
-              margin: 0;
-            }
+            background-color: $base-light;
+            margin-top: 30px;
+            border: 1px solid #eee;
+
             h3 {
               @include font-style(28px, $primary1_500, $base-text);
               margin-bottom: 30px;
@@ -44,12 +44,14 @@
               text-align: justify;
               line-height: 26px;
               padding-bottom: 20px;
+              padding-left: 30px;
+              border-left: 2px solid #eee;
             }
           }
           .slider__photos-clinic {
             cursor: pointer;
             margin-top: 90px;
-            padding: 30px 30px 0 30px;
+            padding: 30px 0 0 0;
             @media (max-width: 575.98px) {
               padding: 20px 0 0 0;
             }
@@ -57,7 +59,9 @@
               display: flex;
               align-items: center;
               justify-content: center;
+
               img {
+                border-radius: 8px;
                 display: block;
                 margin: 0 auto;
                 width: 100%;
@@ -153,10 +157,13 @@
 
                   .review__content {
                     .review__item {
-                      background-color: $primary-main-8;
+                      box-shadow: 0px 10px 20px rgba(#000, 0.1);
+
+                      background: $base-light;
                       width: 100%;
                       margin: 0;
                       margin-bottom: 30px;
+                      border-radius: 8px;
                     }
                     .review__item:nth-of-type(3) {
                       @media (max-width: 991.98px) {

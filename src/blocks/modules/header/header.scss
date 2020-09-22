@@ -1,5 +1,5 @@
 .header {
-  background-color: $primary-main-5;
+  background-color: $base-white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -43,6 +43,7 @@
           opacity: 0.8;
           transition: 0.2s;
           cursor: pointer;
+          border-radius: 6px;
 
           &:hover {
             opacity: 1;
@@ -90,7 +91,7 @@
   }
 
   .header-navigation {
-    background-color: $primary-main-5;
+    background-color: $base-white;
     border-top: 1px solid rgb(225, 225, 225);
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1);
 
@@ -100,7 +101,7 @@
         align-items: center;
         height: 90px;
         @include font-style(18px, $primary1_500, $base-text);
-        background-color: $primary-main-5;
+        background-color: $base-white;
 
         @media (max-width: 991.98px) {
           display: flex;
@@ -157,12 +158,12 @@
 
           .navigation__link {
             color: $base-text;
-            opacity: 0.9;
+            // opacity: 1;
             position: relative;
             transition: 0.2s;
 
             &:hover {
-              opacity: 1;
+              opacity: 0.7;
             }
           }
 

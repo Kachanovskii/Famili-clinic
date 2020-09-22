@@ -6,7 +6,7 @@
     .container {
       .review__head {
         .reviews__head_text {
-          @include font-style(30px, $primary1_500, $base-color);
+          @include font-style(28px, $primary1_500, $base-color);
           padding: 0 0 10px 0;
           margin-bottom: 40px;
 
@@ -82,17 +82,19 @@
         }
 
         .review__item {
-          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
-          background-color: #f8f9fc;
+          border: 1px solid #eee;
+
+          background: linear-gradient(45deg, $primary-main-5, rgba(#eee, 0.4));
+
           display: flex;
           flex-direction: column;
           padding: 30px 30px 10px 30px;
           transition: 0.3s;
-          border-radius: 8px;
+          border-radius: 15px;
           cursor: pointer;
 
           &:hover {
-            box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
           }
 
           @media (max-width: 991.98px) {
@@ -278,7 +280,7 @@
           text-align: right;
           margin-top: 5px;
           cursor: pointer;
-          @include font-style(17px, $primary1_300, $base-color);
+          @include font-style(16px, $primary1_300, $base-color);
           display: block;
           transition: 0.3s all;
           margin-right: 20px;
@@ -288,6 +290,7 @@
           }
 
           i {
+            font-size: 11px;
             padding-left: 5px;
             align-self: flex-end;
           }

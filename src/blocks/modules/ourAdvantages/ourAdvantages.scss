@@ -1,6 +1,7 @@
 .ourAdvantages {
   .container-fluid {
-    background-color: #f8f9fc;
+    border-bottom: 1.5px solid #efefef;
+    background: linear-gradient(180deg, $primary-main-5, rgba(#eee, 0.4));
     padding: 55px 0 0 0;
 
     @media (max-width: 991.98px) {
@@ -8,10 +9,8 @@
     }
 
     .container {
-      border-bottom: 1.5px solid #efefef;
-
       .ourAdvantages__head_text {
-        @include font-style(30px, $primary1_500, $base-color);
+        @include font-style(28px, $primary1_500, $base-color);
         margin-bottom: 40px;
 
         h3 {
@@ -35,23 +34,21 @@
         .ourAdvantages__item {
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
-
           .ourAdvantages__box-img {
-            max-width: 75px;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            background-color: #eee;
 
-            @media (max-width: 991.98px) {
-              max-width: 75px;
-            }
-
-            @media (max-width: 575.98px) {
-              max-width: 60px;
-            }
-
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
             img {
               width: 100%;
-              height: auto;
+              height: 100%;
             }
           }
 
@@ -59,7 +56,8 @@
             p {
               padding-top: 20px;
               text-align: center;
-              @include font-style(18px, $primary1_400, $base-text);
+              @include font-style(16px, $primary1_400, $base-text);
+              letter-spacing: -0.5px;
 
               @media (max-width: 991.98px) {
                 font-size: 16px;

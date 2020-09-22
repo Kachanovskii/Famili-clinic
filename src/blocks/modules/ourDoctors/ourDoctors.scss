@@ -16,7 +16,7 @@
           .ourDoctors__head-text {
             padding: 0;
             margin: 0 0 40px 0;
-            @include font-style(30px, $primary1_500, $base-light);
+            @include font-style(28px, $primary1_500, $base-light);
 
             h3 {
               @media (max-width: 991.98px) {

@@ -19,7 +19,9 @@ module.exports = {
         pageDoctorsAndReferrals: "./src/js/import/pages/pageDoctorsAndReferrals.js",
         pagePricesAndPromotions: "./src/js/import/pages/pagePricesAndPromotions.js",
         pageContact: "./src/js/import/pages/pagePricesAndPromotions.js",
-        pageAboutUs: "./src/js/import/pages/pageAboutUs.js"
+        pageAboutUs: "./src/js/import/pages/pageAboutUs.js",
+        pageDoctorDetails: "./src/js/import/pages/pageDoctorDetails.js"
+
 
     },
 

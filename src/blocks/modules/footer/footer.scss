@@ -21,7 +21,7 @@ body {
   left: 0;
   right: 0;
   z-index: -1;
-  @include font-style(15px, $primary1_400, $primary-main-5);
+  @include font-style(15px, $primary1_400, $base-light);
 
   .container-fluid {
     background-color: $primary-main-1;
@@ -50,12 +50,12 @@ body {
 
           .footer__address {
             margin-top: 16px;
-            color: $primary-main-5;
+            color: $base-light;
 
             i {
               font-size: 16px;
               margin-right: 5px;
-              color: $primary-main-5;
+              color: $base-light;
             }
           }
 
@@ -106,23 +106,23 @@ body {
               i {
                 font-size: 12px;
                 margin-right: 5px;
-                color: $primary-main-5;
+                color: $base-light;
               }
             }
 
             a {
-              @include font-style(16px, $primary1_500, $primary-main-5);
+              @include font-style(16px, $primary1_500, $base-light);
             }
           }
 
           .footer__email {
             a {
-              @include font-style(12px, $primary1_400, $primary-main-5);
+              @include font-style(12px, $primary1_400, $base-light);
             }
 
             i {
               font-size: 15px;
-              color: $primary-main-5;
+              color: $base-light;
               margin: 0 3px;
             }
           }
@@ -148,7 +148,7 @@ body {
 
               i {
                 font-size: 22px;
-                color: $primary-main-5;
+                color: $base-light;
                 margin: 0 5px;
                 transition: 0.3s all;
 
@@ -166,7 +166,7 @@ body {
             .footer__year {
               margin: 30px 0 16px 0;
               line-height: 18px;
-              @include font-style(14px, $primary1_300, $primary-main-5);
+              @include font-style(14px, $primary1_300, $base-light);
 
               @media (max-width: 991.98px) {
                 margin: 10px 0 10px 0;
@@ -178,7 +178,7 @@ body {
             }
 
             .footer__all-rules {
-              @include font-style(11px, $primary1_400, $primary-main-5);
+              @include font-style(11px, $primary1_400, $base-light);
             }
           }
 
@@ -187,16 +187,13 @@ body {
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            text-transform: uppercase;
-            @include font-style(9px, $primary1_400);
-
             @media (max-width: 767.98px) {
               display: none;
             }
 
             i {
               font-size: 42px;
-              color: $primary-main-5;
+              color: $base-light;
               margin-bottom: 20px;
 
               @media (max-width: 991.98px) {
@@ -206,14 +203,13 @@ body {
             }
 
             .custom-btn {
-              @include font-style(11px, $primary1_500, $primary-main-5);
+              @include font-style(14px, $primary1_500, $base-light);
               padding: 10px 20px;
               transition: 0.3s all;
-              background-color: $primary-main-4;
+              background-color: $base-color;
               cursor: pointer;
               display: inline-block;
-              border-radius: 3px;
-
+              border-radius: 6px;
               @media (max-width: 1199.98px) {
                 padding: 10px 13px;
               }
@@ -224,7 +220,7 @@ body {
 
               &:hover {
                 text-decoration: none;
-                background-color: $primary-main-3;
+                opacity: 0.8;
               }
             }
           }

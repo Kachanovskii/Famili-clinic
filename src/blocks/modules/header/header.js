@@ -29,3 +29,13 @@ document.querySelector('.mobile-menu').addEventListener('click', function () {
     document.querySelector('.mobile-navigation').classList.toggle('show-m-navigation');
 });
 
+let link = document.URL;
+let a = document.querySelectorAll('.navigation__link');
+for (let i = 0; i < a.length; i++) {
+    let b = a[i].getAttribute('href');
+    if (a[i].href == link) {
+        a[i].style.opacity = '0.6';
+    }
+}
+
+

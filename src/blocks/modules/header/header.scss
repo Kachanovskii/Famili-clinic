@@ -1,5 +1,7 @@
 .header {
-  background-color: $base-white;
+  // background-color: $base-white;
+  // background-color: rgba($base-white, 0.85);
+  // backdrop-filter: saturate(180%) blur(20px);
   position: fixed;
   top: 0;
   width: 100%;
@@ -8,6 +10,8 @@
   right: 0;
 
   .header-top {
+    background-color: $base-white;
+
     @media (max-width: 991.98px) {
       display: none;
     }
@@ -91,9 +95,16 @@
   }
 
   .header-navigation {
-    background-color: $base-white;
+    // background-color: $base-white;
+    background-color: rgba($base-white, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
     border-top: 1px solid rgb(225, 225, 225);
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 991.98px) {
+      background-color: $base-white;
+      backdrop-filter: none;
+    }
 
     .container {
       .header-navigation__section {
@@ -101,7 +112,6 @@
         align-items: center;
         height: 90px;
         @include font-style(18px, $primary1_500, $base-text);
-        background-color: $base-white;
 
         @media (max-width: 991.98px) {
           display: flex;
@@ -144,7 +154,6 @@
 
         .navigation {
           margin-left: 70px;
-
           width: 100%;
 
           ul {
@@ -163,12 +172,14 @@
             transition: 0.2s;
 
             &:hover {
-              opacity: 0.7;
+              opacity: 0.6;
             }
           }
 
+
+
           .link-red {
-            color: #c90313;
+            color: darken(#f27e63, 15%);
           }
 
           @media (max-width: 991.98px) {
@@ -295,7 +306,8 @@
           margin-top: 0;
           height: auto;
           opacity: 1;
-          background-color: darken($primary-main-5, 1%);
+          background-color: rgba($base-white, 0.85);
+          backdrop-filter: saturate(180%) blur(20px);
         }
       }
     }

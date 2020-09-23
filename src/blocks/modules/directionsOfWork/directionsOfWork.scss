@@ -175,6 +175,8 @@
 
         .directionsOfWork__btn {
           padding: 15px;
+          padding-bottom: 30px;
+          margin-top: auto;
 
           .btn__all {
             @include font-style(16px, $primary1_400, $base-color);

@@ -27,14 +27,13 @@
 }
 
 .promotions {
-  padding: 46px 0;
-  background: linear-gradient(
-    180deg,
-    $primary-main-5,
-    $primary-main-5,
-    $primary-main-5,
-    rgb(239, 239, 239)
-  );
+  padding: 60px 0;
+  background: linear-gradient(180deg,
+      $primary-main-5,
+      $primary-main-5,
+      $primary-main-5,
+      rgb(239, 239, 239));
+
 
   .container {
     .promotions-heading {
@@ -44,7 +43,7 @@
       // @include font-style(30px, $primary1_500, darken(#f27e63, 5%));
 
       h2 {
-        @include font-style(30px, $primary1_500, darken(#f27e63, 5%));
+        @include font-style(28px, $primary1_500, darken(#f27e63, 5%));
 
         @media (max-width: 767.98px) {
           width: 100%;
@@ -63,9 +62,10 @@
 
       h3 {
         padding-top: 10px;
-        @include font-style(20px, $primary1_400, $base-text);
+        @include font-style(20px, $primary1_300, lighten($base-text, 15%));
 
         strong {
+          font-size: 21.5px;
           font-family: $primary1_500;
         }
       }
@@ -73,7 +73,12 @@
       a {
         padding-top: 12px;
         display: block;
-        @include font-style(17px, $primary1_400, darken($base-color, 5%));
+        @include font-style(16px, $primary1_400, darken($base-color, 5%));
+
+        i {
+          padding-left: 5px;
+          font-size: 11px;
+        }
 
         &:hover {
           text-decoration: underline;
@@ -222,20 +227,30 @@
 
 .prices {
   padding: 45px 0;
-  background: $primary_main-5;
+  background-color: #f8f9fc;
+
 
   .container {
     .prices-heading {
       margin: 0 0 40px 0;
-      text-align: center;
 
       h2 {
-        @include font-style(30px, $primary1_500, $base-color);
+        @include font-style(28px, $primary1_500, $base-color);
+        margin-bottom: 10px;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 150px;
+          border-bottom: 2px solid;
+          position: relative;
+          bottom: -6px;
+        }
       }
 
       h3 {
         padding-top: 10px;
-        @include font-style(20px, $primary1_400, $base-text);
+        @include font-style(18px, $primary1_300, $base-text);
 
         @media (max-width: 991.98px) {
           // width: 70%;
@@ -245,14 +260,6 @@
           width: 100%;
         }
 
-        &::after {
-          content: "";
-          display: block;
-          width: 150px;
-          // border-bottom: 2px solid;
-          position: relative;
-          bottom: -6px;
-        }
       }
 
       @media (max-width: 991.98px) {
@@ -277,14 +284,14 @@
     }
 
     .prices-content {
-      border-radius: 15px;
+      border-radius: 8px;
       background-color: #fff;
-      padding: 35px 0px 50px;
+      box-shadow: 0px 10px 20px rgba(#000, 0.1);
+      padding: 25px 0px 40px;
 
       .list-heading {
         padding: 0px 15px 15px;
-        text-transform: uppercase;
-        @include font-style(15px, $primary1_400, lighten($base-text, 30%));
+        @include font-style(21px, $primary1_400, lighten($base-text, 30%));
       }
 
       .prices-list {
@@ -307,11 +314,11 @@
             top: 12px;
             left: -25px;
             color: $base-color;
-            font-size: 22px;
+            font-size: 20px;
           }
 
           p {
-            font-size: 19px;
+            font-size: 16px;
           }
 
           span {
@@ -369,10 +376,6 @@
             }
 
             font-size: 14px;
-
-            p {
-              font-size: 16px;
-            }
 
             .table-prices {
               tbody {

@@ -1,7 +1,4 @@
 .header {
-  // background-color: $base-white;
-  // background-color: rgba($base-white, 0.85);
-  // backdrop-filter: saturate(180%) blur(20px);
   position: fixed;
   top: 0;
   width: 100%;
@@ -17,6 +14,8 @@
     }
 
     .container {
+      padding: 0;
+
       .header-top__section {
         transition: 0.3s;
         margin-top: 0;
@@ -107,6 +106,8 @@
     }
 
     .container {
+      padding: 0;
+
       .header-navigation__section {
         display: flex;
         align-items: center;

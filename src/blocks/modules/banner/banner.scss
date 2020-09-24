@@ -7,22 +7,26 @@
   }
 
   .container {
+    padding: 0;
+
     .slider {
       .owl-dots {
         button {
           outline: none;
         }
+
         .owl-dot.active span {
           background-color: rgba($base-text, 0.6);
         }
+
         .owl-dot {
           &:hover span {
             background-color: rgba($base-text, 0.6);
           }
         }
       }
+
       position: relative;
-      // background-color: $base-color;
       background: linear-gradient(0deg, $base-color, #00cec8);
 
       &__item {
@@ -101,8 +105,7 @@
 
       @media (max-width: 767.98px) {
         &__img {
-          height: 200px;
-          //   height: 300px;
+          height: 270px;
         }
 
         &__text {
@@ -113,8 +116,4 @@
       }
     }
   }
-}
-
-.sticky + .banner {
-  padding-top: 102px;
 }

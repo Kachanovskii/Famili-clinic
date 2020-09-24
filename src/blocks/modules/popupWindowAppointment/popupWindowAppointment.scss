@@ -1,6 +1,9 @@
 $speed: 0.6s;
 $delay: ($speed * 0.5);
 $easing: cubic-bezier(0.55, 0, 0.1, 1);
+.scroll-hidden {
+  overflow: hidden;
+}
 
 .popupWindowAppointment {
   .appointment__content__head_text {

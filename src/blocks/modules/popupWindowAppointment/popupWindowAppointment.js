@@ -2,16 +2,20 @@ $(document).ready(function ($) {
     var elements = $('.modal-overlay, .modal');
     $('.header-top__btn, .link-red').click(function () {
         elements.addClass('active');
+        $('body').addClass('scroll-hidden');
     });
 
     $('.close-modal').click(function () {
         elements.removeClass('active');
+        $('body').removeClass('scroll-hidden');
+
     });
 
     $(document).keydown(function (e) {
         if (e.keyCode === 27) {
             e.stopPropagation();
             elements.removeClass('active');
+            $('body').removeClass('scroll-hidden');
 
         }
     });
@@ -19,6 +23,7 @@ $(document).ready(function ($) {
     $('.modal-overlay').click(function (e) {
         if ($(e.target).closest('.modal').length == 0) {
             elements.removeClass('active');
+            $('body').removeClass('scroll-hidden');
         }
     });
 });

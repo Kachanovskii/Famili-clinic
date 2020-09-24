@@ -22,6 +22,7 @@ $(document).ready(function ($) {
     $('.callback-bt').click(function () {
         if (!elements.hasClass('activeModal')) {
             elements.addClass('activeModal');
+            $('body').addClass('scroll-hidden');
             setTimeout(() => {
                 $('#focus').focus();
             }, 1000);
@@ -29,10 +30,12 @@ $(document).ready(function ($) {
 
         } else {
             elements.removeClass('activeModal');
+            $('body').removeClass('scroll-hidden');
         }
     });
     $('.callback-bt__modal-content .close-modal').click(function () {
         elements.removeClass('activeModal');
+        $('body').removeClass('scroll-hidden');
 
     });
 
@@ -40,11 +43,13 @@ $(document).ready(function ($) {
         if (e.keyCode === 27) {
             e.stopPropagation();
             elements.removeClass('activeModal');
+            $('body').removeClass('scroll-hidden');
         }
     });
     $('.modal-overlay__bt-input').click(function (e) {
         if ($(e.target).closest('.callback-bt-input').length == 0) {
             elements.removeClass('activeModal');
+            $('body').removeClass('scroll-hidden');
         }
     });
 });

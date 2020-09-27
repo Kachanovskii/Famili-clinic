@@ -26,15 +26,15 @@
 
                   height: 100%;
                   width: 100%;
-                  border-radius: 8px;
+                  border-radius: 0 0 8px 0;
                 }
               }
             }
             .content-address__main {
               box-shadow: 0px 10px 20px rgba(#000, 0.1);
 
-              border-left: 6px solid $base-color;
-              border-radius: 6px;
+              border-left: 3px solid $base-color;
+              border-radius: 0 8px 8px 0;
               padding: 20px 0 10px 42px;
               background-color: #fff;
               @media (max-width: 991.98px) {
@@ -78,7 +78,7 @@
             }
             iframe {
               box-shadow: 0px 10px 20px rgba(#000, 0.1);
-              border-radius: 8px;
+              border-radius: 0 0 0 8px;
 
               height: 0;
               max-height: 100%;
@@ -99,8 +99,7 @@
       .container {
         box-shadow: 0px 10px 20px rgba(#000, 0.1);
         padding: 40px;
-        border-radius: 6px;
-        border-right: 6px solid $base-color;
+        border-right: 3px solid $base-color;
         background-color: #fff;
         @media (max-width: 575.98px) {
           padding: 30px;
@@ -159,6 +158,7 @@
         }
         .write-to-us__box_textarea {
           textarea {
+            border-radius: 8px;
             @include font-style(16px, $primary1_300, $base-text);
             border: 1px solid rgba($base-text, 0.2);
             width: 100%;

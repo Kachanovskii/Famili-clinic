@@ -472,12 +472,6 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
   visibility: hidden;
   backface-visibility: hidden;
   transition: opacity $speed $easing, visibility $speed $easing;
-  // background-color: rgba(#fff, 0.6);
-  // backdrop-filter: blur(4px);
-  // background-color: rgba($base-text, 0.45);
-  // backdrop-filter: saturate(180%) blur(15px);
-  // background-color: rgba($base-dark, 0.4);
-  // backdrop-filter: saturate(180%) blur(15px);
   backdrop-filter: saturate(180%) blur(15px);
 
   &.activeModal {

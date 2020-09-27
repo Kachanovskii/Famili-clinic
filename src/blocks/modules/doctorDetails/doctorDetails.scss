@@ -1,38 +1,49 @@
 .doctorDetails {
   .doctorDetails__content {
-    // box-shadow: 0px 10px 20px rgba(#000, 0.1);
-    padding: 60px;
+    padding: 60px 0 50px 0;
     background-color: #f8f9fc;
 
     .container-fluid {
       .container {
         box-shadow: 0px 10px 20px rgba(#000, 0.1);
-
+        border-radius: 0 0 8px 8px;
+        overflow: hidden;
+        @media (max-width: 991.98px) {
+          border-radius: 8px;
+        }
         .row {
+          @media (max-width: 991.98px) {
+            background-color: $base-light;
+          }
           .box-photo {
             border-radius: 8px 0 0 0;
             font-size: 0;
-            padding: 50px;
+            padding: 40px;
+            @media (max-width: 1199.98px) {
+              padding: 40px 30px 20px 30px;
+            }
+            @media (max-width: 991.98px) {
+              margin: 0 auto;
+            }
+            @media (max-width: 575.98px) {
+              padding: 35px 25px 20px 25px;
+            }
+
             background-color: $base-light;
-            // @media (max-width: 991.98px) {
-            //   padding: 0;
-            // }
             img {
               border-radius: 8px;
-              // box-shadow: 0px 10px 20px #dce4e6;
               width: 100%;
               height: 100%;
+              @media (max-width: 991.98px) {
+                border-radius: 50%;
+              }
             }
           }
           .description-doctor {
-            // margin-bottom: 30px;
-            // box-shadow: 0px 10px 20px rgba(#000, 0.1);
-            // border-right: 8px solid $base-color;
             border-radius: 0 8px 0 0;
             background-color: $base-white;
-            // padding: 0 20px;
             @media (max-width: 991.98px) {
-              padding: 0 0 10px 30px;
+              padding: 0;
             }
 
             .doctor__text-head {
@@ -43,9 +54,20 @@
                 margin-bottom: 0;
                 padding: 30px 0;
               }
+              @media (max-width: 991.98px) {
+                text-align: center;
+                padding: 20px 30px;
+              }
+              @media (max-width: 767.98px) {
+                padding-top: 10px;
+              }
             }
             .doctorDetails__rating {
               padding-left: 30px;
+              @media (max-width: 991.98px) {
+                text-align: center;
+                padding: 0;
+              }
               i {
                 color: $base-color;
               }
@@ -60,13 +82,20 @@
             }
             .details-info {
               margin-top: 30px;
+              @media (max-width: 991.98px) {
+                padding: 0 40px;
+              }
+              @media (max-width: 767.98px) {
+                line-height: 22px;
+              }
+              @media (max-width: 575.98px) {
+                padding: 0 30px;
+              }
               .box-img {
                 margin-right: 10px;
-                width: 20px;
-                height: 20px;
                 img {
-                  width: 100%;
-                  height: 100%;
+                  width: 20px;
+                  height: 20px;
                 }
               }
               li {
@@ -80,12 +109,6 @@
                   }
                 }
               }
-              .experience {
-              }
-              .category {
-              }
-              .phones-for-recording {
-              }
               .specialization {
                 @media (max-width: 1199.98px) {
                   padding-bottom: 20px;
@@ -95,11 +118,7 @@
           }
         }
         .row:nth-of-type(2) {
-          border-radius: 0 0 8px 8px;
-          // box-shadow: 0px 10px 20px rgba(#000, 0.1);
           border-top: 1px solid #eee;
-
-          // border-left: 8px solid $base-color;
           background-color: $base-white;
           justify-content: center;
           .more-info__content {
@@ -117,13 +136,270 @@
               }
             }
             flex-direction: column;
-            .position {
+          }
+        }
+      }
+    }
+  }
+  .slider-certificates {
+    padding: 30px 0;
+    background-color: $base-color;
+    .container-fluid {
+      .container {
+        padding: 0;
+        .slider-certificates__content {
+          .content__head-text {
+            padding: 0;
+            margin: 0 0 40px 0;
+            @include font-style(28px, $primary1_500, $base-light);
+
+            h5 {
+              @media (max-width: 575.98px) {
+                margin-bottom: 85px;
+              }
+
+              &::after {
+                content: "";
+                display: block;
+                width: 150px;
+                border-bottom: 2px solid;
+                position: relative;
+                bottom: -6px;
+              }
             }
-            .education {
+          }
+          .certificates-carousel {
+            .item {
+              height: 120px;
+              width: 170px;
+              img {
+                cursor: pointer;
+              }
             }
-            .treated {
+            .owl-item {
+              display: flex;
+              justify-content: center;
             }
-            .procedures {
+            .owl-nav {
+              position: absolute;
+              top: -80px;
+              right: 0;
+              text-align: right;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              button {
+                width: 60px;
+                height: 60px;
+                border: 1px solid $base-light;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-left: 20px;
+                color: $base-light;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                  margin: 0 auto;
+                  @include font-style(30px, $primary1_400, $base-light);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .close-modal {
+      color: $base-text;
+      position: absolute;
+      cursor: pointer;
+      top: -5px;
+      right: -30px;
+      opacity: 0;
+      backface-visibility: hidden;
+      transition: opacity $speed $easing, transform $speed $easing;
+      transition-delay: $delay;
+      font-size: 30px;
+      text-align: center;
+      @media (max-width: 991.98px) {
+        top: -45px;
+        right: 0;
+        left: 0;
+      }
+    }
+
+    .certificate__modal-content {
+      margin: 0 auto;
+      opacity: 0;
+      backface-visibility: hidden;
+      transition: opacity $speed $easing;
+      transition-delay: $delay;
+      position: relative;
+      max-height: 80vh;
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 80vh;
+      }
+    }
+    .activeModal {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+
+      .certificate__modal-content {
+        opacity: 1;
+      }
+
+      .close-modal {
+        transform: translateY(10px);
+        opacity: 1;
+      }
+    }
+    .modal-overlay__certificate {
+      padding: 0 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      backface-visibility: hidden;
+      transition: opacity $speed $easing, visibility $speed $easing;
+      backdrop-filter: saturate(180%) blur(15px);
+      &.activeModal {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  .doctorDetails__reviews {
+    background-color: #f8f9fc;
+    padding: 50px 0 30px 0;
+    .container-fluid {
+      .container {
+        padding: 0;
+        .doctorDetails__reviews__head-text {
+          padding: 0;
+          margin-bottom: 10px;
+          @include font-style(28px, $primary1_500, $base-color);
+           text-align: center;
+          // &::after {
+          //   content: "";
+          //   display: block;
+          //   width: 150px;
+          //   border-bottom: 2px solid;
+          //   position: relative;
+          //   bottom: -6px;
+          // }
+        }
+        .doctorDetails__reviews__content {
+          display: flex;
+          flex-wrap: wrap;
+          border-radius: 8px;
+          padding: 30px 0;
+          @media (max-width: 767.98px) {
+            padding: 30px 0 0 0;
+          }
+          .doctorDetails__review_item {
+            padding: 0 40px 0 40px;
+            width: 50%;
+            @media (max-width: 991.98px) {
+              padding: 0 20px 0 20px;
+            }
+            @media (max-width: 767.98px) {
+              width: 100%;
+            }
+            &:nth-of-type(odd) {
+              padding-left: 0;
+              @media (max-width: 767.98px) {
+                padding-right: 0;
+              }
+            }
+            &:nth-of-type(even) {
+              margin-top: 50px;
+              padding-right: 0;
+              @media (max-width: 767.98px) {
+                padding-bottom: 50px;
+                padding-left: 100px;
+              }
+              @media (max-width: 575.98px) {
+                padding-left: 30px;
+              }
+              @media (max-width: 475px) {
+                padding-left: 0;
+              }
+            }
+            .review_text {
+              position: relative;
+              @include font-style(17px, $primary1_400, $base-text);
+              line-height: 20px;
+              padding: 30px 25px 25px 25px;
+              margin-bottom: 25px;
+              background: linear-gradient(180deg, $primary-main-5, rgba(#eee, 0.4));
+              border-radius: 18px;
+              filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.5));
+
+              &:after {
+                content: " ";
+                border: 10px solid;
+                border-color: rgba(#eee, 0.4) transparent transparent rgba(#eee, 0.4);
+                position: absolute;
+                bottom: -20px;
+                left: 95px;
+                @media (max-width: 991.98px) {
+                  left: 70px;
+                }
+              }
+            }
+            .review__user-content {
+              padding: 0 45px;
+              display: flex;
+              justify-content: space-between;
+              @media (max-width: 991.98px) {
+                padding: 0 20px;
+              }
+              .review__user_box {
+                display: flex;
+                align-items: center;
+                .user__img-box {
+                  width: 50px;
+                  height: 50px;
+                  margin-right: 10px;
+                  img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                .user__name {
+                  @include font-style(16px, $primary1_400, $base-text);
+                }
+              }
+              .review__rating_box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .review__rating {
+                  margin-bottom: 20px;
+                  i {
+                    color: $base-color;
+                  }
+                }
+                .review-date {
+                  text-align: center;
+                  @include font-style(12px, $primary1_400, $base-text1);
+                }
+              }
             }
           }
         }

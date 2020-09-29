@@ -164,11 +164,12 @@
             li {
               display: inline-block;
             }
+
+
           }
 
           .navigation__link {
             color: $base-text;
-            // opacity: 1;
             position: relative;
             transition: 0.2s;
 
@@ -177,6 +178,18 @@
             }
           }
 
+          .active-point:before {
+            content: '';
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $base-text;
+            opacity: 0.6;
+            top: 7px;
+            position: absolute;
+            left: -12px;
+          }
 
 
           .link-red {

@@ -22,7 +22,7 @@
             }
 
             &::after {
-              content: "";
+              content: '';
               display: block;
               width: 150px;
               border-bottom: 2px solid;
@@ -33,49 +33,113 @@
         }
 
         .directionsOfWork__card {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          gap: 15px;
+          display: flex;
+          flex-wrap: wrap;
+
+          @media (max-width: 575.98px) {
+            justify-content: space-between;
+
+
+            .card__info {
+              .card__p {
+                display: none;
+              }
+            }
+          }
 
           .card__info {
             overflow: hidden;
+            margin-right: 1.32%;
+            margin-bottom: 1.32%;
+            width: 24%;
             border-radius: 8px;
             border: 1px solid #eee;
+
+            &:nth-last-of-type(4),
+            &:nth-last-of-type(8),
+            &:nth-last-of-type(12) {
+              margin-right: 0;
+            }
 
             &:hover {
               box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
             }
 
-            .card__a {
-              display: block;
-            }
+
 
             .container-img {
               padding: 25px 0;
               background-color: #eee;
-              display: flex;
-              justify-content: center;
+              text-align: center;
 
               .card__img {
                 width: 30%;
               }
             }
 
-            .card-content {
-              display: grid;
-              grid-template-rows: 1fr 1fr 0.5fr;
-
-              @media (max-width: 991.98px) {
-                grid-template-rows: 1fr 1fr;
+            @media (max-width: 991.98px) {
+              .card__detail {
+                display: none;
               }
 
-              @media (max-width: 575.98px) {
-                grid-template-rows: 1fr;
+              width: 32%;
+              margin-right: 2%;
+              margin-bottom: 2%;
+
+              &:nth-last-of-type(4),
+              &:nth-last-of-type(8),
+              &:nth-last-of-type(12) {
+                margin-right: 2%;
+              }
+
+              &:nth-last-of-type(3),
+              &:nth-last-of-type(6),
+              &:nth-last-of-type(9),
+              &:nth-last-of-type(12) {
+                margin-right: 0;
+              }
+            }
+
+            @media (max-width: 575.98px) {
+              .card__info {
+                .card__p {
+                  display: none;
+                }
 
                 .card__heading {
-                  padding: 15px 15px;
+                  text-align: center;
+                  margin-top: 0px;
+                  @include font-style(14px, $primary1_500, $base-text);
                 }
               }
+
+              width: 47%;
+              margin-right: 0%;
+              margin-bottom: 6%;
+
+              &:nth-last-of-type(1),
+              &:nth-last-of-type(2),
+              &:nth-last-of-type(3),
+              &:nth-last-of-type(4),
+              &:nth-last-of-type(5),
+              &:nth-last-of-type(6),
+              &:nth-last-of-type(7),
+              &:nth-last-of-type(8),
+              &:nth-last-of-type(9),
+              &:nth-last-of-type(10),
+              &:nth-last-of-type(11),
+              &:nth-last-of-type(12) {
+                margin-right: 0%;
+              }
+
+              .card__heading {
+                padding: 15px 15px;
+              }
+            }
+
+            .card-content {
+              display: flex;
+              flex-direction: column;
             }
 
             .card__heading {
@@ -88,7 +152,6 @@
               @include font-style(12px, $primary1_400, $base-text1);
               padding: 0 10px 15px;
             }
-
 
             .card__detail {
               margin: 10px;
@@ -110,41 +173,23 @@
             }
           }
 
-          @media (max-width: 991.98px) {
-            grid-template-columns: 1fr 1fr 1fr;
-
-            .card__detail {
-              display: none;
-            }
-          }
-
           @media (max-width: 767.98px) {
-            grid-template-columns: 1fr 1fr;
+
 
             .card__heading {
+              font-size: 14px;
               padding: 15px;
             }
-          }
-
-          @media (max-width: 575.98px) {
-
 
             .card__info {
+              .card-content {
+                height: 50%;
 
-              .card__p {
-                display: none;
-              }
-
-              .card__heading {
-                text-align: center;
-                margin-top: 0px;
-                @include font-style(14px, $primary1_500, $base-text);
+                .card__p {
+                  margin-top: auto;
+                }
               }
             }
-          }
-
-          @media (max-width: 349.98px) {
-            grid-template-columns: 1fr;
           }
         }
 

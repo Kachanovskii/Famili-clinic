@@ -35,6 +35,7 @@ for (let i = 0; i < a.length; i++) {
     let b = a[i].getAttribute('href');
     if (a[i].href == link) {
         a[i].style.opacity = '0.6';
+        a[i].classList.add('active-point');
     }
 }
 

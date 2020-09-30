@@ -4,6 +4,8 @@
     background: $primary-main-5;
 
     .container {
+      padding: 0;
+
       .promo-heading {
         text-align: center;
         margin: 0 0 40px 0;
@@ -83,6 +85,7 @@
 
 
           .p-card {
+            text-align: left;
             display: inline-block;
             width: 31%;
             margin-bottom: 3%;
@@ -90,6 +93,42 @@
             background: $base-white;
             overflow: hidden;
             box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
+
+            @media (max-width: 767.98px) {
+              width: 100%;
+
+              .card-header {
+                height: 145px;
+
+                .filter {
+                  padding: 20px 80px 20px 20px;
+
+                  .card-heading {
+
+                    h5 {
+                      font-size: 18px;
+                    }
+
+                    p {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+
+              .card-info {
+                p {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            @media (max-width: 992.98px) {
+              width: 48.5%;
+              margin-bottom: 3%;
+
+
+            }
 
 
             .card-header {
@@ -137,7 +176,7 @@
               a {
                 @include font-style(14px, $primary1_500, $base-white);
                 padding: 5px 8px;
-                border-radius: 8px;
+                border-radius: 5px;
                 background: $base-color;
                 display: block;
                 width: min-content;
@@ -147,14 +186,14 @@
 
           .p-card-1 {
             .card-header {
-              background: url(../../../img/promotions/1.jpg) no-repeat;
+              background: url(../img/promotions/1.jpg) no-repeat;
               background-size: cover;
             }
           }
 
           .p-card-2 {
             .card-header {
-              background: url(../../../img/promotions/2.jpg) no-repeat;
+              background: url(../img/promotions/2.jpg) no-repeat;
               background-size: cover;
 
             }
@@ -162,7 +201,7 @@
 
           .p-card-3 {
             .card-header {
-              background: url(../../../img/promotions/3.jpg) no-repeat;
+              background: url(../img/promotions/3.jpg) no-repeat;
               background-size: cover;
 
             }
@@ -170,7 +209,7 @@
 
           .p-card-4 {
             .card-header {
-              background: url(../../../img/promotions/4.jpg) no-repeat;
+              background: url(../img/promotions/4.jpg) no-repeat;
               background-size: cover;
 
             }
@@ -178,7 +217,7 @@
 
           .p-card-5 {
             .card-header {
-              background: url(../../../img/promotions/5.jpg) no-repeat;
+              background: url(../img/promotions/5.jpg) no-repeat;
               background-size: cover;
 
             }
@@ -186,7 +225,7 @@
 
           .p-card-6 {
             .card-header {
-              background: url(../../../img/promotions/6.jpg) no-repeat;
+              background: url(../img/promotions/6.jpg) no-repeat;
               background-size: cover;
 
             }
@@ -194,28 +233,28 @@
 
           .p-card-7 {
             .card-header {
-              background: url(../../../img/promotions/7.jpg) no-repeat;
+              background: url(../img/promotions/7.jpg) no-repeat;
               background-size: cover;
             }
           }
 
           .p-card-8 {
             .card-header {
-              background: url(../../../img/promotions/8.jpg) no-repeat;
+              background: url(../img/promotions/8.jpg) no-repeat;
               background-size: cover;
             }
           }
 
           .p-card-9 {
             .card-header {
-              background: url(../../../img/promotions/9.jpg) no-repeat;
+              background: url(../img/promotions/9.jpg) no-repeat;
               background-size: cover;
             }
           }
 
           .p-card-10 {
             .card-header {
-              background: url(../../../img/promotions/10.jpg) no-repeat;
+              background: url(../img/promotions/10.jpg) no-repeat;
               background-size: cover;
             }
           }

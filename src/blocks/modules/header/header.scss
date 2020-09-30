@@ -191,6 +191,10 @@
             left: -12px;
           }
 
+          .active-point-primary.active-point:before {
+            background-color: darken(#f27e63, 15%);
+          }
+
 
           .link-red {
             color: darken(#f27e63, 15%);

@@ -34,8 +34,12 @@ let a = document.querySelectorAll('.navigation__link');
 for (let i = 0; i < a.length; i++) {
     let b = a[i].getAttribute('href');
     if (a[i].href == link) {
-        a[i].style.opacity = '0.6';
+        console.log(a[4].href);
+        if (i == 3) {
+            a[i].classList.add('active-point-primary');
+        }
         a[i].classList.add('active-point');
+        a[i].style.opacity = '0.7';
     }
 }
 

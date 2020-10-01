@@ -1,7 +1,7 @@
 import $ from 'jquery';
 $(document).ready(function () {
   $(".owl-three").owlCarousel({
-    items: 4,
+    items: 3,
     loop: true,
     margin: 10,
     nav: false,

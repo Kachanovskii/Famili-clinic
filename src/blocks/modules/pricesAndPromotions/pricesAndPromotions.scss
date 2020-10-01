@@ -74,110 +74,6 @@
       }
     }
 
-    // .promotions-content {
-    //   .promotions-cards {
-    //     display: flex;
-
-    //     .promotions-item {
-    //       margin-right: 15px;
-
-    //       .promotions-card-content {
-    //         overflow: hidden;
-    //         height: 180px;
-    //         border-radius: 5px;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-between;
-
-    //         .promotions-card-heading {
-    //           border-radius: 5px;
-    //           padding: 15px;
-    //           margin-bottom: 15px;
-    //           display: flex;
-
-    //           .card-img {
-    //             width: 75px;
-    //             padding-left: 15px;
-    //           }
-
-    //           p {
-    //             @include font-style(15px, $primary1_400, $base-white);
-    //           }
-
-    //           .p-bold {
-    //             padding-bottom: 10px;
-    //             @include font-style(18px, $primary1_400, $base-white);
-    //           }
-    //         }
-
-    //         .promotions-card-text {
-    //           background-color: rgba(255, 255, 255, 0.8);
-    //           border-radius: 5px;
-    //           padding: 15px 10px 10px;
-
-    //           p {
-    //             @include font-style(12.5px, $primary1_400, $base-text);
-    //           }
-    //         }
-
-    //         .promotions-card-info {
-    //           background: rgba(255, 255, 255, 0.8);
-    //           padding: 10px 15px;
-    //           display: flex;
-    //           flex: 0 0 auto;
-    //           justify-content: space-between;
-    //           @include font-style(15px, $primary1_400, $base-text);
-
-    //           .more-detail {
-    //             background-color: #fff;
-    //             border-radius: 5px;
-    //             padding: 7px;
-    //             text-transform: uppercase;
-    //             @include font-style(12px, $primary1_500, $base-color);
-    //           }
-
-    //           .old-price {
-    //             margin-left: auto;
-    //             position: relative;
-    //             padding-right: 15px;
-
-    //             &:before {
-    //               position: absolute;
-    //               content: "";
-    //               height: 1px;
-    //               width: 100%;
-    //               background-color: #e72a19;
-    //               top: 8px;
-    //               right: 10px;
-    //               transform: rotate(20deg);
-    //             }
-    //           }
-
-    //           .new-price {
-    //             font-family: $primary1_500;
-    //           }
-    //         }
-    //       }
-
-    //       .promotions-card1 {
-    //         background: linear-gradient(45deg, #8245bf, lighten(#8245bf, 15%));
-    //       }
-
-    //       .promotions-card2 {
-    //         background: linear-gradient(45deg, #04d99d, lighten(#04d99d, 15%));
-    //       }
-
-    //       .promotions-card3 {
-    //         background: linear-gradient(45deg, #f27e63, lighten(#f27e63, 15%));
-    //       }
-
-    //       .promotions-card4 {
-    //         background: linear-gradient(45deg, #6805f2, lighten(#6805f2, 15%));
-    //       }
-    //     }
-    //   }
-    // }
-
     .promo-content {
       p {
         @include font-style(15px, $primary1_400, $base-text);
@@ -190,9 +86,6 @@
           border-radius: 8px;
           background: $base-white;
           overflow: hidden;
-          box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
-
-
 
           .card-header {
             background-size: cover;
@@ -208,6 +101,10 @@
               left: 0;
               right: 0;
               bottom: 0;
+
+              @media (max-width:767.98px) {
+                padding-right: 70px;
+              }
 
               .card-heading {
                 height: 100%;

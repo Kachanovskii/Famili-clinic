@@ -14,7 +14,7 @@ $(document).ready(function () {
         items: 1.1,
       },
       500.98: {
-        items: 2,
+        items: 1.2
       },
       991.98: {
         items: 3,

@@ -34,7 +34,6 @@ for (let e of tr) {
   }
 }
 
-console.log(tr[1].children.length);
 let toggle = false;
 let list = document.querySelectorAll('.prices-list__item');
 for (let e of list) {

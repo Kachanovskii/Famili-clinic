@@ -1,9 +1,11 @@
 .questions {
   .container-fluid {
-    padding: 45px 0;
+    padding: 45px 15px;
     background-color: #f8f9fc;
 
     .container {
+      padding: 0;
+
       .questions-heading {
         margin: 0 0 40px 0;
 
@@ -47,52 +49,67 @@
         }
       }
 
-      .prices-content {
-        // border-radius: 8px;
-        // background-color: #fff;
-        // box-shadow: 0px 10px 20px rgba(#000, 0.1);
-        padding: 25px 0px 35px;
+      .questions-content {
+        padding: 0px 0px 35px;
 
         .list-heading {
           padding: 0px 20px 15px;
           @include font-style(21px, $primary1_400, lighten($base-text, 30%));
         }
 
-        .prices-list {
+        .questions-sections {
           // padding: 0px 0px 0px 45px;
 
-          .prices-list__item {
+          .questions-sections__item {
             overflow: hidden;
             position: relative;
             border-radius: 8px;
-            // border-top: 1px solid #eee;
-            padding: 15px 50px;
+            padding: 15px 40px;
             margin-top: 20px;
             background-color: #fff;
             position: relative;
             cursor: pointer;
-            @include font-style(16px, $primary1_500, darken($base-color, 15px));
+            @include font-style(16px, $primary1_500, darken($base-color, 15%));
             transition: 0.3s;
             position: relative;
 
+            @media (max-width: 767.98px) {
+              .list-i {
+                font-size: 18px;
+              }
+
+              p {
+                font-size: 16px;
+              }
+
+              .questions-text {
+                font-size: 14px;
+              }
+            }
+
             .list-i {
               position: absolute;
-              padding: 0 15px;
+              padding: 0 10px;
               height: 100%;
               display: flex;
               align-items: center;
               top: 0px;
               left: 0px;
-              color: $base-white;
-              font-size: 27px;
-              border-right: 1px solid #fff;
-              background: lighten($base-color, 37%);
+              color: lighten($base-color, 47%);
+              font-size: 20px;
+              border-right: 1px solid #eee;
               transition: 0.3s;
 
             }
 
+            .list-i-active {
+              opacity: 1;
+              background-color: lighten($base-color, 37%);
+              color: $base-white;
+            }
+
             p {
-              padding: 0 0 0 15px;
+              padding: 0 0 0 10px;
               font-size: 18px;
             }
 
@@ -106,81 +123,31 @@
 
 
               i {
-                font-size: 22px;
-                font-weight: 500;
+                font-size: 20px;
                 color: darken($base-color, 15%);
               }
             }
 
-            .table__container {
+            .questions-text {
               overflow: hidden;
               max-height: 0px;
               height: 0;
               min-height: 0;
               opacity: 0;
-              padding-left: 10px;
+              padding: 0px 10px;
               transition: 0.3s;
-              padding-right: 30px;
 
               p {
-                @include font-style(16px, $primary1_300, darken($base-color, 15px))
+                @include font-style(16px, $primary1_400, darken($base-color, 10%))
               }
             }
 
-            .show__table {
+            .show__sections {
               opacity: 1;
               height: auto;
               max-height: 1000px;
               min-height: 18px;
             }
-
-            .table-prices {
-              width: 100%;
-              border: 1px solid #eee;
-
-              tbody {
-                color: lighten($base-text, 10%);
-
-                tr {
-                  width: 100%;
-
-                  td {
-                    padding: 10px 15px;
-                  }
-
-                  .prices-detail {
-                    font-size: 12px;
-                    color: lighten($base-text, 15%);
-                  }
-                }
-              }
-            }
-
-            @media (max-width: 767.98px) {
-              .list-heading {
-                font-size: 15px;
-              }
-
-              font-size: 14px;
-
-              .table-prices {
-                tbody {
-                  tr {
-                    td {
-                      padding: 15px 10px;
-                    }
-
-                    td:nth-of-type(2) {
-                      width: 70px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          .prices-list__item:nth-of-type(1) {
-            border: none;
           }
         }
       }

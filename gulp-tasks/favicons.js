@@ -2,7 +2,7 @@
 
 import { paths } from "../gulpfile.babel";
 import gulp from "gulp";
-// import favicons from "gulp-favicons";
+import favicons from "gulp-favicons";
 import debug from "gulp-debug";
 
 gulp.task("favicons", () => {

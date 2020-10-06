@@ -17,7 +17,8 @@ jQuery(document).ready(function () {
         }
     });
     btn.on('click', function (e) {
-        $('html, body').animate({ scrollTop: 0 }, 700);
+        // $('html, body').animate({ scrollTop: 0 }, 700);
+        $('html, body').animate({ scrollTop: 0 }, 0);
     });
 });
 

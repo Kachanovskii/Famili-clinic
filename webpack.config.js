@@ -21,7 +21,8 @@ module.exports = {
         pageContact: "./src/js/import/pages/pagePricesAndPromotions.js",
         pageAboutUs: "./src/js/import/pages/pageAboutUs.js",
         pageDoctorDetails: "./src/js/import/pages/pageDoctorDetails.js",
-        pageQuestions: "./src/js/import/pages/pageQuestions.js"
+        pageQuestions: "./src/js/import/pages/pageQuestions.js",
+        pageReviews: "./src/js/import/pages/pageReviews.js"
     },
 
     output: {

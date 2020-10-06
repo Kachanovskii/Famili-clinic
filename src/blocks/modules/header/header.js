@@ -27,6 +27,7 @@ document.querySelector('.mobile-menu').addEventListener('click', function () {
     // document.querySelector('.mobile-menu__item').classList.toggle('mobile-menu__active');
 
     document.querySelector('.mobile-navigation').classList.toggle('show-m-navigation');
+    document.querySelector('body').classList.toggle('scroll-hidden');
 });
 
 let link = document.URL;

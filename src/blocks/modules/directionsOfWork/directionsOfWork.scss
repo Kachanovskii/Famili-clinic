@@ -191,6 +191,20 @@
               }
             }
           }
+
+          @media (max-width: 575.98px) {
+            .card__info {
+              .card__p {
+                display: none;
+              }
+
+              .card__heading {
+                text-align: center;
+                margin-top: 0px;
+                @include font-style(14px, $primary1_500, $base-text);
+              }
+            }
+          }
         }
 
         .directionsOfWork__btn {

@@ -448,7 +448,7 @@
               color: $base-color;
             }
             &:hover {
-              background-color: rgba($primary-main-1, 0.6);
+              background-color: rgba($primary-main-1, 0.8);
               i {
                 color: #eee;
               }
@@ -475,7 +475,7 @@
               }
               .form-reviews__top-section {
                 border-radius: 8px 8px 0 0;
-                background-color: rgba($primary-main-1, 0.6);
+                background-color: rgba($primary-main-1, 0.8);
                 padding: 15px 15px 0 15px;
                 display: flex;
                 justify-content: space-between;
@@ -530,7 +530,7 @@
               .form-reviews__button {
                 input {
                   padding: 11px 20px;
-                  background-color: rgba($primary-main-1, 0.6);
+                  background-color: rgba($primary-main-1, 0.8);
                   border: none;
                   @include font-style(16px, $primary1_400, $base-light);
                   transition: 0.3s all;
@@ -540,7 +540,7 @@
                   margin-top: 20px;
 
                   &:hover {
-                    background-color: $primary-main-1;
+                    background-color: rgba($primary-main-1, 0.6);
                   }
                 }
               }

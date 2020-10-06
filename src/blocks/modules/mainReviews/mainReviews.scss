@@ -1,0 +1,484 @@
+.mainReviews {
+  .mainReviews__content {
+    .container-fluid {
+      background-color: #f8f9fc;
+      padding: 60px 15px 40px 15px;
+
+      .container {
+        .review__head {
+          a {
+            padding: 11px 20px;
+            background-color: rgba($primary-main-1, 0.8);
+            border: none;
+            @include font-style(16px, $primary1_400, $base-light);
+            transition: 0.3s all;
+            cursor: pointer;
+            outline: none;
+            border-radius: 6px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+
+            &:hover {
+              background-color: $primary-main-1;
+            }
+          }
+        }
+
+        .review__content {
+          @media (max-width: 767.98px) {
+            padding: 0 15px;
+          }
+
+          @media (max-width: 991.98px) {
+            padding: 0 40px;
+          }
+
+          @media (max-width: 575.98px) {
+            padding: 0 5px;
+          }
+
+          .review__item {
+            border: 1px solid #eee;
+            background: linear-gradient(70deg, $base-light, rgba(#eee, 0.1));
+            // background-color: $base-light;
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 30px 30px 10px 30px;
+            transition: 0.3s;
+            border-radius: 15px;
+            cursor: pointer;
+            width: calc((100% - 50px) / 3);
+            float: left;
+            margin-bottom: 25px;
+            margin-right: 25px;
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+
+            &:hover {
+              box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
+            }
+
+            @media (max-width: 991.98px) {
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin: 12.5px 0;
+            }
+
+            @media (max-width: 575.98px) {
+              flex-direction: column;
+            }
+
+            .review__doctor {
+              text-align: center;
+              @media (max-width: 991.98px) {
+                width: 45%;
+              }
+
+              @media (max-width: 575.98px) {
+                width: 100%;
+              }
+
+              @include font-style(16px, $primary1_300, $base-color);
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              .review__doctor__box-img {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background-image: url("../img/ourDoctors4.jpg");
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 20px;
+                background-repeat: no-repeat;
+              }
+
+              .review__doctor__content {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                  @include font-style(17px, $primary1_400, $base-text);
+                  margin-bottom: 5px;
+                  transition: 0.3s;
+
+                  &:hover {
+                    color: $base-color;
+                  }
+                }
+
+                span {
+                  @include font-style(14px, $primary1_400, rgba(0, 0, 0, 0.4));
+                  margin-bottom: 20px;
+                  line-height: 16px;
+                }
+              }
+            }
+
+            .review__customer {
+              @media (max-width: 991.98px) {
+                width: 55%;
+                padding: 0 20px;
+              }
+
+              @media (max-width: 575.98px) {
+                width: 100%;
+                padding: 0;
+              }
+
+              .review__customer__content {
+                display: flex;
+                flex-direction: column;
+
+                .review__customer__info {
+                  @include font-style(16px, $primary1_400, $base-color);
+
+                  display: flex;
+                  align-items: center;
+                  margin-left: 10px;
+
+                  .review__customer__box-img {
+                    margin-right: 15px;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-image: url("../img/customer-girl.jpg");
+                    background-position: -5px;
+                    background-size: auto 50px;
+                    position: relative;
+
+                    i {
+                      position: absolute;
+                      font-size: 18px;
+                      background-color: $primary-main-5;
+                      right: -15px;
+                      top: -5px;
+                      padding: 4px;
+                      border-radius: 50%;
+                    }
+                  }
+                }
+
+                .review__customer__star {
+                  align-self: flex-end;
+
+                  i {
+                    color: $base-color;
+                    font-size: 13px;
+                  }
+                }
+
+                .review__customer__text {
+                  @include font-style(15px, $primary1_300, $base-text);
+                  line-height: 18px;
+                  padding: 10px 0 0 0;
+
+                  p {
+                    a {
+                      margin-top: 5px;
+                      cursor: pointer;
+                      @include font-style(14px, $primary1_300, $base-color);
+                      display: block;
+                      width: 150px;
+                      transition: 0.3s all;
+
+                      &:hover {
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                }
+
+                .review__customer__data {
+                  text-align: right;
+                  @include font-style(12px, $primary1_300, rgba(0, 0, 0, 0.4));
+                  padding: 10px;
+                }
+              }
+            }
+          }
+
+          .review__item:nth-of-type(2) {
+            .review__doctor__box-img {
+              background-image: url("../img/ourDoctors2.jpg");
+            }
+
+            .review__customer
+              .review__customer__content
+              .review__customer__info
+              .review__customer__box-img {
+              background-image: url("../img/customer-girl-2.jpg");
+              background-position: center;
+              background-size: auto 50px;
+            }
+          }
+
+          .review__item:nth-of-type(3) {
+            .review__doctor__box-img {
+              background-image: url("../img/ourDoctors3.jpg");
+            }
+
+            .review__customer
+              .review__customer__content
+              .review__customer__info
+              .review__customer__box-img {
+              background-image: url("../img/customer-men.jpeg");
+              background-position: 0 0;
+              background-size: auto 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mainReviews__form-reviews {
+    background: linear-gradient(0deg, $base-color, #00cec8);
+    padding: 50px 0;
+    .container-fluid {
+      .container {
+        padding: 0;
+        .head-text {
+          margin: 0 0 40px 0;
+          @include font-style(28px, $primary1_400, $base-light);
+          line-height: 1.2;
+          @media (max-width: 767.98px) {
+            font-size: 25px;
+          }
+        }
+        .authorization-box {
+          display: flex;
+          justify-content: center;
+          padding-bottom: 30px;
+          a {
+            background-color: #eee;
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+            i {
+              font-size: 30px;
+              color: $base-color;
+            }
+            &:hover {
+              background-color: rgba($primary-main-1, 0.8);
+              i {
+                color: #eee;
+              }
+            }
+          }
+        }
+        .row {
+          justify-content: center;
+          .form-reviews__content {
+            opacity: 0.4;
+            transition: 0.3s;
+            &:hover {
+              opacity: 1;
+            }
+            border-radius: 8px;
+            form {
+              textarea,
+              input[type="text"],
+              input[type="button"],
+              input[type="submit"],
+              input[type="email"] {
+                -webkit-appearance: none;
+                border-radius: 0;
+              }
+              .form-reviews__top-section {
+                border-radius: 8px 8px 0 0;
+                background-color: rgba($primary-main-1, 0.8);
+                padding: 15px 15px 0 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media (max-width: 767.98px) {
+                  padding: 15px 15px 0 15px;
+                }
+                .user_info {
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 15px;
+                  .user_info__box-logo {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                  }
+                  .user_name {
+                    @include font-style(16px, $primary1_400, $base-light);
+                  }
+                }
+                .review__rating-container {
+                  .review-text {
+                    @include font-style(13px, $primary1_300, rgba($base-light, 0.8));
+                    margin-bottom: 5px;
+                  }
+                  .review__rating-box {
+                    right: 20px;
+                    bottom: 20px;
+                    color: $base-light;
+                  }
+                }
+              }
+              label {
+                position: relative;
+                display: block;
+                textarea {
+                  border-radius: 0 0 8px 8px;
+                  @include font-style(16px, $primary1_300, $base-text);
+                  border: 1px solid rgba($base-text, 0.2);
+                  width: 100%;
+                  height: calc(100% - 29px);
+                  box-shadow: 0px 10px 20px rgba(#000, 0.1);
+                  line-height: 18px;
+                  padding: 14px 15px 12px;
+                  outline: none;
+                  resize: none;
+                  background-color: #f8f9fc;
+                  cursor: pointer;
+                  background-color: $base-light;
+                }
+                .custom-select {
+                  position: absolute;
+                  margin-bottom: 15px;
+                  $height: 38px;
+                  bottom: -13px;
+                  right: 0;
+                  width: 250px;
+                  @media (max-width: 575.98px) {
+                    width: 220px;
+                  }
+
+                  i {
+                    @media (max-width: 991.98px) {
+                      margin-right: 5px;
+                    }
+                  }
+
+                  .select {
+                    width: 100%;
+                    position: relative;
+                    z-index: 100;
+                    background-color: rgba($primary-main-1, 0.93);
+                    @include font-style(13px, $primary1_400, $base-light);
+                    border-radius: 8px 0 8px 0;
+                    &.open {
+                      .select__dropdown {
+                        display: block;
+                        font-size: 12px;
+                      }
+
+                      .select__input {
+                        border-bottom: none;
+                      }
+
+                      .select__backdrop {
+                        display: block;
+                      }
+                    }
+
+                    &__input:first-of-type {
+                      border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+
+                    &__input {
+                      height: $height;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      padding: 0 10px;
+                      cursor: pointer;
+                      transition: 0.3s border;
+                    }
+
+                    &__dropdown {
+                      display: none;
+                      border: 1px solid rgba(255, 255, 255, 0.5);
+                      border-radius: 0 0 5px 5px;
+                      position: absolute;
+                      top: $height;
+                      left: 0;
+                      right: 0;
+                      max-height: 200px;
+                      overflow-y: auto;
+                      box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+                    }
+
+                    &__list {
+                      padding: 0;
+                      margin: 0;
+                      list-style: none;
+                    }
+
+                    &__backdrop {
+                      position: fixed;
+                      top: 0;
+                      right: 0;
+                      left: 0;
+                      bottom: 0;
+                      background: transparent;
+                      z-index: -1;
+                      display: none;
+                    }
+
+                    &__item:first-of-type {
+                      border-top: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+
+                    &__item {
+                      padding: 7px 10px;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                      background-color: lighten($primary-main-1, 2.5%);
+
+                      &.selected {
+                        background-color: $base-light;
+
+                        color: $primary-main-1;
+                      }
+
+                      &:hover {
+                        background-color: $base-light;
+
+                        color: $primary-main-1;
+
+                        cursor: pointer;
+                        transition: 0.15s background-color ease-in;
+                      }
+                    }
+                  }
+                }
+              }
+              .form-reviews__button {
+                input {
+                  padding: 11px 20px;
+                  background-color: rgba($primary-main-1, 0.8);
+                  border: none;
+                  @include font-style(16px, $primary1_400, $base-light);
+                  transition: 0.3s all;
+                  cursor: pointer;
+                  outline: none;
+                  border-radius: 6px;
+                  margin-top: 20px;
+
+                  &:hover {
+                    background-color: rgba($primary-main-1, 0.5);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

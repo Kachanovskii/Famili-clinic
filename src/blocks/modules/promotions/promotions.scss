@@ -1,7 +1,7 @@
 .container-fluid {
+  background: $primary-main-5;
   .promo {
     padding: 60px 0;
-    background: $primary-main-5;
 
     .container {
       padding: 0;
@@ -18,7 +18,7 @@
           }
 
           &::after {
-            content: '';
+            content: "";
             display: block;
             width: 150px;
             position: relative;

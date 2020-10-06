@@ -1,6 +1,6 @@
 $(document).ready(function ($) {
     var elements = $('.modal-overlay, .modal');
-    $('.header-top__btn, .link-red').click(function () {
+    $('.header-top__btn').click(function () {
         elements.addClass('active');
         $('body').addClass('scroll-hidden');
     });

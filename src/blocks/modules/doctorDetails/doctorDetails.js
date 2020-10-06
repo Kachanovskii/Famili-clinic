@@ -1,33 +1,33 @@
 
 $(document).ready(function () {
     $('.certificates-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         responsiveClass: true,
         dots: false,
         mouseDrag: false,
+        touchDrag: false,
         smartSpeed: 900,
         responsive: {
             0: {
                 items: 1,
-                nav: true
+                nav: true,
             },
             430: {
                 items: 2,
-                nav: true
+                nav: true,
             },
             575.98: {
                 items: 3,
-                nav: true
+                nav: true,
+
             },
             991.98: {
                 items: 5,
                 nav: true,
-                loop: false
             },
             1199.98: {
                 items: 6,
                 nav: true,
-                loop: false,
             },
         }
     });
@@ -35,6 +35,7 @@ $(document).ready(function () {
 
 $('.certificates-carousel').click(function (e) {
     if (e.target.tagName === "IMG" && e.target.src) {
+        console.log(e.target);
         document.querySelector('.certificate__modal-content img').setAttribute('src', e.target.src);
     }
 });

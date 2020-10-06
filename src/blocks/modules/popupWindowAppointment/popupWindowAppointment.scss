@@ -44,7 +44,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
         outline: none;
         padding: 0 10px;
         @include font-style(13px, $primary1_400, $base-light);
-        background-color: rgba($base-text, 0.03);
+        background-color: rgba($base-light, 0.25);
         border: 1px solid rgba(255, 255, 255, 0.4);
         transition: 0.3s border;
         cursor: pointer;
@@ -117,7 +117,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
           width: 100%;
           position: relative;
           z-index: 100;
-          background-color: rgba($base-text, 0.03);
+          background-color: rgba($base-light, 0.25);
           @include font-style(13px, $primary1_400, $base-light);
 
           &.open {
@@ -324,7 +324,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
   height: 100%;
   z-index: 9999;
   opacity: 0;
-  background-color: rgba(57, 82, 97, 0.3);
+  background-color: rgba($base-light, 0.3);
   backdrop-filter: saturate(180%) blur(15px);
   visibility: hidden;
   backface-visibility: hidden;

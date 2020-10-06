@@ -1,0 +1,260 @@
+.container-fluid {
+  .promo {
+    padding: 60px 0;
+    background: $primary-main-5;
+
+    .container {
+      padding: 0;
+
+      .promo-heading {
+        text-align: center;
+        margin: 0 0 40px 0;
+
+        h2 {
+          @include font-style(28px, $primary1_500, darken(#f27e63, 5%));
+
+          @media (max-width: 767.98px) {
+            width: 100%;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            width: 150px;
+            position: relative;
+            bottom: -6px;
+          }
+        }
+
+        h3 {
+          padding-top: 10px;
+          @include font-style(20px, $primary1_300, lighten($base-text, 15%));
+
+          strong {
+            font-size: 21.5px;
+            font-family: $primary1_500;
+          }
+        }
+
+        a {
+          padding-top: 12px;
+          display: block;
+          @include font-style(16px, $primary1_400, darken($base-color, 5%));
+
+          i {
+            padding-left: 5px;
+            font-size: 11px;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        @media (max-width: 991.98px) {
+          h2 {
+            font-size: 28px;
+          }
+
+          h3 {
+            font-size: 18px;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          h2 {
+            font-size: 25px;
+          }
+
+          h3 {
+            font-size: 17px;
+          }
+        }
+      }
+
+      .promo-content {
+        p {
+          @include font-style(15px, $primary1_400, $base-text);
+        }
+
+        .cards-container {
+          display: inline-block;
+          .p-card {
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+            width: calc((100% - 50px) / 3);
+            float: left;
+            margin-bottom: 25px;
+            margin-right: 25px;
+            border-radius: 8px;
+            background: $base-white;
+            overflow: hidden;
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
+
+            @media (max-width: 992.98px) {
+              &:nth-child(3n) {
+                margin-right: 25px;
+              }
+              &:nth-child(2n) {
+                margin-right: 0;
+              }
+              width: calc((100% - 25px) / 2);
+            }
+
+            @media (max-width: 767.98px) {
+              width: 100%;
+              &:nth-child(1n) {
+                margin-right: 0;
+              }
+              .card-header {
+                height: 145px;
+
+                .filter {
+                  padding: 20px 80px 20px 20px;
+
+                  .card-heading {
+                    h5 {
+                      font-size: 18px;
+                    }
+
+                    p {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+
+              .card-info {
+                p {
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .card-header {
+              background-size: cover;
+              filter: contrast(130%);
+              height: 180px;
+              position: relative;
+
+              .filter {
+                padding: 20px 100px 20px 20px;
+                background-color: rgba(0, 0, 0, 0.3);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                .card-heading {
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+
+                  h5 {
+                    @include font-style(20px, $primary1_500, $base-white);
+                  }
+
+                  p {
+                    @include font-style(14px, $primary1_400, $base-white);
+                  }
+                }
+              }
+            }
+
+            .card-info {
+              padding: 20px 20px 17px 20px;
+
+              p {
+                @include font-style(14px, $primary1_400, $base-text);
+                line-height: 1.5;
+                margin-bottom: 15px;
+              }
+
+              a {
+                @include font-style(14px, $primary1_500, $base-white);
+                padding: 5px 8px;
+                border-radius: 5px;
+                background: $base-color;
+                display: block;
+                width: min-content;
+              }
+            }
+          }
+
+          .p-card-1 {
+            .card-header {
+              background: url(../img/promotions/1.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-2 {
+            .card-header {
+              background: url(../img/promotions/2.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-3 {
+            .card-header {
+              background: url(../img/promotions/3.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-4 {
+            .card-header {
+              background: url(../img/promotions/4.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-5 {
+            .card-header {
+              background: url(../img/promotions/5.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-6 {
+            .card-header {
+              background: url(../img/promotions/6.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-7 {
+            .card-header {
+              background: url(../img/promotions/7.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-8 {
+            .card-header {
+              background: url(../img/promotions/8.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-9 {
+            .card-header {
+              background: url(../img/promotions/9.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+
+          .p-card-10 {
+            .card-header {
+              background: url(../img/promotions/10.jpg) no-repeat;
+              background-size: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

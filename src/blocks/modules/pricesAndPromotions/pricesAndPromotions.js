@@ -1,7 +1,7 @@
 import $ from 'jquery';
 $(document).ready(function () {
   $(".owl-three").owlCarousel({
-    items: 4,
+    items: 3,
     loop: true,
     margin: 10,
     nav: false,
@@ -14,7 +14,7 @@ $(document).ready(function () {
         items: 1.1,
       },
       500.98: {
-        items: 2,
+        items: 1.2
       },
       991.98: {
         items: 3,
@@ -34,7 +34,6 @@ for (let e of tr) {
   }
 }
 
-console.log(tr[1].children.length);
 let toggle = false;
 let list = document.querySelectorAll('.prices-list__item');
 for (let e of list) {

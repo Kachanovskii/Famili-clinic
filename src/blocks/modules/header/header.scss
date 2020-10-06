@@ -191,7 +191,7 @@
             left: -12px;
           }
 
-          .active-point-primary.active-point:before {
+          .active-point-red.active-point:before {
             background-color: darken(#f27e63, 15%);
           }
 
@@ -293,10 +293,6 @@
           transition: 0.3s;
           padding: 0 15px;
 
-          .link-red {
-            color: #d90416;
-          }
-
           a {
             border-bottom: 1px solid rgb(225, 225, 225);
             opacity: 0.85;
@@ -304,6 +300,28 @@
             display: block;
             transition: 0.3s;
             @include font-style(17px, $primary1_500, $base-text);
+          }
+
+          .mob-link {
+            position: relative;
+            padding-left: 10px;
+          }
+
+          .mob-active-point::before {
+            content: '';
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $base-text;
+            opacity: 0.6;
+            top: 23px;
+            position: absolute;
+            left: -3px;
+          }
+
+          .active-point-red.mob-active-point:before {
+            background-color: darken(#f27e63, 15%);
           }
 
           .mobile-social {

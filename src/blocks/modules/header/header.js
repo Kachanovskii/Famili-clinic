@@ -32,14 +32,23 @@ document.querySelector('.mobile-menu').addEventListener('click', function () {
 let link = document.URL;
 let a = document.querySelectorAll('.navigation__link');
 for (let i = 0; i < a.length; i++) {
-    let b = a[i].getAttribute('href');
     if (a[i].href == link) {
         console.log(a[4].href);
         if (i == 3) {
-            a[i].classList.add('active-point-primary');
+            a[i].classList.add('active-point-red');
         }
         a[i].classList.add('active-point');
         a[i].style.opacity = '0.7';
+    }
+}
+let link_mobil = document.querySelectorAll('.mob-link');
+for (let i = 0; i < link_mobil.length; i++) {
+    if (link_mobil[i].href == link) {
+        if (i == 3) {
+            link_mobil[i].classList.add('active-point-red');
+        }
+        link_mobil[i].classList.add('mob-active-point');
+        link_mobil[i].style.opacity = '0.7';
     }
 }
 

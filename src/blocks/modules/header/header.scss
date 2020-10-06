@@ -307,6 +307,10 @@
             padding-left: 10px;
           }
 
+          .mob-link-red {
+            color: darken(#f27e63, 15%);
+          }
+
           .mob-active-point::before {
             content: '';
             display: block;

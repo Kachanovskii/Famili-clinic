@@ -1,11 +1,12 @@
-.promotions {
-  padding: 60px 0;
-  background: linear-gradient(180deg,
-      $primary-main-5,
-      $primary-main-5,
-      $primary-main-5,
-      rgb(239, 239, 239));
-
+.promotions-content {
+  padding: 60px 0 0 0;
+  background: linear-gradient(
+    180deg,
+    $primary-main-5,
+    $primary-main-5,
+    $primary-main-5,
+    rgb(239, 239, 239)
+  );
 
   .container {
     .promotions-heading {
@@ -80,9 +81,7 @@
       }
 
       .cards-container {
-
         .p-card {
-
           border-radius: 8px;
           background: $base-white;
           overflow: hidden;
@@ -102,7 +101,7 @@
               right: 0;
               bottom: 0;
 
-              @media (max-width:767.98px) {
+              @media (max-width: 767.98px) {
                 padding-right: 70px;
               }
 
@@ -221,7 +220,6 @@
 .prices {
   padding: 45px 0;
   background-color: #f8f9fc;
-
 
   .container {
     .prices-heading {

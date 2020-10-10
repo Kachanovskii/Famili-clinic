@@ -6,9 +6,24 @@
 
       .container {
         .review__head {
+          display: flex;
+          flex-direction: column;
+          h3 {
+            @include font-style(28px, $primary1_500, $base-color);
+            padding: 0 0 10px 0;
+            margin-bottom: 10px;
+            &::after {
+              content: "";
+              display: block;
+              width: 150px;
+              border-bottom: 2px solid;
+              position: relative;
+              bottom: -6px;
+            }
+          }
           a {
             padding: 11px 20px;
-            background-color: rgba($primary-main-1, 0.8);
+            background: linear-gradient(80deg, rgba($primary-main-1, 0.8), rgba($base-color, 0.9));
             border: none;
             @include font-style(16px, $primary1_400, $base-light);
             transition: 0.3s all;
@@ -17,9 +32,16 @@
             border-radius: 6px;
             margin: 0 auto;
             margin-bottom: 40px;
+            @media (max-width: 991.98px) {
+              margin-bottom: 12.5px;
+            }
 
             &:hover {
-              background-color: $primary-main-1;
+              background: linear-gradient(
+                80deg,
+                rgba($primary-main-1, 0.5),
+                rgba($base-color, 0.6)
+              );
             }
           }
         }
@@ -39,9 +61,8 @@
 
           .review__item {
             border: 1px solid #eee;
-            background: linear-gradient(70deg, $base-light, rgba(#eee, 0.1));
-            // background-color: $base-light;
-            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+            background: linear-gradient(80deg, $base-light, rgba($base-color, 0.04));
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
             display: flex;
             flex-direction: column;
             padding: 30px 30px 10px 30px;
@@ -57,7 +78,7 @@
             }
 
             &:hover {
-              box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
+              background: linear-gradient(80deg, $base-light, rgba($base-color, 0.15));
             }
 
             @media (max-width: 991.98px) {
@@ -301,8 +322,12 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                position: relative;
                 @media (max-width: 767.98px) {
                   padding: 15px 15px 0 15px;
+                }
+                @media (max-width: 575.98px) {
+                  height: 95px;
                 }
                 .user_info {
                   display: flex;
@@ -319,9 +344,19 @@
                   }
                 }
                 .review__rating-container {
+                  align-self: flex-start;
+                  display: flex;
+                  @media (max-width: 575.98px) {
+                    flex-direction: column;
+                  }
                   .review-text {
+                    display: flex;
+                    align-items: center;
                     @include font-style(13px, $primary1_300, rgba($base-light, 0.8));
-                    margin-bottom: 5px;
+                    margin-right: 10px;
+                    @media (max-width: 575.98px) {
+                      margin-bottom: 5px;
+                    }
                   }
                   .review__rating-box {
                     right: 20px;
@@ -329,32 +364,15 @@
                     color: $base-light;
                   }
                 }
-              }
-              label {
-                position: relative;
-                display: block;
-                textarea {
-                  border-radius: 0 0 8px 8px;
-                  @include font-style(16px, $primary1_300, $base-text);
-                  border: 1px solid rgba($base-text, 0.2);
-                  width: 100%;
-                  height: calc(100% - 29px);
-                  box-shadow: 0px 10px 20px rgba(#000, 0.1);
-                  line-height: 18px;
-                  padding: 14px 15px 12px;
-                  outline: none;
-                  resize: none;
-                  background-color: #f8f9fc;
-                  cursor: pointer;
-                  background-color: $base-light;
-                }
                 .custom-select {
                   position: absolute;
-                  margin-bottom: 15px;
-                  $height: 38px;
-                  bottom: -13px;
+                  $height: 30px;
+                  bottom: 0;
                   right: 0;
                   width: 250px;
+                  background-color: rgba($primary-main-1, 0.4);
+                  border: 1px solid rgba(255, 255, 255, 0.5);
+                  border-radius: 8px 0 0 0;
                   @media (max-width: 575.98px) {
                     width: 220px;
                   }
@@ -369,9 +387,7 @@
                     width: 100%;
                     position: relative;
                     z-index: 100;
-                    background-color: rgba($primary-main-1, 0.93);
                     @include font-style(13px, $primary1_400, $base-light);
-                    border-radius: 8px 0 8px 0;
                     &.open {
                       .select__dropdown {
                         display: block;
@@ -456,6 +472,24 @@
                       }
                     }
                   }
+                }
+              }
+              label {
+                display: block;
+                textarea {
+                  border-radius: 0 0 8px 8px;
+                  @include font-style(16px, $primary1_300, $base-text);
+                  border: 1px solid rgba($base-text, 0.2);
+                  width: 100%;
+                  height: calc(100% - 29px);
+                  box-shadow: 0px 10px 20px rgba(#000, 0.1);
+                  line-height: 18px;
+                  padding: 14px 15px 12px;
+                  outline: none;
+                  resize: none;
+                  background-color: #f8f9fc;
+                  cursor: pointer;
+                  background-color: $base-light;
                 }
               }
               .form-reviews__button {

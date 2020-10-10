@@ -1,3 +1,4 @@
+import { event } from 'jquery';
 import Select from '../../../js/import/customSelect/customSelect';
 
 const selectPopupWindow = new Select('#selectReviews', {
@@ -21,4 +22,13 @@ const selectPopupWindow = new Select('#selectReviews', {
         console.log('Selected Item', item);
     }
 
+});
+
+jQuery(document).ready(function () {
+    jQuery("a.scrollto").click(function () {
+        let elementClick = jQuery(this).attr("href");
+        let destination = jQuery(elementClick).offset().top - 90;
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
+        return false;
+    });
 });

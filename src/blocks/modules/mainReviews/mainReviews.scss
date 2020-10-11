@@ -21,27 +21,39 @@
               bottom: -6px;
             }
           }
-          a {
-            padding: 11px 20px;
-            background: linear-gradient(80deg, rgba($primary-main-1, 0.8), rgba($base-color, 0.9));
-            border: none;
-            @include font-style(16px, $primary1_400, $base-light);
-            transition: 0.3s all;
-            cursor: pointer;
-            outline: none;
-            border-radius: 6px;
-            margin: 0 auto;
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-bottom: 40px;
             @media (max-width: 991.98px) {
               margin-bottom: 12.5px;
             }
-
-            &:hover {
-              background: linear-gradient(
-                80deg,
-                rgba($primary-main-1, 0.5),
-                rgba($base-color, 0.6)
-              );
+            i {
+              height: 70px;
+              width: 70px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid lighten($primary-main-1, 20%);
+              margin-right: 25px;
+              border-radius: 50%;
+              font-size: 42px;
+              color: lighten($primary-main-1, 20%);
+            }
+            a {
+              max-height: 38px;
+              padding: 11px 20px;
+              background: lighten($primary-main-1, 10%);
+              border: none;
+              @include font-style(16px, $primary1_400, $base-light);
+              transition: 0.3s all;
+              cursor: pointer;
+              outline: none;
+              border-radius: 6px;
+              &:hover {
+                background: lighten($primary-main-1, 20%);
+              }
             }
           }
         }
@@ -61,8 +73,8 @@
 
           .review__item {
             border: 1px solid #eee;
-            background: linear-gradient(80deg, $base-light, rgba($base-color, 0.04));
-            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.12);
+            background: $primary-main-5;
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.08);
             display: flex;
             flex-direction: column;
             padding: 30px 30px 10px 30px;
@@ -78,7 +90,7 @@
             }
 
             &:hover {
-              background: linear-gradient(80deg, $base-light, rgba($base-color, 0.15));
+              background: $base-light;
             }
 
             @media (max-width: 991.98px) {
@@ -372,6 +384,8 @@
                   width: 250px;
                   background-color: rgba($primary-main-1, 0.4);
                   border: 1px solid rgba(255, 255, 255, 0.5);
+                  border-right: none;
+                  border-bottom: none;
                   border-radius: 8px 0 0 0;
                   @media (max-width: 575.98px) {
                     width: 220px;

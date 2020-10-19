@@ -2,17 +2,14 @@
   background-color: $primary-main-5;
   .container-fluid {
     .container {
-      .mainDoctorsAndReferrals__navbar.open{
+      .mainDoctorsAndReferrals__navbar.open {
         @media (max-width: 991.98px) {
           width: 100%;
           opacity: 1;
-          }
-        .mainDoctorsAndReferrals__navbar-content{
+        }
+        .mainDoctorsAndReferrals__navbar-content {
           @media (max-width: 991.98px) {
-          left: 0;
-          #navbar-icon{
-            left: 280px;
-          }
+            left: 0;
           }
         }
       }
@@ -21,20 +18,19 @@
         background-color: #f8f9fc;
         position: relative;
         padding-top: 15px;
-        transition: .3s;
+        transition: 0.3s;
         @media (max-width: 991.98px) {
           padding: 0;
           position: fixed;
-          z-index: 9;
+          z-index: 1000;
           top: 81px;
           left: 0;
           bottom: 0;
           width: 0;
-          background-color:rgba($base-light, 0.2);
+          background-color: rgba($base-light, 0.2);
           backdrop-filter: saturate(180%) blur(10px);
           // box-shadow: none;
           opacity: 1;
-          
         }
 
         .mainDoctorsAndReferrals__navbar-content {
@@ -43,9 +39,7 @@
           top: 110px;
           padding-bottom: 30px;
           @media (max-width: 991.98px) {
-          padding-top: 30px;
-          padding-left: 15px;
-            padding-bottom: 30px; 
+            padding: 30px 15px;
             position: absolute;
             bottom: 0;
             top: 0;
@@ -56,9 +50,11 @@
             box-shadow: 0 0 5px 2px rgba($primary-main-1, 0.1);
             left: -300px;
             box-shadow: 0 0 5px 2px rgba($primary-main-1, 0.1);
-
           }
-
+          @media (max-width: 370px) {
+            width: 275px;
+            left: -275px;
+          }
           li {
             display: flex;
             align-items: center;
@@ -66,18 +62,13 @@
             cursor: pointer;
             transition: 0.3s color;
             border-bottom: 1px solid rgba($base-color, 0.15);
-            h5{
-            @include font-style(22px, $primary1_400, $base-color);
-            width: 100%;
-            padding:0 0 10px 15px;
+            h5 {
+              @include font-style(22px, $primary1_400, $base-color);
+              width: 100%;
+              padding: 0 0 10px 15px;
             }
             @media (max-width: 1199.98px) {
               line-height: 19px;
-            }
-            @media (max-width: 991.98px) {
-             h5{
-              text-align: center;
-             }
             }
 
             &:hover {
@@ -129,9 +120,9 @@
         }
 
         .ourDoctors__head-text {
-            text-align: center;
-            @include font-style(28px, $primary1_500, $base-color);
-            padding: 20px;
+          text-align: center;
+          @include font-style(28px, $primary1_500, $base-color);
+          padding: 20px 0;
         }
 
         .ourDoctors__main {
@@ -214,87 +205,35 @@
       }
     }
   }
-  .navbar-icon-wrapper{
+  .navbar-icon-wrapper {
+    border: 1px $base-light solid;
+    border-left: none;
     position: fixed;
-    top: 100px;
-    left: 20px;
-    z-index: 10;
-    padding: 10px;
-    padding-bottom:4px;
-    background-color:#f8f9fc;
-    
-    border-radius: 6px;
-   #navbar-icon{
-    width: 30px;
-    height: 30px;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-    cursor: pointer;
-  }
-  // #navbar-icon.open {
-  //   transition: all .5s;
-  //     left: 250px;
-  // }
-  #navbar-icon span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: $base-color;
-    border-radius: 9px;
-    opacity: 1;
+    top: 50%;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fc;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $base-light;
+    background-color: $base-color;
+    font-size: 19px;
+    transition: 0.3s;
+    i {
+      transition: 0.3s;
+    }
   }
-  #navbar-icon span:nth-child(1) {
-    top: 0px;
+  .navbar-icon-wrapper.open {
+    left: 300px;
+    i {
+      transform: rotate(-180deg);
+    }
+    @media (max-width: 370px) {
+      left: 275px;
+    }
   }
-  
-  #navbar-icon span:nth-child(2),#navbar-icon span:nth-child(3) {
-    top: 10px;
-  }
-  
-  #navbar-icon span:nth-child(4) {
-    top: 20px;
-  }
-  
-  #navbar-icon.open span:nth-child(1) {
-    top: 10px;
-    width: 0%;
-    left: 50%;
-  }
-  
-  #navbar-icon.open span:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  
-  #navbar-icon.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  
-  #navbar-icon.open span:nth-child(4) {
-    top: 10px;
-    width: 0%;
-    left: 50%;
-  }
-}
 }

@@ -2,15 +2,39 @@
   background-color: $primary-main-5;
   .container-fluid {
     .container {
+      .mainDoctorsAndReferrals__navbar.open{
+        @media (max-width: 991.98px) {
+          width: 100%;
+          opacity: 1;
+          }
+        .mainDoctorsAndReferrals__navbar-content{
+          @media (max-width: 991.98px) {
+          left: 0;
+          #navbar-icon{
+            left: 280px;
+          }
+          }
+        }
+      }
       .mainDoctorsAndReferrals__navbar {
         box-shadow: 0 0 5px 2px rgba($primary-main-1, 0.1);
-
         background-color: #f8f9fc;
         position: relative;
         padding-top: 15px;
-
+        transition: .3s;
         @media (max-width: 991.98px) {
-          padding-top: 20px;
+          padding: 0;
+          position: fixed;
+          z-index: 9;
+          top: 81px;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          background-color:rgba($base-light, 0.2);
+          backdrop-filter: saturate(180%) blur(10px);
+          // box-shadow: none;
+          opacity: 1;
+          
         }
 
         .mainDoctorsAndReferrals__navbar-content {
@@ -18,9 +42,21 @@
           position: sticky;
           top: 110px;
           padding-bottom: 30px;
-
           @media (max-width: 991.98px) {
-            padding-bottom: 30px;
+          padding-top: 30px;
+          padding-left: 15px;
+            padding-bottom: 30px; 
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            overflow: hidden;
+            width: 300px;
+            background-color: rgba(#f8f9fc, 0.85);
+            backdrop-filter: saturate(180%) blur(10px);
+            box-shadow: 0 0 5px 2px rgba($primary-main-1, 0.1);
+            left: -300px;
+            box-shadow: 0 0 5px 2px rgba($primary-main-1, 0.1);
+
           }
 
           li {
@@ -30,8 +66,18 @@
             cursor: pointer;
             transition: 0.3s color;
             border-bottom: 1px solid rgba($base-color, 0.15);
+            h5{
+            @include font-style(22px, $primary1_400, $base-color);
+            width: 100%;
+            padding:0 0 10px 15px;
+            }
             @media (max-width: 1199.98px) {
               line-height: 19px;
+            }
+            @media (max-width: 991.98px) {
+             h5{
+              text-align: center;
+             }
             }
 
             &:hover {
@@ -75,19 +121,17 @@
           padding: 0 0 0 30px;
         }
 
+        @media (max-width: 991.98px) {
+          padding: 0;
+        }
         @media (max-width: 767.98px) {
           padding: 0;
         }
 
         .ourDoctors__head-text {
-          display: none;
-
-          @media (max-width: 767.98px) {
             text-align: center;
             @include font-style(28px, $primary1_500, $base-color);
-            display: block;
-            padding: 40px 0 0 0;
-          }
+            padding: 20px;
         }
 
         .ourDoctors__main {
@@ -170,4 +214,87 @@
       }
     }
   }
+  .navbar-icon-wrapper{
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    z-index: 10;
+    padding: 10px;
+    padding-bottom:4px;
+    background-color:#f8f9fc;
+    
+    border-radius: 6px;
+   #navbar-icon{
+    width: 30px;
+    height: 30px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  // #navbar-icon.open {
+  //   transition: all .5s;
+  //     left: 250px;
+  // }
+  #navbar-icon span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: $base-color;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  #navbar-icon span:nth-child(1) {
+    top: 0px;
+  }
+  
+  #navbar-icon span:nth-child(2),#navbar-icon span:nth-child(3) {
+    top: 10px;
+  }
+  
+  #navbar-icon span:nth-child(4) {
+    top: 20px;
+  }
+  
+  #navbar-icon.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+  }
+  
+  #navbar-icon.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  #navbar-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  #navbar-icon.open span:nth-child(4) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+  }
+}
 }

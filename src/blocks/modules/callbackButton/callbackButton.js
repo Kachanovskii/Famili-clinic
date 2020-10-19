@@ -12,7 +12,7 @@ $('.callback-bt__modal-content input[type="submit"]').click(function (e) {
     var elements = $('.callback-bt-input, .modal-overlay__bt-input');
     e.preventDefault();
     elements.removeClass('activeModal');
-
+    $('body').removeClass('scroll-hidden');
 
 });
 

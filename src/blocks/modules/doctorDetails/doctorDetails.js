@@ -35,7 +35,6 @@ $(document).ready(function () {
 
 $('.certificates-carousel').click(function (e) {
     if (e.target.tagName === "IMG" && e.target.src) {
-        console.log(e.target);
         document.querySelector('.certificate__modal-content img').setAttribute('src', e.target.src);
     }
 });

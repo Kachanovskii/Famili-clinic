@@ -253,7 +253,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
     padding: 40px 30px 10px 30px;
     position: relative;
     margin: 0 auto;
-    background: linear-gradient(0deg, $base-color, #00cec8);
+    background: linear-gradient(80deg, $base-color, lighten($base-color, 7%));
     width: 600px;
     border-radius: 3px;
     opacity: 0;

@@ -10,7 +10,7 @@
           </div>
           <div>
             <div class="referrals__head-text">
-              <h3>Всі відгуки наших пацієнтів</h3>
+              <h3>Всі відгуки</h3>
             </div>
           </div>
         </div>
@@ -21,7 +21,12 @@
     <div class="container-fluid">
       <div class="container">
         <div class="row review__head">
-          <a href="#formReviews">Залишити відгук</a>
+              <h3>Всі відгуки наших пацієнтів </h3>
+              <div>
+                <i class="fas fa-user"></i>
+                  <a class="scrollto" href="#formReview">Залишити відгук</a>
+               </div>
+              
         </div>
         <div class="row review__content">
           <div class="review__item">
@@ -256,51 +261,11 @@
               </div>
             </div>
           </div>
-          <div class="review__item">
-            <div class="review__doctor">
-              <div class="review__doctor__box-img"></div>
-              <div class="review__doctor__content">
-                <a href="#">Щеринская Илона Юрьевна</a>
-                <span
-                  >Врач медицины неотложных состояний, Кардиолог, Функциональная диагностика</span
-                >
-              </div>
-            </div>
-            <div class="review__customer">
-              <div class="review__customer__content">
-                <div class="review__customer__info">
-                  <div class="review__customer__box-img"><i class="fas fa-comment-dots"></i></div>
-                  Марина
-                </div>
-                <div class="review__customer__star">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <div class="review__customer__text">
-                  <p>
-                    — "<span
-                      >Сегодня была на приёме у Илоны Юрьевны впервые. Очень ответственный и
-                      располагающий к себе доктор! Внимательно и обстоятельно прошлась по всем
-                      вопросам по здоровью. После посещения таких врачей, хочется возвращаться
-                      именно в вашу клинику! Спасибо!</span
-                    >"
-                  </p>
-                </div>
-                <div class="review__customer__data">
-                  <span>25.08.2020</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      <a id="formReviews"></a>
     </div>
   </div>
-  <div class="mainReviews__form-reviews">
+  <div class="mainReviews__form-reviews" id="formReview">
     <div class="container-fluid">
       <div class="container">
         <div class="head-text">
@@ -310,11 +275,11 @@
           </h5>
         </div>
         <div class="authorization-box">
-          <a href="" class="instagram">
+          <a href="#" class="instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="" class="google"><i class="fab fa-google"></i> </a>
-          <a href="" class="facebook"> <i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="google"><i class="fab fa-google"></i> </a>
+          <a href="#" class="facebook"> <i class="fab fa-facebook-f"></i></a>
         </div>
         <div class="row">
           <div class="form-reviews__content col-12 col-md-8 col-lg-7">
@@ -327,13 +292,18 @@
                   <div class="user_name">Ім'я</div>
                 </div>
                 <div class="review__rating-container">
-                  <div class="review-text">Оцінка</div>
+                  <div class="review-text">Оцінка:</div>
                   <div class="review__rating-box">
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <div class="custom-select">
+                  <div class="wrap">
+                    <div id="selectReviews"></div>
                   </div>
                 </div>
               </div>
@@ -344,11 +314,6 @@
                   rows="6"
                   placeholder="Ваш коментар"
                 ></textarea>
-                <div class="custom-select">
-                  <div class="wrap">
-                    <div id="selectReviews"></div>
-                  </div>
-                </div>
               </label>
               <div class="form-reviews__button">
                 <input type="submit" value="Опублікувати" />

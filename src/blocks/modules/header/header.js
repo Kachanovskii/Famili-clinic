@@ -34,7 +34,6 @@ let link = document.URL;
 let a = document.querySelectorAll('.navigation__link');
 for (let i = 0; i < a.length; i++) {
     if (a[i].href == link) {
-        console.log(a[4].href);
         if (i == 3) {
             a[i].classList.add('active-point-red');
         }

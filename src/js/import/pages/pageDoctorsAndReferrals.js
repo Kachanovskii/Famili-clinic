@@ -6,3 +6,4 @@ import "%modules%/preloader/preloader";
 import "%modules%/popupWindowAppointment/popupWindowAppointment";
 import "%modules%/callbackButton/callbackButton";
 import "%modules%/mainDoctorsAndReferrals/mainDoctorsAndReferrals";
+import "%modules%/department/scriptDepartment";

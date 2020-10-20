@@ -1,7 +1,73 @@
 
+      .cosmetology, .dermatology, .family-doc, .massage, .gynecology, .otolaryngology, .surgery, .urology, .uzd {
+        display: none;
+      }
+      .family-doc{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/1.jpg) no-repeat;
+          }
+        }
+      }
+      .urology{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/2.jpg) no-repeat;
+          }
+        }
+      }
+      .uzd{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/3.jpg) no-repeat;
+          }
+        }
+      }
+      .otolaryngology{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/4.jpg) no-repeat;
+          }
+        }
+      }
+      .massage{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/5.jpg) no-repeat;
+          }
+        }
+      }
+      .gynecology{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/6.jpg) no-repeat;
+          }
+        }
+      }
+      .dermatology{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/7.jpg) no-repeat;
+          }
+        }
+      }
+      .cosmetology{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/8.jpg) no-repeat;
+          }
+        }
+      }
+      .surgery{
+        .direction-text{
+          .direction-heading{
+            background:  url(../img/directions/8.jpg) no-repeat;
+          }
+        }
+      }
       .direction-content{
         // border: 1px solid blue;
-        display: flex;
+        // display: flex;
         .direction-text{
           // border: 1px solid blue;
           border-radius: 8px;
@@ -16,7 +82,6 @@
           .direction-heading{
             // border: 1px solid blue;
             margin-bottom: 20px;
-            background:  url(../img/directions/9.jpg) no-repeat;
             filter: contrast(110%);
             background-size: cover;
             height: 200px;

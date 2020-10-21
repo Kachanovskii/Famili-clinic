@@ -25,6 +25,4 @@ for (let i = 0; i < $links.length; i++) {
     $div(objDepartments[a]).style.display = 'flex';
   });
 }
-window.onbeforeunload = function () {
-  localStorage.clear();
-};
+localStorage.clear();

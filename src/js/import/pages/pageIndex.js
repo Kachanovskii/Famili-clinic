@@ -5,16 +5,16 @@ import "%modules%/upButton/upButton";
 const WOW = require('../wow/wow.min.js');
 
 let link = document.querySelectorAll(".card__a");
+let v = false;
 for (let i = 0; i < link.length; i++) {
     link[i].addEventListener("click", function () {
         localStorage.setItem('key', i);
+        v = true;
     });
+    if (v == false) {
+        localStorage.clear();
+    }
 }
-
-// link[0].addEventListener("click", function () {
-//     localStorage.setItem("test", ['test1', 'test2']);
-// });
-
 window.wow = new WOW.WOW({       // default
     mobile: true,       // default
     live: false       // default

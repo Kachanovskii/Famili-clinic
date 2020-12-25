@@ -12,3 +12,17 @@ $(document).ready(function () {
         }
     });
 });
+
+let $link = document.querySelectorAll('.link');
+console.log($link.length );
+for (let j = 0; j < $link.length; j++) {  
+    $link[j].addEventListener('click', ()=>{
+        for(let n=0; n<$link.length; n++){
+            $link[n].classList.remove('active')
+        }
+        if($link[j]){
+            $link[j].classList.add('active')
+        }
+    })
+}
+

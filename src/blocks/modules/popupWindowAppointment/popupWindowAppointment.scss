@@ -6,6 +6,36 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .popupWindowAppointment {
+  .popupWindowAppointmentMessege{
+      // background-color: rgba(#fff, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 42px;
+      transition: 1s;
+      opacity: 0;
+      text-align: center;
+      position: absolute;
+      padding: 0 20px;
+      top: 30px;
+      right: 38px;
+      left: 30px;
+      border-radius: 3px;
+      @include font-style(16px, $primary1_400, #000);
+      &.success{
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        transition: 1s;
+        opacity: 1;
+      }
+      &.error{
+        transition: 1s;
+        opacity: 1;
+        color: #721c24;
+        background-color: #f8d7da
+    }
+  }
   .appointment__content__head_text {
     padding-bottom: 45px;
     @include font-style(25px, $primary1_400, $base-light);
@@ -232,7 +262,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
       border-radius: 0;
     }
 
-    input {
+    button {
       padding: 11px 20px;
       background-color: transparent;
       border: 1px solid rgba(255, 255, 255, 0.5);

@@ -289,6 +289,7 @@ $speed: 0.6s;
 $delay: ($speed * 0.5);
 $easing: cubic-bezier(0.55, 0, 0.1, 1);
 
+
 .callback-bt-input {
   @include font-style(16px, $primary1_300, $base-light);
   background: linear-gradient(0deg, $base-color, #00cec8);
@@ -301,6 +302,8 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
   backface-visibility: hidden;
   transform: scale(1.2);
   transition: all $speed $easing;
+  
+ 
 
   @media (max-width: 767.98px) {
     width: 500px;
@@ -377,13 +380,13 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
     textarea,
     input[type="text"],
     input[type="button"],
-    input[type="submit"] {
+    button[type="submit"] {
       -webkit-appearance: none;
       border-radius: 0;
     }
 
-    input[type="submit"] {
-      max-width: 40%;
+    .callback-button {
+      width: 40%;
       background-color: $primary-btn-1;
       color: $base-light;
       cursor: pointer;
@@ -392,6 +395,9 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
       border: 1px inset transparent;
       transition: 0.3s border;
       border-radius: 0;
+      &:hover{
+        border: none;
+      }
 
       @media (max-width: 440px) {
         margin-top: 20px;
@@ -450,6 +456,35 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
 
   .callback-bt__modal-content {
     opacity: 1;
+    .callbackMessage{
+      // background-color: rgba(#fff, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 42px;
+      transition: 1s;
+      opacity: 0;
+      text-align: center;
+      position: absolute;
+      padding: 0 20px;
+      top: 30px;
+      right: 38px;
+      left: 40px;
+      border-radius: 3px;
+      @include font-style(16px, $primary1_400, #000);
+      &.success{
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        transition: 1s;
+        opacity: 1;
+      }
+      &.error{
+        transition: 1s;
+        opacity: 1;
+        color: #721c24;
+        background-color: #f8d7da
+    }}
   }
 
   .close-modal {
@@ -473,6 +508,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
   backface-visibility: hidden;
   transition: opacity $speed $easing, visibility $speed $easing;
   backdrop-filter: saturate(180%) blur(15px);
+  
 
   &.activeModal {
     opacity: 1;

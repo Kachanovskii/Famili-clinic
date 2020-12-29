@@ -13,7 +13,6 @@ $('.callback-bt__modal-content input[type="submit"]').click(function (e) {
     e.preventDefault();
     elements.removeClass('activeModal');
     $('body').removeClass('scroll-hidden');
-
 });
 
 
@@ -26,7 +25,6 @@ $(document).ready(function ($) {
             setTimeout(() => {
                 $('#focus').focus();
             }, 1000);
-
 
         } else {
             elements.removeClass('activeModal');
@@ -53,3 +51,66 @@ $(document).ready(function ($) {
         }
     });
 });
+
+const moment = require('moment');
+document.getElementById('callback__form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    let $phone = document.querySelector('#callback__form [name = "phone"]').value;
+    
+    let dateNow = moment(new Date()).format('MMMM Do YYYY, h:mm:ss a');
+
+    let newCallback = {
+        phone: $phone
+    }
+
+    fetch(`https://api.telegram.org/bot1461272815:AAELZnj3YdSHVItWSyK0N8wHkQkPIdRl-eQ/sendMessage?chat_id=-311294005&text=New+Callback%0APhone:+${'%2B' + newCallback.phone}%0AApplication time:+${dateNow}`).then(responce => {
+        return responce.json();
+    }).then(data => {
+        let $statusMessage = document.querySelector('.callbackMessage');
+        let status = '';
+
+        if (data.ok) {
+            status = 'success';
+            $statusMessage.classList.add(status);
+            $statusMessage.innerHTML = ' Ваше замовлення на зворотній дзвінок успішно прийнята 🙂 Наш працівник скоро зв’яжеться з Вами !';
+        } else {
+            status = 'error';
+            $statusMessage.classList.add(status);
+            $statusMessage.innerHTML = 'Виникла помилка 🙁 спробуйте ще раз!';
+        }
+        var elements = $('.callback-bt-input, .modal-overlay__bt-input');
+        setTimeout(() => {
+            elements.removeClass('activeModal');
+        $statusMessage.classList.remove(data.status)
+        $statusMessage.innerHTML = '';
+        $statusMessage.innerHTML = '';
+        }, 5000);
+        console.log(data);
+    })
+  
+})
+
+
+// fetch('http://localhost:8000/callback', {
+//     method: 'POST',
+//     headers: {
+//         "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(newCallback)
+// }).then(responce => {
+//     return responce.json();
+// }).then(data => {
+//     let $statusMessage = document.querySelector('.callbackMessage');
+//     var elements = $('.callback-bt-input, .modal-overlay__bt-input');
+
+//     $statusMessage.classList.add(data.status);
+//     $statusMessage.innerHTML = data.message;
+//     setTimeout(() => {
+//         elements.removeClass('activeModal');
+//         $statusMessage.classList.remove(data.status)
+//         $statusMessage.innerHTML = '';
+//     }, 5000);
+    
+// }).catch((e) => {
+//     console.log(e);
+// })

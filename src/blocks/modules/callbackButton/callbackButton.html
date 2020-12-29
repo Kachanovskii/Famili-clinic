@@ -9,11 +9,12 @@
 <div class="modal-overlay__bt-input">
     <div class="callback-bt-input">
         <div class="callback-bt__modal-content">
+            <p class="callbackMessage"></p>
             <h4>Хочете, зателефонуємо Вам? <i class="fas fa-mobile-android-alt"></i></h4>
             <i class="close-modal fal fa-times"></i>
-            <form action="">
-                <input id="focus" type="text" name="phone" placeholder="Ваш номер телефону">
-                <input type="submit" value="Зателефонуйте">
+            <form id="callback__form">
+                <input id="focus" type="text" name="phone" placeholder="Ваш номер телефону" required>
+                <button class="callback-button" type="submit" >Зателефонуйте</button>
             </form>
             <p>Наприклад: 067 000 00 00</p>
         </div>

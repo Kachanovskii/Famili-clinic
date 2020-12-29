@@ -3,12 +3,12 @@
     <div class="modal">
         <div class="modal-content">
             <div class="appointment__contact-form">
+                <p class="popupWindowAppointmentMessege"></p>
                 <div class="appointment__content__head_text">
                     <h3>Запис на прийом <i class="fas fa-calendar-check"></i></h3>
-
                     <i class="close-modal fal fa-times"></i>
                 </div>
-                <form action="">
+                <form id="popupWindowAppointment_form">
                     <div class="contact-form__main row">
                         <div class="contact-form__input col-12">
                             <div class="custom-select">
@@ -17,20 +17,20 @@
                                 </div>
                             </div>
                             <div class="contact-form__input-name">
-                                <input type="text" name="name" placeholder="ім'я" />
+                                <input type="text" name="name" placeholder="ім'я" required/>
                             </div>
                         </div>
                         <div class="contact-form__input col-12">
                             <div class="contact-form__input-phone">
-                                <input type="text" name="phone" placeholder="Телефон" />
+                                <input type="text" name="phone" placeholder="Телефон" required/>
                             </div>
                             <div class="contact-form__input-date">
-                                <input type="date" name="date" value="2018-07-22" />
+                                <input type="date" name="date" value="" required/>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form__button">
-                        <input type="submit" value="Записатись" />
+                        <button type="submit">Записатись</button>
                     </div>
                 </form>
             </div>

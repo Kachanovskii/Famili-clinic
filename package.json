@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
+    "moment": "^2.29.1",
     "smart-grid": "^2.1.2"
   }
 }

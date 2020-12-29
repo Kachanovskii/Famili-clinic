@@ -389,7 +389,7 @@ $easing: cubic-bezier(0.55, 0, 0.1, 1);
       width: 40%;
       background-color: $primary-btn-1;
       color: $base-light;
-      // cursor: pointer;
+      cursor: pointer;
       border: none;
       @include font-style(16px, $primary1_400, $base-light);
       border: 1px inset transparent;

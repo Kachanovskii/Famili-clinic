@@ -81,13 +81,12 @@ document.getElementById('callback__form').addEventListener('submit', (e) => {
         var elements = $('.callback-bt-input, .modal-overlay__bt-input');
         setTimeout(() => {
             elements.removeClass('activeModal');
-        $statusMessage.classList.remove(data.status)
-        $statusMessage.innerHTML = '';
-        $statusMessage.innerHTML = '';
+            $statusMessage.classList.remove(data.status)
+            $statusMessage.innerHTML = '';
+            $statusMessage.innerHTML = '';
         }, 5000);
         console.log(data);
     })
-  
 })
 
 

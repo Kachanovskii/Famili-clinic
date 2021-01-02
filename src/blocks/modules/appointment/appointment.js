@@ -24,10 +24,11 @@ const select = new Select('#select', {
 });
 //  *******  end castom select  ********
 
-document.querySelector('.contact-form__button input').addEventListener('click', (e) => {
+document.querySelector('.contact-form__button button').addEventListener('click', (e) => {
     e.preventDefault();
-});;
+});
 
+const moment = require('moment');
 document.getElementById('appointment__form').addEventListener('submit', (e) => {
     e.preventDefault();
     let $service = select.current.value;
@@ -41,26 +42,31 @@ document.getElementById('appointment__form').addEventListener('submit', (e) => {
         phone: $phone,
         date: $date
     };
-    fetch('http://localhost:8000/appointment', {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newAppointment)
-    }).then(responce => {
+
+    let dateNow = moment(new Date()).format('MMMM Do YYYY, h:mm:ss a');
+    fetch(`https://api.telegram.org/bot1461272815:AAELZnj3YdSHVItWSyK0N8wHkQkPIdRl-eQ/sendMessage?chat_id=-311294005&text=New+Appointment+from+Family+Clinic%0AService:+${newAppointment.service}%0AName:+${newAppointment.name}%0APhone:+${'%2B' + newAppointment.phone}%0AAppointment+date:+${newAppointment.date}%0AApplication time:+${dateNow}`).then(responce => {
         return responce.json();
     }).then(data => {
         let $statusMessage = document.querySelector('.appointment_message');
-        $statusMessage.classList.add(data.status);
-        $statusMessage.innerHTML = data.message;
+        let status = '';
+
+        if (data.ok) {
+            status = 'success';
+            $statusMessage.classList.add(status);
+            $statusMessage.innerHTML = 'Ваша заявка успішно подана 🙂 !';
+        } else {
+            status = 'error';
+            $statusMessage.classList.add(status);
+            $statusMessage.innerHTML = 'Виникла помилка 🙁 спробуйте ще раз!';
+        }
         setTimeout(() => {
-            $statusMessage.classList.remove(data.status);
+            $statusMessage.classList.remove(status);
         }, 5000);
+        console.log(data);
     });
 
     console.log(newAppointment);
-});;
-
+});
 
 //  *******  start appointment fetch  ********
 // const URL = 'http://localhost';

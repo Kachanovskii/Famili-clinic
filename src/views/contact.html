@@ -45,5 +45,46 @@
     @@include("../blocks/modules/footer/footer.html")
     <script src="js/vendor.js"></script>
     <script src="js/pageContact.js"></script>
+    <script>
+      document.querySelector('.contact-form__button button').addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+
+      // const moment = require('moment');
+      document.getElementById('form-contact').addEventListener('submit', (e) => {
+        e.preventDefault();
+        let $name = document.querySelector('#form-contact input[name="name"]').value;
+        let $email = document.querySelector('#form-contact input[name="email"]').value;
+        let $message = document.querySelector('#form-contact textarea[name="message"]').value;
+
+        let newMessage = {
+          name: $name,
+          email: $email,
+          messge: $message
+        };
+
+        // let dateNow = moment(new Date()).format('MMMM Do YYYY, h:mm:ss a');
+        fetch(`https://api.telegram.org/bot1461272815:AAELZnj3YdSHVItWSyK0N8wHkQkPIdRl-eQ/sendMessage?chat_id=-311294005&text=New+Message+from+Family+Clinic%0AName:+${newMessage.name}%0AEmail:+${newMessage.email}%0AMessage:+${newMessage.messge}`).then(responce => {
+          return responce.json();
+        }).then(data => {
+          let $statusMessage = document.querySelector('.contact-form__message');
+          let status = '';
+
+          if (data.ok) {
+            status = 'success';
+            $statusMessage.classList.add(status);
+            $statusMessage.innerHTML = 'Ваша заявка успішно подана 🙂 !';
+          } else {
+            status = 'error';
+            $statusMessage.classList.add(status);
+            $statusMessage.innerHTML = 'Виникла помилка 🙁 спробуйте ще раз!';
+          }
+          setTimeout(() => {
+            $statusMessage.classList.remove(status);
+          }, 5000);
+          console.log(data);
+        });
+      });
+    </script>
   </body>
 </html>

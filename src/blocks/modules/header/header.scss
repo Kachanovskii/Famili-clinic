@@ -79,7 +79,12 @@
         }
 
         .h-phone {
+          flex-direction: column;
           a {
+            margin: -5px 0 -5px  auto;
+            display: flex;
+            align-items: center;
+
             &:hover {
               text-decoration: underline;
             }

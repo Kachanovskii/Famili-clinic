@@ -124,7 +124,7 @@
               width: 90px;
               height: 90px;
               border-radius: 50%;
-              background-image: url("../img/ourDoctors4.jpg");
+              background-image: url("../img/alina-2.jpeg");
               background-position: center;
               background-size: cover;
               margin-bottom: 20px;
@@ -180,7 +180,7 @@
                   width: 50px;
                   height: 50px;
                   border-radius: 50%;
-                  background-image: url("../img/customer-girl.jpg");
+                  background-image: url("../img/yuliya1.jpeg");
                   background-position: -5px;
                   background-size: auto 50px;
                   position: relative;
@@ -238,14 +238,14 @@
 
         .review__item:nth-of-type(2) {
           .review__doctor__box-img {
-            background-image: url("../img/ourDoctors2.jpg");
+            background-image: url("../img/roma.jpeg");
           }
 
           .review__customer
             .review__customer__content
             .review__customer__info
             .review__customer__box-img {
-            background-image: url("../img/customer-girl-2.jpg");
+            background-image: url("../img/dmitriy-2.jpeg");
             background-position: center;
             background-size: auto 50px;
           }
@@ -253,16 +253,16 @@
 
         .review__item:nth-of-type(3) {
           .review__doctor__box-img {
-            background-image: url("../img/ourDoctors3.jpg");
+            background-image: url("../img/dima.jpeg");
           }
 
           .review__customer
             .review__customer__content
             .review__customer__info
             .review__customer__box-img {
-            background-image: url("../img/customer-men.jpeg");
+            background-image: url("../img/yakovenko.jpeg");
             background-position: 0 0;
-            background-size: auto 100px;
+            background-size: auto;
           }
         }
       }

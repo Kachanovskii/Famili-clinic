@@ -84,8 +84,23 @@ body {
           }
 
           .footer__phone {
-            display: flex;
+            //display: flex;
             justify-content: space-between;
+            li {
+              margin: 10px 0;
+              display: flex;
+              justify-content: center;
+              a {
+                display: flex;
+                align-items: center;
+                i {
+                  font-size: 18px;
+                  padding: 0 10px 0 0;
+                }
+              }
+            }
+
+
 
             @media (max-width: 1199.98px) {
               flex-direction: column;

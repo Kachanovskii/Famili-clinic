@@ -37,17 +37,16 @@ const selectPopupWindow = new Select('#selectPopupWindow', {
     selectedId: '1',
     data: [
         { id: '1', value: 'Оберіть послугу' },
-        { id: '2', value: 'Angular' },
-        { id: '3', value: 'Vue' },
-        { id: '4', value: 'React Native' },
-        { id: '5', value: 'Next' },
-        { id: '6', value: 'Nefdsfst' },
-        { id: '7', value: 'React' },
-        { id: '8', value: 'Anfsfgular' },
-        { id: '9', value: 'Vue' },
-        { id: '10', value: 'React Native' },
-        { id: '11', value: 'Nexsdft' },
-        { id: '12', value: 'Nesfst' },
+        { id: '2', value: 'Cімейний лікар' },
+        { id: '3', value: 'Урологія' },
+        { id: '4', value: 'Ультразвукова діагностика' },
+        { id: '5', value: 'Отоларинологія (ЛОР)' },
+        { id: '6', value: 'Массаж' },
+        { id: '7', value: 'Гінекологія' },
+        { id: '8', value: 'Дерматологія' },
+        { id: '9', value: 'Косметологія' },
+        { id: '10', value: 'Хірургія' },
+
     ],
     onSelect(item) {
         console.log('Selected Item', item);
@@ -56,11 +55,8 @@ const selectPopupWindow = new Select('#selectPopupWindow', {
 });
 //  *******  end castom select  ********
 
-const moment = require('moment');
-document.querySelector('.contact-form__button input').addEventListener('click', (e) => {
-    e.preventDefault()
-});
 
+const moment = require('moment');
 document.getElementById('popupWindowAppointment_form').addEventListener('submit', (e) => {
     e.preventDefault();
     let $service = selectPopupWindow.current.value
@@ -96,7 +92,6 @@ document.getElementById('popupWindowAppointment_form').addEventListener('submit'
             elements.removeClass('active');
             $('body').removeClass('scroll-hidden');
         }, 5000);
-        console.log(data);
     })})
 
  // fetch('http://localhost:8000/popupWindowAppointment', {

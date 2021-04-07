@@ -28,7 +28,7 @@
               }
 
               &::after {
-                content: "";
+                content: '';
                 display: block;
                 width: 150px;
                 border-bottom: 2px solid;
@@ -127,7 +127,11 @@
               }
 
               .ourDoctors__trade {
-                @include font-style(14px, $primary1_500, rgba(255, 255, 255, 0.7));
+                @include font-style(
+                  14px,
+                  $primary1_500,
+                  rgba(255, 255, 255, 0.7)
+                );
                 line-height: 1.2;
               }
             }

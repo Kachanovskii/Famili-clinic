@@ -159,7 +159,7 @@
               }
 
               &::after {
-                content: "";
+                content: '';
                 display: block;
                 width: 150px;
                 border-bottom: 2px solid;
@@ -347,7 +347,7 @@
               }
               &::after,
               &::before {
-                content: "";
+                content: '';
                 position: absolute;
                 z-index: 1;
                 right: 100%;
@@ -464,10 +464,10 @@
             border-radius: 8px;
             form {
               textarea,
-              input[type="text"],
-              input[type="button"],
-              input[type="submit"],
-              input[type="email"] {
+              input[type='text'],
+              input[type='button'],
+              input[type='submit'],
+              input[type='email'] {
                 -webkit-appearance: none;
                 border-radius: 0;
               }
@@ -497,7 +497,11 @@
                 }
                 .review__rating-container {
                   .review-text {
-                    @include font-style(13px, $primary1_300, rgba($base-light, 0.8));
+                    @include font-style(
+                      13px,
+                      $primary1_300,
+                      rgba($base-light, 0.8)
+                    );
                     margin-bottom: 5px;
                   }
                   .review__rating-box {

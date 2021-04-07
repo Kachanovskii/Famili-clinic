@@ -71,7 +71,7 @@
             @media (max-width: 1199.98px) {
               line-height: 19px;
             }
-            .active{
+            .active {
               color: $base-color;
             }
             &:hover {
@@ -173,11 +173,14 @@
                 @media (max-width: 767.98px) {
                   margin-top: 20px;
                 }
-
+                width: 220px;
+                height: 220px;
+                overflow: hidden;
+                border-radius: 50%;
                 img {
-                  border-radius: 50%;
+                  // border-radius: 50%;
                   max-width: 220px;
-                  height: auto;
+                  // height: auto;
                   transition: 0.3s all;
 
                   @media (max-width: 1199.98px) {
